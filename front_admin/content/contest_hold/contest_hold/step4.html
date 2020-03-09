@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>gcon</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../../resources/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="../../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../../resources/css/style.css">
+    <!-- jQuery -->
+    <script src="../../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../../resources/plugins/moment/moment.min.js"></script>
+    <!-- date-range-picker -->
+    <script src="../../../resources/plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include 개발시 상위 div 삭제 요망 -->
+        </div>        
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include 개발시 상위 div 삭제 요망 -->
+            </div>
+
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                
+                <div id="location-include">
+                    <!-- location include 개발시 상위 div 삭제 요망 -->
+                </div>
+
+                <!-- Main content -->
+                <section class="content">
+                    <div class="container-fluid">
+                    
+                        <!-- content 시작 -->
+
+                        <div class="step">
+                            <ol class="row">
+                                <li class="col-3">
+                                    <div class="small-box">
+                                        <div class="inner">
+                                            <span>step 1</span>
+                                            <strong>상품선택 및 필수정보 등록</strong>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fas fa-edit"></i>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-3">
+                                    <div class="small-box">
+                                        <div class="inner">
+                                            <span>step 2</span>
+                                            <strong>콘테스트 기본정보 등록</strong>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fas fa-edit"></i>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-3">
+                                    <div class="small-box">
+                                        <div class="inner">
+                                            <span>step 3</span>
+                                            <strong>콘테스트 상세정보 등록</strong>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fas fa-edit"></i>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-3">
+                                    <div class="small-box bg-primary">
+                                        <div class="inner">
+                                            <span>step 4</span>
+                                            <strong>접수방법 선택</strong>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fas fa-edit"></i>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="card card-gray card-outline">
+                            <div class="card-header">
+                                <h3 class="card-title">접수 방법 선택</h3>
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label>G콘 접수 솔루션 <a href="javascript:;" data-toggle="modal" data-target="#modal-solution" class="badge bg-success"><i class="fas fa-question-circle"></i> 솔루션 안내</a></label>
+                                            <div class="custom-control-group">
+                                                <span class="custom-radio custom-control">
+                                                    <input class="custom-control-input" type="radio" id="rdo1_1">
+                                                    <label for="rdo1_1" class="custom-control-label">템플릿 홈페이지</label>
+                                                </span>
+                                                <span class="custom-radio custom-control">
+                                                    <input class="custom-control-input" type="radio" id="rdo1_2">
+                                                    <label for="rdo1_2" class="custom-control-label">G콘 간편접수</label>
+                                                </span>
+                                                <span class="custom-radio custom-control">
+                                                    <input class="custom-control-input" type="radio" id="rdo1_3">
+                                                    <label for="rdo1_3" class="custom-control-label">G콘 폼 메일</label>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label>개최사 개별 접수</label>
+                                            <div class="custom-control-group">
+                                                <span class="custom-radio custom-control">
+                                                    <input class="custom-control-input" type="radio" id="rdo2_1" name="receiptType">
+                                                    <label for="rdo2_1" class="custom-control-label">자체 홈페이지</label>
+                                                    <input type="text" class="form-control" style="display:none">
+                                                </span>
+                                                <span class="custom-radio custom-control">
+                                                    <input class="custom-control-input" type="radio" id="rdo2_2" name="receiptType">
+                                                    <label for="rdo2_2" class="custom-control-label">이메일 접수</label>
+                                                    <input type="text" class="form-control" style="display:none">
+                                                </span>
+                                                <span class="custom-radio custom-control">
+                                                    <input class="custom-control-input" type="radio" id="rdo2_3" name="receiptType">
+                                                    <label for="rdo2_3" class="custom-control-label">우편 접수</label>
+                                                    <input type="text" class="form-control" style="display:none">
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-gray card-outline">
+                            <div class="card-header">
+                                <h3 class="card-title">이용약관/개인정보취급방침 수정</h3>
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-danger">콘테스트 성격에 맞추어 내용을 수정하세요</p>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label>이용약관</label>
+                                            <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label>개인정보보호취급방침</label>
+                                            <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btns">
+                            <button class="btn btn-default btn-lg" onclick="window.location.href='step3.html'">이전</button>
+                            <button class="btn btn-dark btn-lg" data-toggle="modal" data-target="#modal-submit">다음</button>
+                        </div>
+                        <!-- content 끝 -->
+                        
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include 개발시 상위 div 삭제 요망 -->
+        </div>
+
+        <div id="aside-right-include">
+            <!-- aside-right include 개발시 상위 div 삭제 요망 -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+    
+    <!-- modal : 포스터 등록 안내 -->
+    <div class="modal fade" id="modal-solution">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title"></h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>솔루션 안내 <br> width:766px</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal : 등록 확인 -->
+    <!-- alert 기능일때 .alert 추가 -->
+    <div class="modal fade alert" id="modal-submit">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p class="text-center text-danger">등록을 하시면 G콘 등록관리자의 검토/승인 후 <br>G콘테스트에 전시되어집니다.</p>
+                    <p class="text-center">등록을 완료하였습니다. <br>표준이용약관 샘플 콘테스트를 내용출력 등록하시겠습니까?</p>
+                    <div class="btns">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">아니오</button>
+                        <button type="button" class="btn btn-dark" onclick="window.location.href='ok.html'">네</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AdminLTE App -->
+    <script src="../../../resources/js/adminlte.js"></script>    
+    <!-- ui 관련 -->
+    <script src="../../../resources/js/ui.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            receiptTypeChk();
+        });
+        $('[name="receiptType"]').change(function(){
+            receiptTypeChk();
+        });
+        var receiptTypeChk = function(){
+            $('[name="receiptType"]').each(function(){
+                $(this).siblings('.form-control').hide();
+                $('[name="receiptType"]:checked').siblings('.form-control').show();
+            });
+        }
+    </script>
+</body>
+
+</html>

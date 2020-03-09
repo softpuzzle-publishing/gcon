@@ -1,0 +1,14 @@
+.step {
+    ol {
+        display: flex;    
+    }    
+    li {
+        width: 25%;background-color: #fff;padding: 15px;
+        span {
+            font-size: 20px;font-weight: 700;
+        }
+        strong {
+            font-size: 16px;     
+        }
+    }
+}
