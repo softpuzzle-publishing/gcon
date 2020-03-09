@@ -69,7 +69,6 @@ body, textarea, select, table, button, input {
 img {
   border: 0;
   vertical-align: middle;
-  max-width:100%;
 }
 
 ul, ol {

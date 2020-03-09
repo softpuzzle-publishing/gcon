@@ -36,8 +36,9 @@
 
     // Apply the new margins to the main content and footer
     .content-wrapper,
-    .main-footer,
-    .main-header {
+    .main-header .navbar-nav.left{
+    //.main-footer,
+    //.main-header {
       margin-left: $sidebar-mini-width !important;
     }
 
