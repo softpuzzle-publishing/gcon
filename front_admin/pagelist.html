@@ -12,8 +12,9 @@
             table th,
             table td{border:1px solid #ccc;padding:4px 10px;word-break: keep-all}
             table th{background:#222;color:#fff;padding:10px;font-size:14px;}
-            table td a{color:#244cce;text-decoration:none;}
+            table td a{color:#7324ce;text-decoration:none;}
             table td a:hover{text-decoration:underline;}
+            table tbody tr:hover{background-color: #fdecec;}
             .noteTable{display: table;width: 100%;}
             .noteTable .date{display: table-cell;color: #e04545;width: 40px;}
             .noteTable .note{display: table-cell;}
@@ -39,14 +40,15 @@
         <table>
             <colgroup>
                 <col style="width:6%">
-                <col style="width:9%">
-                <col style="width:9%">
-                <col style="width:9%">
-                <col style="width:9%">
-                <col style="width:5%">
+                <col style="width:10%">
+                <col style="width:16%">
+                <col style="width:10%">
+                <col>
+                <col style="width:10%">
                 <col style="width:15%">
                 <col style="width:6%">
                 <col style="width:6%">
+                <col>
                 <col>
             </colgroup>
             <thead>
@@ -64,15 +66,33 @@
                     <th>Note</th>
                 </tr>
             </thead>
-            <tbody>     
+            <tbody>
                 <tr>
                     <td></td>
-                    <td>0. 메인</td>
+                    <td>*. 로그인</td>
                     <td></td>
                     <td></td>
                     <td></td>
+                    <td>/login/login/</td>
+                    <td><a target="_blank" href="content/login/login/login.html">login.html</a></td>
+                    <td class="center"></td>
                     <td class="center"></td>
                     <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>  
+                <tr>
+                    <td></td>
+                    <td>0. Dashboard</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>/main/main/</td>
+                    <td><a target="_blank" href="content/main/main/index.html">index.html</a></td>
                     <td class="center"></td>
                     <td class="center"></td>
                     <td></td>
@@ -89,7 +109,7 @@
                     <td>step1 상품선택 및 필수정보 등록</td>
                     <td></td>
                     <td></td>
-                    <td class="center"></td>
+                    <td>/contest_hold/contest_hold/</td>
                     <td><a target="_blank" href="content/contest_hold/contest_hold/step1.html">step1.html</a></td>
                     <td class="center"></td>
                     <td class="center"></td>
@@ -107,7 +127,7 @@
                     <td>step2 콘테스트 기본정보 등록</td>
                     <td></td>
                     <td></td>
-                    <td class="center"></td>
+                    <td></td>
                     <td><a target="_blank" href="content/contest_hold/contest_hold/step2.html">step2.html</a></td>
                     <td class="center"></td>
                     <td class="center"></td>
@@ -125,7 +145,7 @@
                     <td>step3 콘테스트 상세정보 등록</td>
                     <td></td>
                     <td></td>
-                    <td class="center"></td>
+                    <td></td>
                     <td><a target="_blank" href="content/contest_hold/contest_hold/step3.html">step3.html</a></td>
                     <td class="center"></td>
                     <td class="center"></td>
@@ -143,7 +163,7 @@
                     <td>step4 접수방법 선택</td>
                     <td></td>
                     <td></td>
-                    <td class="center"></td>
+                    <td></td>
                     <td><a target="_blank" href="content/contest_hold/contest_hold/step4.html">step4.html</a></td>
                     <td class="center"></td>
                     <td class="center"></td>
@@ -161,8 +181,530 @@
                     <td>접수 완료</td>
                     <td></td>
                     <td></td>
-                    <td class="center"></td>
+                    <td></td>
                     <td><a target="_blank" href="content/contest_hold/contest_hold/ok.html">ok.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>2. 콘테스트 관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td>/contest_management/contest_management/</td>
+                    <td><a target="_blank" href="content/contest_management/contest_management/list.html">list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>view</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/contest_management/contest_management/view.html">view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>3. 홈페이지 빌더</td>
+                    <td>콘테스트 홈페이지 리스트</td>
+                    <td></td>
+                    <td></td>
+                    <td>/hompage_builder/hompage_builder/</td>
+                    <td><a target="_blank" href="content/hompage_builder/hompage_builder/list.html">list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>step1 템플릿 설정</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/hompage_builder/hompage_builder/step1.html">step1.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>step2 디자인/도메인 관리</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/hompage_builder/hompage_builder/step2.html">step2.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>step3 운영정보 관리</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/hompage_builder/hompage_builder/step3.html">step3.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>step4 메뉴 설정</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/hompage_builder/hompage_builder/step4.html">step4.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>step5 페이지 관리</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/hompage_builder/hompage_builder/step5.html">step5.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>step6 접수항목 관리</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/hompage_builder/hompage_builder/step6.html">step6.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>접수 완료</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/hompage_builder/hompage_builder/ok.html">ok.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>5. 접수작품 관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td>/entry_management/entry_management/</td>
+                    <td><a target="_blank" href="content/entry_management/entry_management/list.html">list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>view</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/entry_management/entry_management/view.html">view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>8. 보고서 관리</td>
+                    <td>step1 보고서 표지</td>
+                    <td></td>
+                    <td></td>
+                    <td>/report_management/report_management/</td>
+                    <td><a target="_blank" href="content/report_management/report_management/step1.html">step1.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>step2 공모전 개요</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/report_management/report_management/step2.html">step1.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>step3 공모전 운영결과</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/report_management/report_management/step3.html">step3.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>step4 공모전 수상작</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/report_management/report_management/step4.html">step4.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>step5 홍보물 제작</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/report_management/report_management/step5.html">step5.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>step6 광고 홍보</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/report_management/report_management/step6.html">step6.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>9. 게시판 관리</td>
+                    <td>공지사항</td>
+                    <td>list</td>
+                    <td></td>
+                    <td>/board_management/notice/</td>
+                    <td><a target="_blank" href="content/board_management/notice/list.html">list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>view</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/board_management/notice/view.html">view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>form</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/board_management/notice/form.html">form.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>FAQ</td>
+                    <td>list</td>
+                    <td></td>
+                    <td>/board_management/faq/</td>
+                    <td><a target="_blank" href="content/board_management/faq/list.html">list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>view</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/board_management/faq/view.html">view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>form</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/board_management/faq/form.html">form.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Q&A</td>
+                    <td>list</td>
+                    <td></td>
+                    <td>/board_management/qna/</td>
+                    <td><a target="_blank" href="content/board_management/qna/list.html">list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>view</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/board_management/qna/view.html">view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>10. 팝업 관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td>/popup_management/popup_management/</td>
+                    <td><a target="_blank" href="content/popup_management/popup_management/list.html">list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>view</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/popup_management/popup_management/view.html">view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>form</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/popup_management/popup_management/form.html">form.html</a></td>
                     <td class="center"></td>
                     <td class="center"></td>
                     <td></td>

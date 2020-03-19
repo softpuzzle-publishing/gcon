@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>gcon</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../../resources/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="../../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../../resources/css/style.css">
+    <!-- jQuery -->
+    <script src="../../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../../resources/plugins/moment/moment.min.js"></script>
+    <!-- date-range-picker -->
+    <script src="../../../resources/plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include 개발시 상위 div 삭제 요망 -->
+        </div>        
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include 개발시 상위 div 삭제 요망 -->
+            </div>
+            
+    
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                
+                <div id="location-include">
+                    <!-- location include 개발시 상위 div 삭제 요망 -->
+                </div>
+    
+                <!-- Main content -->
+                <section class="content">
+                    <div class="container-fluid">
+                    
+                        <!-- content 시작 -->
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="card card-secondary h-100">
+                                    <div class="card-header">
+                                        <h3 class="card-title">콘테스트 접수현황</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <table class="table table-bordered">
+                                            <colgroup>
+                                                <col style="width:35%">
+                                                <col style="width:26%">
+                                                <col>
+                                                <col>
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-center" rowspan="2">일자</th>
+                                                    <th class="text-center" rowspan="2">접수량(건)</th>
+                                                    <th class="text-center" colspan="2">부문별</th>
+                                                </tr>
+                                                <tr>
+                                                    <th class="text-center">기획</th>
+                                                    <th class="text-center">디자인</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center">2020-03-02</td>
+                                                    <td class="text-right">5</td>
+                                                    <td class="text-right">1</td>
+                                                    <td class="text-right">4</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">2020-03-02</td>
+                                                    <td class="text-right">5</td>
+                                                    <td class="text-right">1</td>
+                                                    <td class="text-right">4</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center text-danger">2020-03-02(오늘)</td>
+                                                    <td class="text-right">5</td>
+                                                    <td class="text-right">1</td>
+                                                    <td class="text-right">4</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center text-success">최근 7일 합계</td>
+                                                    <td class="text-right">5</td>
+                                                    <td class="text-right">1</td>
+                                                    <td class="text-right">4</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">최근 30일 합계</td>
+                                                    <td class="text-right">5</td>
+                                                    <td class="text-right">1</td>
+                                                    <td class="text-right">4</td>
+                                                </tr>
+                                                <tr class="bg-gray-light">
+                                                    <td class="text-center">누적 합계</td>
+                                                    <td class="text-right">45</td>
+                                                    <td class="text-right">1</td>
+                                                    <td class="text-right">4</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card card-success h-100">
+                                    <div class="card-header">
+                                        <h3 class="card-title">콘테스트 통계분석 현황</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                                <tr>
+                                                    <th class="text-center">콘테스트공고조회수</th>
+                                                    <td class="text-center">1234</td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="text-center">관심콘테스트등록수</th>
+                                                    <td class="text-center">234</td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="text-center" rowspan="6">G콘접수솔루션 방문수</th>
+                                                    <th class="text-center">템플릿홈페이지</th>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">234</td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="text-center">간편접수</th>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">-</td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="text-center">폼메일</th>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">-</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-6">
+                                <div class="card card-warning card-tabs h-100">
+                                    <div class="card-header p-0 pt-1">
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" data-toggle="pill" href="#tab-notice" role="tab" aria-selected="true">공지사항</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-toggle="pill" href="#tab-qna" role="tab" aria-selected="true">Q&amp;A</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-toggle="pill" href="#tab-lib" role="tab" aria-selected="false">자료실</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="tab-content">
+                                            <div class="tab-pane fade active show" id="tab-notice" role="tabpanel">
+                                                <div class="text-right mb-1">
+                                                    <a href="../../board_management/notice/list.html"><i class="fas fa-plus"></i> 더보기</a>
+                                                </div>
+                                                <table class="table table-hover text-nowrap">
+                                                    <colgroup>
+                                                        <col>
+                                                        <col style="width:110px">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-truncate"><a href="">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
+                                                            <td class="text-right">2020-01-01</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-truncate"><a href="">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
+                                                            <td class="text-right">2020-01-01</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-truncate"><a href="">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
+                                                            <td class="text-right">2020-01-01</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-truncate"><a href="">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
+                                                            <td class="text-right">2020-01-01</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-truncate"><a href="">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
+                                                            <td class="text-right">2020-01-01</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-truncate"><a href="">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
+                                                            <td class="text-right">2020-01-01</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="tab-pane fade" id="tab-qna" role="tabpanel">
+                                                <div class="text-right mb-1">
+                                                    <a href="../../board_management/notice/list.html"><i class="fas fa-plus"></i> 더보기</a>
+                                                </div>
+                                                <table class="table table-hover text-nowrap">
+                                                    <colgroup>
+                                                        <col>
+                                                        <col style="width:110px">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-truncate"><a href="">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
+                                                            <td class="text-right">2020-01-01</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-truncate"><a href="">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
+                                                            <td class="text-right">2020-01-01</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-truncate"><a href="">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
+                                                            <td class="text-right">2020-01-01</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-truncate"><a href="">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
+                                                            <td class="text-right">2020-01-01</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-truncate"><a href="">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
+                                                            <td class="text-right">2020-01-01</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-truncate"><a href="">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
+                                                            <td class="text-right">2020-01-01</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="tab-pane fade" id="tab-lib" role="tabpanel">
+                                                <div class="text-right mb-1">
+                                                    <a href="../../board_management/notice/list.html"><i class="fas fa-plus"></i> 더보기</a>
+                                                </div>
+                                                <table class="table table-hover text-nowrap">
+                                                    <colgroup>
+                                                        <col>
+                                                        <col style="width:110px">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-truncate"><a href="">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
+                                                            <td class="text-right">2020-01-01</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-truncate"><a href="">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
+                                                            <td class="text-right">2020-01-01</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-truncate"><a href="">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
+                                                            <td class="text-right">2020-01-01</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-truncate"><a href="">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
+                                                            <td class="text-right">2020-01-01</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-truncate"><a href="">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
+                                                            <td class="text-right">2020-01-01</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-truncate"><a href="">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
+                                                            <td class="text-right">2020-01-01</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card card-dark h-100">
+                                    <div class="card-body">
+                                        G콘테스트 광고 영역 또는 바로가기 배너 영역
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- content 끝 -->
+                        
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include 개발시 상위 div 삭제 요망 -->
+        </div>
+
+        <div id="aside-right-include">
+            <!-- aside-right include 개발시 상위 div 삭제 요망 -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- AdminLTE App -->
+    <script src="../../../resources/js/adminlte.js"></script>    
+    <!-- ui 관련 -->
+    <script src="../../../resources/js/ui.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>

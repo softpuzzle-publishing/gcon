@@ -232,7 +232,7 @@
                                             <label>공모부문 등록</label>
                                             <div>
                                                 <input type="text" class="form-control w-auto" placeholder="공모 부문" value="">
-                                                <button type="button" class="btn btn-default w-auto"><i class="fas fa-plus"></i></button>
+                                                <button type="button" class="btn btn-default w-auto" data-event="btn-add"><i class="fas fa-plus"></i></button>
                                             </div>
                                             <p class="note-in-form">※부문이 2개 이상인 경우,부문명을 1개씩 입력 후 우측 +버튼을 클릭하세요. 입력하지 않을 시 단일부문으로 등록됩니다.</p>
                                         </div>
@@ -279,7 +279,7 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col">
+                                    <div class="col-6">
                                         <div class="form-group">
                                             <label>공모기간 선택</label>
                                             <div class="input-group">
@@ -299,7 +299,7 @@
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
                                                 </div>
-                                                <input type="text" class="form-control" data-event="datepicker">
+                                                <input type="text" class="form-control" data-event="singleDatepicker">
                                                 <div class="input-group-append">
                                                     <div class="input-group-text">
                                                         <span class="custom-checkbox custom-control">
@@ -318,7 +318,7 @@
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
                                                 </div>
-                                                <input type="text" class="form-control" data-event="datepicker">
+                                                <input type="text" class="form-control" data-event="singleDatepicker">
                                                 <div class="input-group-append">
                                                     <div class="input-group-text">
                                                         <span class="custom-checkbox custom-control">
@@ -334,8 +334,8 @@
                             </div>
                         </div>
                         <div class="btns">
-                            <button class="btn btn-default btn-lg" onclick="window.location.href='step1.html'">이전</button>
-                            <button class="btn btn-dark btn-lg" onclick="window.location.href='step3.html'">다음</button>
+                            <button type="button" class="btn btn-default btn-lg" onclick="window.location.href='step1.html'">이전</button>
+                            <button type="button" class="btn btn-dark btn-lg" onclick="window.location.href='step3.html'">다음</button>
                         </div>
                         <!-- content 끝 -->
                         
@@ -371,12 +371,13 @@
             timePicker: true,
             timePickerIncrement: 30,
             locale: {
-                format: 'MM/DD/YYYY hh:mm A'
+                format: 'YYYY-MM-DD hh:mm A'
             }
         });
 
-        $('[data-event="datepicker"]').daterangepicker({
-            singleDatePicker: true,
+        //input 추가
+        $('[data-event="btn-add"]').on('click',function(){
+            $(this).before('<input type="text" class="form-control w-auto" value=""> ');
         });
     </script>
 </body>

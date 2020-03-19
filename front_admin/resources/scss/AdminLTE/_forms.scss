@@ -157,14 +157,6 @@ textarea.form-control {
   }
 }
 
-.form-control.w-auto{
-  display: inline-block;
-  min-width: 250px;
-}
-.form-group .btn{
-  vertical-align: top;
-}
-
 .custom-select {
   &.is-warning {
     border-color: theme-color('warning');

@@ -18,7 +18,7 @@ $gray-500: #999 !default;
 $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
-$gray-900: #212529 !default;
+$gray-900: #222 !default;
 $black:    #000 !default;
 
 $grays: () !default;
@@ -34,15 +34,16 @@ $grays: map-merge((
         "900": $gray-900
 ), $grays);
 
-$blue:    #007bff !default;
+$blue:    #4383F8 !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
-$red:     #dc3545 !default;
+$red:     #F12444 !default;
+$red-light:     #FE6F65 !default;
 $orange:  #fd7e14 !default;
-$yellow:  #F8A61A !default;
+$yellow:  #ec9e16 !default;
 $green:   #28a745 !default;
-$teal:    #20c997 !default;
+$teal:    #00C08E !default;
 $cyan:    #17a2b8 !default;
 
 $colors: () !default;
@@ -63,10 +64,10 @@ $colors: map-merge((
 ), $colors);
 
 $primary:       $yellow !default;
-$secondary:     $gray-600 !default;
-$success:       $green !default;
-$info:          $cyan !default;
-$warning:       $blue !default;
+$secondary:     $teal !default;
+$success:       $blue !default;
+$info:          #999 !default;
+$warning:       $red-light !default;
 $danger:        $red !default;
 $light:         $gray-400 !default;
 $dark:          $gray-800 !default;
@@ -91,7 +92,7 @@ $theme-color-interval:      8% !default;
 $yiq-contrasted-threshold: 150 !default;
 
 // Customize the light and dark text colors for use in our YIQ color contrast function.
-$yiq-text-dark: #1F2D3D !default;
+$yiq-text-dark: #333 !default;
 $yiq-text-light: $white !default;
 
 // Options
@@ -151,7 +152,7 @@ $body-color:                $gray-900 !default;
 //
 // Style anchor elements.
 
-$link-color:                theme-color("primary") !default;
+$link-color:                $black !default;
 $link-decoration:           none !default;
 $link-hover-color:          darken($link-color, 15%) !default;
 $link-hover-decoration:     none !default;
@@ -191,7 +192,7 @@ $container-max-widths: (
         sm: 540px,
         md: 720px,
         lg: 960px,
-        xl: 1140px
+        xl: 1200px
 ) !default;
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");
@@ -219,7 +220,7 @@ $border-radius-lg:            .3rem !default;
 $border-radius-sm:            .2rem !default;
 
 $component-active-color:      $white !default;
-$component-active-bg:         theme-color("primary") !default;
+$component-active-bg:         theme-color("danger") !default;
 
 $caret-width:                 .3em !default;
 
@@ -240,7 +241,7 @@ $font-family-base:            $font-family-noto-sans-kr !default;
 // stylelint-enable value-keyword-case
 
 $font-size-base:              0.9375rem !default; // Assumes the browser default, typically `16px`
-$font-size-lg:                ($font-size-base * 1.25) !default;
+$font-size-lg:                ($font-size-base * 1.2) !default;
 $font-size-sm:                ($font-size-base * .875) !default;
 
 $font-weight-light:           300 !default;
@@ -279,7 +280,7 @@ $lead-font-weight:            300 !default;
 
 $small-font-size:             80% !default;
 
-$text-muted:                  $gray-600 !default;
+$text-muted:                  $gray-500 !default;
 
 $blockquote-small-color:      $gray-600 !default;
 $blockquote-font-size:        ($font-size-base * 1.25) !default;
@@ -309,7 +310,7 @@ $table-cell-padding:          .75rem !default;
 $table-cell-padding-sm:       .3rem !default;
 
 $table-bg:                    transparent !default;
-$table-accent-bg:             rgba($black, .05) !default;
+$table-accent-bg:             $gray-100 !default;
 $table-hover-bg:              rgba($black, .075) !default;
 $table-active-bg:             $table-hover-bg !default;
 
@@ -445,7 +446,7 @@ $form-check-input-margin-x:             .25rem !default;
 $form-check-inline-margin-x:            .75rem !default;
 $form-check-inline-input-margin-x:      .3125rem !default;
 
-$form-group-margin-bottom:              1rem !default;
+$form-group-margin-bottom:              1.75rem !default;
 
 $input-group-addon-color:               $input-color !default;
 $input-group-addon-bg:                  $gray-200 !default;
@@ -454,8 +455,8 @@ $input-group-addon-border-color:        $input-border-color !default;
 $custom-control-gutter:                 .5rem !default;
 $custom-control-spacer-x:               1rem !default;
 
-$custom-control-indicator-size:         1rem !default;
-$custom-control-indicator-bg:           $gray-300 !default;
+$custom-control-indicator-size:         1.15rem !default;
+$custom-control-indicator-bg:           $gray-100 !default;
 $custom-control-indicator-bg-size:      50% 50% !default;
 $custom-control-indicator-box-shadow:   inset 0 .25rem .25rem rgba($black, .1) !default;
 
@@ -464,7 +465,7 @@ $custom-control-label-disabled-color:           $gray-600 !default;
 
 $custom-control-indicator-checked-color:        $component-active-color !default;
 $custom-control-indicator-checked-bg:           $component-active-bg !default;
-$custom-control-indicator-checked-disabled-bg:  rgba(theme-color("primary"), .5) !default;
+$custom-control-indicator-checked-disabled-bg:  rgba(theme-color("danger"), .5) !default;
 $custom-control-indicator-checked-box-shadow:   none !default;
 
 $custom-control-indicator-focus-box-shadow:     0 0 0 1px $body-bg, $input-btn-focus-box-shadow !default;
@@ -640,19 +641,19 @@ $pagination-padding-y-lg:           .75rem !default;
 $pagination-padding-x-lg:           1.5rem !default;
 $pagination-line-height:            1.25 !default;
 
-$pagination-color:                  $link-color !default;
+$pagination-color:                  $dark !default;
 $pagination-bg:                     $white !default;
 $pagination-border-width:           $border-width !default;
 $pagination-border-color:           $gray-300 !default;
 
 $pagination-focus-box-shadow:       $input-btn-focus-box-shadow !default;
 
-$pagination-hover-color:            $link-hover-color !default;
+$pagination-hover-color:            $black !default;
 $pagination-hover-bg:               $gray-200 !default;
 $pagination-hover-border-color:     $gray-300 !default;
 
 $pagination-active-color:           $component-active-color !default;
-$pagination-active-bg:              $component-active-bg !default;
+$pagination-active-bg:              $dark !default;
 $pagination-active-border-color:    $pagination-active-bg !default;
 
 $pagination-disabled-color:         $gray-600 !default;
@@ -756,6 +757,9 @@ $badge-pill-border-radius:          10rem !default;
 // Padding applied to the modal body
 $modal-inner-padding:         1rem !default;
 
+// Margin between elements in footer, must be lower than or equal to 2 * $modal-inner-padding
+$modal-footer-margin-between:       .5rem !default;
+
 $modal-dialog-margin:         .5rem !default;
 $modal-dialog-margin-y-sm-up: 1.75rem !default;
 
@@ -786,9 +790,9 @@ $modal-transition:                  transform .3s ease-out !default;
 //
 // Define alert colors, border radius, and padding.
 
-$alert-padding-y:                   .75rem !default;
+$alert-padding-y:                   1.25rem !default;
 $alert-padding-x:                   1.25rem !default;
-$alert-margin-bottom:               1rem !default;
+$alert-margin-bottom:               1.75rem !default;
 $alert-border-radius:               $border-radius !default;
 $alert-link-font-weight:            $font-weight-bold !default;
 $alert-border-width:                $border-width !default;

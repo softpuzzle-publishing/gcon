@@ -89,3 +89,15 @@ a.text-muted:hover {
     }
   }
 }
+
+p.note-in-form {
+  margin-top: 0.5rem;
+  font-size: 14px;
+  color: $danger;
+}
+
+span.note-in-form {
+  margin-left: 0.5rem;
+  font-size: 14px;
+  color: $danger;
+}

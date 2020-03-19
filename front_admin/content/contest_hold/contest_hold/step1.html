@@ -119,7 +119,7 @@
                                         <option>[유료] 모두의 콘테스트 프라임 200만(월)</option>
                                         <option>[유료] 모두의 콘테스트 베이직 100만(월)</option>
                                     </select>
-                                    <button class="btn btn-info w-auto" type="button" data-toggle="modal" data-target="#modal-information">상품안내</button>
+                                    <button type="button" class="btn btn-dark w-auto" data-toggle="modal" data-target="#modal-information">상품안내</button>
                                 </div>
                             </div>
                         </div>
@@ -182,7 +182,7 @@
                                             <label>주최사명</label>
                                             <div>
                                                 <input type="text" class="form-control w-auto" placeholder="주최사명" value="">
-                                                <button type="button" class="btn btn-default w-auto"><i class="fas fa-plus"></i></button>
+                                                <button type="button" class="btn btn-default w-auto" data-event="btn-add"><i class="fas fa-plus"></i></button>
                                             </div>
                                         </div>
                                     </div>
@@ -242,7 +242,7 @@
                                             <label>주관사명</label>
                                             <div>
                                                 <input type="text" class="form-control w-auto" placeholder="주최사명" value="">
-                                                <button type="button" class="btn btn-default w-auto"><i class="fas fa-plus"></i></button>
+                                                <button type="button" class="btn btn-default w-auto" data-event="btn-add"><i class="fas fa-plus"></i></button>
                                             </div>
                                         </div>
                                     </div>
@@ -253,7 +253,7 @@
                                             <label>후원사명</label>
                                             <div>
                                                 <input type="text" class="form-control w-auto" placeholder="후원사명" value="">
-                                                <button type="button" class="btn btn-default w-auto"><i class="fas fa-plus"></i></button>
+                                                <button type="button" class="btn btn-default w-auto" data-event="btn-add"><i class="fas fa-plus"></i></button>
                                             </div>
                                         </div>
                                     </div>
@@ -261,7 +261,7 @@
                             </div>
                         </div>
                         <div class="btns">
-                            <button class="btn btn-dark btn-lg" onclick="window.location.href='step2.html'">다음</button>
+                            <button type="button" class="btn btn-dark btn-lg" onclick="window.location.href='step2.html'">다음</button>
                         </div>
                         <!-- content 끝 -->
                         
@@ -309,6 +309,13 @@
     <script src="../../../resources/js/adminlte.js"></script>    
     <!-- ui 관련 -->
     <script src="../../../resources/js/ui.js"></script>
+
+    <script>
+        //input 추가
+        $('[data-event="btn-add"]').on('click',function(){
+            $(this).before('<input type="text" class="form-control w-auto" value=""> ');
+        });
+    </script>
 </body>
 
 </html>

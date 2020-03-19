@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>gcon</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../../resources/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="../../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../../resources/css/style.css">
+    <!-- jQuery -->
+    <script src="../../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../../resources/plugins/moment/moment.min.js"></script>
+    <!-- date-range-picker -->
+    <script src="../../../resources/plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include 개발시 상위 div 삭제 요망 -->
+        </div>        
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include 개발시 상위 div 삭제 요망 -->
+            </div>
+
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                
+                <div id="location-include">
+                    <!-- location include 개발시 상위 div 삭제 요망 -->
+                </div>
+
+                <!-- Main content -->
+                <section class="content">
+                    <div class="container-fluid">
+                    
+                        <!-- content 시작 -->
+                        <div class="card">
+                            <div class="card-body">                                
+                                <table class="table table-bordered">
+                                    <colgroup>
+                                        <col style="width:150px">
+                                        <col>
+                                        <col style="width:150px">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>제목</th>
+                                            <td colspan="3">공지사항 제목</td>
+                                        </tr>
+                                        <tr>
+                                            <th>노출기간</th>
+                                            <td>2020-01-01 ~ 2020-02-01</td>
+                                            <th>상태</th>
+                                            <td>사용함</td>                                            
+                                        </tr>  
+                                        <tr>
+                                            <th>등록일</th>
+                                            <td>2020.10.10</td>
+                                            <th>조회수</th>
+                                            <td>15,244</td>
+                                        </tr>
+                                        <tr>
+                                            <th>등록자</th>
+                                            <td></td>
+                                            <th></th>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>이미지</th>
+                                            <td colspan="3"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>이미지 설명</th>
+                                            <td colspan="3"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>링크 주소</th>
+                                            <td>www.abcdefg.com</td>
+                                            <th>링크 타겟</th>
+                                            <td>new / _self</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="pagination-wrap">
+                                    <ul class="pagination">
+                                        <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                        <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-right"></i></a></li>
+                                    </ul>
+                                </div>                                
+                            </div>
+                        </div>
+                        <div class="btns">
+                            <button type="button" class="btn btn-default btn-lg" onclick="window.location.href='list.html'">목록</button>
+                            <button type="button" class="btn btn-dark btn-lg" onclick="window.location.href='form.html'">수정</button>
+                            <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#modal-delete">삭제</button>                            
+                        </div>
+                        <!-- content 끝 -->
+                        
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include 개발시 상위 div 삭제 요망 -->
+        </div>
+
+        <div id="aside-right-include">
+            <!-- aside-right include 개발시 상위 div 삭제 요망 -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- modal : 삭제 -->
+    <!-- alert 기능일때 .alert 추가 -->
+    <div class="modal fade alert" id="modal-delete">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p class="text-center">게시물을 삭제 하시겠습니까?</p>
+                    <div class="btns">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">아니오</button>
+                        <button type="button" class="btn btn-dark">네</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AdminLTE App -->
+    <script src="../../../resources/js/adminlte.js"></script>    
+    <!-- ui 관련 -->
+    <script src="../../../resources/js/ui.js"></script>
+
+    <script>
+        
+    </script>
+</body>
+
+</html>

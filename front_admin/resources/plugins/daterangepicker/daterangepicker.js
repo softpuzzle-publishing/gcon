@@ -65,15 +65,15 @@
             this.drops = 'up';
 
         this.buttonClasses = 'btn btn-sm';
-        this.applyButtonClasses = 'btn-primary';
-        this.cancelButtonClasses = 'btn-default';
+        this.applyButtonClasses = 'btn-primary w-auto';
+        this.cancelButtonClasses = 'btn-default w-auto';
 
         this.locale = {
             direction: 'ltr',
             format: moment.localeData().longDateFormat('L'),
-            separator: ' - ',
-            applyLabel: 'Apply',
-            cancelLabel: 'Cancel',
+            separator: ' ~ ',
+            applyLabel: '적용',
+            cancelLabel: '취소',
             weekLabel: 'W',
             customRangeLabel: 'Custom Range',
             daysOfWeek: moment.weekdaysMin(),
@@ -111,8 +111,8 @@
                 '</div>' +
                 '<div class="drp-buttons">' +
                     '<span class="drp-selected"></span>' +
-                    '<button class="cancelBtn" type="button"></button>' +
-                    '<button class="applyBtn" disabled="disabled" type="button"></button> ' +
+                    '<button type="button" class="cancelBtn"></button>' +
+                    '<button type="button" class="applyBtn" disabled="disabled"></button> ' +
                 '</div>' +
             '</div>';
 
