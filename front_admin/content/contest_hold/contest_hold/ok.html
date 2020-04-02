@@ -122,40 +122,6 @@
 
     </div>
     <!-- ./wrapper -->
-    
-    <!-- modal : 포스터 등록 안내 -->
-    <div class="modal fade" id="modal-solution">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title"></h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>솔루션 안내 <br> width:766px</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- modal : 등록 확인 -->
-    <!-- alert 기능일때 .alert 추가 -->
-    <div class="modal fade alert" id="modal-submit">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <p class="text-center text-danger">등록을 하시면 G콘 등록관리자의 검토/승인 후 <br>G콘테스트에 전시되어집니다.</p>
-                    <p class="text-center">등록을 완료하였습니다. <br>표준이용약관 샘플 콘테스트를 내용출력 등록하시겠습니까?</p>
-                    <div class="btns">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">아니오</button>
-                        <button type="button" class="btn btn-dark" onclick="window.location.href='step5.html'">네</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- AdminLTE App -->
     <script src="../../../resources/js/adminlte.js"></script>    
@@ -164,17 +130,7 @@
 
     <script>
         $(document).ready(function(){
-            receiptTypeChk();
         });
-        $('[name="receiptType"]').change(function(){
-            receiptTypeChk();
-        });
-        var receiptTypeChk = function(){
-            $('[name="receiptType"]').each(function(){
-                $(this).siblings('.form-control').hide();
-                $('[name="receiptType"]:checked').siblings('.form-control').show();
-            });
-        }
     </script>
 </body>
 
