@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>gcon</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../../resources/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="../../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../../resources/css/style.css">
+    <!-- jQuery -->
+    <script src="../../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../../resources/plugins/moment/moment.min.js"></script>
+    <!-- date-range-picker -->
+    <script src="../../../resources/plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include 개발시 상위 div 삭제 요망 -->
+        </div>        
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include 개발시 상위 div 삭제 요망 -->
+            </div>
+            
+    
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                
+                <div id="location-include">
+                    <!-- location include 개발시 상위 div 삭제 요망 -->
+                </div>
+    
+                <!-- Main content -->
+                <section class="content">
+                    <div class="container-fluid">
+                    
+                        <!-- content 시작 -->
+                        <div class="contest-select-wrap callout callout-primary">
+                            <div class="row justify-content-center">
+                                <div class="col-auto">
+                                    <div class="form-group mb-0">
+                                        <label class="mr-1">콘테스트 선택</label>
+                                        <select class="form-control form-control-lg d-inline-block w-auto">
+                                            <option selected>제 5회 아이디어 공모전</option>
+                                            <option>제 4회 아이디어 공모전</option>
+                                            <option>제 3회 아이디어 공모전</option>
+                                            <option>제 2회 아이디어 공모전</option>
+                                            <option>제 1회 아이디어 공모전</option>
+                                        </select>
+                                        <button type="button" class="btn btn-primary btn-lg ml-1">확인</button>
+                                    </div>
+                                </div>                           
+                            </div>
+                        </div>
+                        <div class="alert alert-warning alert-dismissible">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                            <h5 class="text-center mt-2 mb-2"><i class="icon fas fa-info"></i> 작성중인 결과보고서가 있습니다.</h5>
+                            <div class="text-center"><button type="button" class="btn btn-dark">결과보고서 확인</button></div>
+                        </div>
+                        <div class="step">
+                            <ol class="row row-10">
+                                <li class="col-2">
+                                    <div class="small-box">
+                                        <div class="inner">
+                                            <span>step 1</span>
+                                            <strong>보고서 표지</strong>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-2">
+                                    <div class="small-box">
+                                        <div class="inner">
+                                            <span>step 2</span>
+                                            <strong>공모전 개요</strong>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-2">
+                                    <div class="small-box">
+                                        <div class="inner">
+                                            <span>step 3</span>
+                                            <strong>공모전 운영결과</strong>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-2">
+                                    <div class="small-box">
+                                        <div class="inner">
+                                            <span>step 4</span>
+                                            <strong>공모전 수상작</strong>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-2">
+                                    <div class="small-box">
+                                        <div class="inner">
+                                            <span>step 5</span>
+                                            <strong>홍보물 제작</strong>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-2">
+                                    <div class="small-box bg-warning">
+                                        <div class="inner">
+                                            <span>step 6</span>
+                                            <strong>광고 홍보</strong>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="card card-warning card-outline">                            
+                            <div class="card-body">
+                                <div class="table-top">
+                                    <div class="row">
+                                        <div class="col text-right">
+                                            <button type="button" class="btn btn-warning">저장</button>
+                                            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modal-preview">미리보기</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <section class="table-group">
+                                    <h3 class="table-title mt-0">홍보 개요(요약)</h3>
+                                    <table class="table table-bordered">
+                                        <colgroup>
+                                            <col style="width:160px">
+                                            <col style="width:25%">
+                                            <col>
+                                            <col style="width:180px">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>구분</th>
+                                                <th>형태</th>
+                                                <th>내용</th>
+                                                <th>기간</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th rowspan="2">오프라인</th>
+                                                <td>
+                                                    <input type="text" class="form-control" placeholder="포스터 부착">
+                                                </td>
+                                                <td>
+                                                    <input type="text" class="form-control" placeholder="예 : 전국 주요대학 70개소">
+                                                </td>
+                                                <td>
+                                                   <input type="text" class="form-control" placeholder="01.05 ~ 01.25">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="text" class="form-control" placeholder="DM 발송">
+                                                </td>
+                                                <td>
+                                                    <input type="text" class="form-control" placeholder="예 : 포스터 및 협조공문 200개소">
+                                                </td>
+                                                <td>
+                                                   <input type="text" class="form-control" placeholder="01.05 ~ 01.25">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th rowspan="7">오프라인</th>
+                                                <td>
+                                                    <input type="text" class="form-control" placeholder="G콘 배너광고">
+                                                </td>
+                                                <td>
+                                                    <input type="text" class="form-control" placeholder="예 : 메인 페이지 배너 광고 등">
+                                                </td>
+                                                <td>
+                                                   <input type="text" class="form-control" placeholder="01.05 ~ 01.25">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="text" class="form-control" placeholder="타 사이트 배너광고">
+                                                </td>
+                                                <td>
+                                                    <input type="text" class="form-control" placeholder="예 : OO사이트 빅배너 광고 등">
+                                                </td>
+                                                <td>
+                                                   <input type="text" class="form-control" placeholder="01.05 ~ 01.25">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="text" class="form-control" placeholder="e-DM 및 뉴스레터">
+                                                </td>
+                                                <td>
+                                                    <input type="text" class="form-control" placeholder="예 : G콘테스트 회원 외 1,000명">
+                                                </td>
+                                                <td>
+                                                   <input type="text" class="form-control" placeholder="01.05 ~ 01.25">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="text" class="form-control" placeholder="SNS 홍보">
+                                                </td>
+                                                <td>
+                                                    <input type="text" class="form-control" placeholder="예 : 페이스북 등">
+                                                </td>
+                                                <td>
+                                                   <input type="text" class="form-control" placeholder="01.05 ~ 01.25">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="text" class="form-control" placeholder="공모전사이트 등록">
+                                                </td>
+                                                <td>
+                                                    <input type="text" class="form-control" placeholder="예 : 씽굿 외 8개 사이트">
+                                                </td>
+                                                <td>
+                                                   <input type="text" class="form-control" placeholder="01.05 ~ 01.25">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="text" class="form-control" placeholder="커뮤니티 포스팅">
+                                                </td>
+                                                <td>
+                                                    <input type="text" class="form-control" placeholder="예 : 공모전, 아이디어, 디자인 등 OO개 게시판">
+                                                </td>
+                                                <td>
+                                                   <input type="text" class="form-control" placeholder="01.05 ~ 01.25">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="text" class="form-control" placeholder="검색엔진 키워드">
+                                                </td>
+                                                <td>
+                                                    <input type="text" class="form-control" placeholder="예 : 네이버 키워드 광고">
+                                                </td>
+                                                <td>
+                                                   <input type="text" class="form-control" placeholder="01.05 ~ 01.25">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </section>
+                                <section class="table-group">
+                                    <h3 class="table-title">포스터 부착</h3>
+                                    <a href="javascript:;" class="btn-table-del"><i class="fas fa-trash-alt"></i>삭제</a>
+                                    <table class="table table-bordered">
+                                        <colgroup>
+                                            <col style="width:160px">
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>홍보 거점</th>
+                                                <td>
+                                                    <input type="text" class="form-control" placeholder="예 : 서울 00개소, 경기 00개소, 지박 00개소 대학교">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>홍보 기간</th>
+                                                <td>
+                                                    <input type="text" class="form-control" placeholder="예 : 2020. 01.05 ~ 03.15">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>홍보이미지 <br>(대표이미지 4컷)</th>
+                                                <td>
+                                                    <div class="row row-10">
+                                                        <div class="col-6">
+                                                            <div class="input-group">
+                                                                <div class="custom-file">
+                                                                    <input type="file" class="custom-file-input" id="file1">
+                                                                    <label class="custom-file-label" for="file1">파일 선택</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="input-group">
+                                                                <div class="custom-file">
+                                                                    <input type="file" class="custom-file-input" id="file2">
+                                                                    <label class="custom-file-label" for="file2">파일 선택</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row row-10">
+                                                        <div class="col-6">
+                                                            <div class="input-group">
+                                                                <div class="custom-file">
+                                                                    <input type="file" class="custom-file-input" id="file3">
+                                                                    <label class="custom-file-label" for="file3">파일 선택</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="input-group">
+                                                                <div class="custom-file">
+                                                                    <input type="file" class="custom-file-input" id="file4">
+                                                                    <label class="custom-file-label" for="file4">파일 선택</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </section>
+                                <section class="table-group">
+                                    <h3 class="table-title">DM 발송</h3>
+                                    <a href="javascript:;" class="btn-table-del"><i class="fas fa-trash-alt"></i>삭제</a>
+                                    <table class="table table-bordered">
+                                        <colgroup>
+                                            <col style="width:160px">
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>홍보 거점</th>
+                                                <td>
+                                                    <input type="text" class="form-control" placeholder="예 : 각 대학 및 관련 기관 등 총 000개소 우편 발송">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>홍보 기간</th>
+                                                <td>
+                                                    <input type="text" class="form-control" placeholder="예 : 2020. 01.05 ~ 03.15">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>홍보 내용</th>
+                                                <td>
+                                                    <input type="text" class="form-control" placeholder="예 : 포스터 00매, 협조공문 1매">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>홍보이미지 <br>(대표이미지 2컷)</th>
+                                                <td>
+                                                    <div class="row row-10">
+                                                        <div class="col-6">
+                                                            <div class="input-group">
+                                                                <div class="custom-file">
+                                                                    <input type="file" class="custom-file-input" id="file5">
+                                                                    <label class="custom-file-label" for="file5">파일 선택</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="input-group">
+                                                                <div class="custom-file">
+                                                                    <input type="file" class="custom-file-input" id="file6">
+                                                                    <label class="custom-file-label" for="file6">파일 선택</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </section>
+                                <section class="table-group">
+                                    <h3 class="table-title">e-DM/뉴스레터 발송</h3>
+                                    <a href="javascript:;" class="btn-table-del"><i class="fas fa-trash-alt"></i>삭제</a>
+                                    <table class="table table-bordered">
+                                        <colgroup>
+                                            <col style="width:160px">
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>홍보 대상</th>
+                                                <td>
+                                                    <input type="text" class="form-control" placeholder="예 : 회원 등 약 1500명 대상">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>홍보 회수</th>
+                                                <td>
+                                                    <div class="row row-10">
+                                                        <div class="col-3">
+                                                            <input type="text" class="form-control" placeholder="1회차">
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="input-group">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                                                </div>
+                                                                <input type="text" class="form-control" data-event="rangeDatepicker">  
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-3">
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control text-right">
+                                                                <div class="input-group-append">
+                                                                    <div class="input-group-text">명</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row row-10">
+                                                        <div class="col-3">
+                                                            <input type="text" class="form-control" placeholder="2회차">
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="input-group">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                                                </div>
+                                                                <input type="text" class="form-control" data-event="rangeDatepicker">  
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-3">
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control text-right">
+                                                                <div class="input-group-append">
+                                                                    <div class="input-group-text">명</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row row-10">
+                                                        <div class="col-3">
+                                                            <input type="text" class="form-control" placeholder="3회차">
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="input-group">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                                                </div>
+                                                                <input type="text" class="form-control" data-event="rangeDatepicker">  
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-3">
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control text-right">
+                                                                <div class="input-group-append">
+                                                                    <div class="input-group-text">명</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>홍보 내용</th>
+                                                <td>
+                                                    <input type="text" class="form-control" placeholder="예 : 포스터 00매, 협조공문 1매">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>홍보이미지 <br>(대표이미지 2컷)</th>
+                                                <td>
+                                                    <div class="row row-10">
+                                                        <div class="col-6">
+                                                            <div class="input-group">
+                                                                <div class="custom-file">
+                                                                    <input type="file" class="custom-file-input" id="file7">
+                                                                    <label class="custom-file-label" for="file7">파일 선택</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="input-group">
+                                                                <div class="custom-file">
+                                                                    <input type="file" class="custom-file-input" id="file8">
+                                                                    <label class="custom-file-label" for="file8">파일 선택</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </section>
+                                <section class="table-group">
+                                    <h3 class="table-title">SNS채널 홍보</h3>
+                                    <a href="javascript:;" class="btn-table-del"><i class="fas fa-trash-alt"></i>삭제</a>
+                                    <table class="table table-bordered">
+                                        <colgroup>
+                                            <col style="width:160px">
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>채널 종류</th>
+                                                <td>
+                                                    <input type="text" class="form-control" placeholder="예 : 당사 페이스북">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>홍보이미지 <br>(대표이미지 2컷)</th>
+                                                <td>
+                                                    <div class="row row-10">
+                                                        <div class="col-6">
+                                                            <div class="input-group">
+                                                                <div class="custom-file">
+                                                                    <input type="file" class="custom-file-input" id="file1">
+                                                                    <label class="custom-file-label" for="file1">파일 선택</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="input-group">
+                                                                <div class="custom-file">
+                                                                    <input type="file" class="custom-file-input" id="file2">
+                                                                    <label class="custom-file-label" for="file2">파일 선택</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </section>
+                                <div class="table-bottom">
+                                    <div class="row">
+                                        <div class="col text-right">
+                                            <a href="javascript:;" class="btn-withicon text-warning" data-toggle="modal" data-target="#modal-reset"><i class="fas fa-redo-alt"></i>항목 되돌리기</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btns">
+                            <button type="button" class="btn btn-default btn-lg" onclick="window.location.href='step5.html'">이전</button>
+                            <button type="button" class="btn btn-warning btn-lg" onclick="window.location.href='step1.html'">완료</button>
+                        </div>
+                        <!-- content 끝 -->
+                        
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include 개발시 상위 div 삭제 요망 -->
+        </div>
+
+        <div id="aside-right-include">
+            <!-- aside-right include 개발시 상위 div 삭제 요망 -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- modal : 미리보기 -->
+    <div class="modal fade" id="modal-preview">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">결과보고서 미리보기</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>보고서</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal : 항목 되돌리기 -->
+    <div class="modal fade" id="modal-reset">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">항목 되돌리기</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered">
+                        <colgroup>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td>홍보 개요(요약)</td>
+                                <td>
+                                    <div class="custom-switch custom-control">
+                                        <input class="custom-control-input" type="checkbox" id="chk1" disabled>
+                                        <label for="chk1" class="custom-control-label"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>포스터 부착</td>
+                                <td>
+                                    <div class="custom-switch custom-control">
+                                        <input class="custom-control-input" type="checkbox" id="chk2">
+                                        <label for="chk2" class="custom-control-label"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>DM 발송</td>
+                                <td>
+                                    <div class="custom-switch custom-control">
+                                        <input class="custom-control-input" type="checkbox" id="chk3">
+                                        <label for="chk3" class="custom-control-label"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>e-DM/뉴스레터 발송</td>
+                                <td>
+                                    <div class="custom-switch custom-control">
+                                        <input class="custom-control-input" type="checkbox" id="chk4">
+                                        <label for="chk4" class="custom-control-label"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SNS채널 홍보</td>
+                                <td>
+                                    <div class="custom-switch custom-control">
+                                        <input class="custom-control-input" type="checkbox" id="chk5">
+                                        <label for="chk5" class="custom-control-label"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <div class="row">
+                        <div class="col-6">
+                            <button type="button" class="btn btn-dark" id="btnItemSubmit">적용</button>
+                        </div>
+                        <div class="col-6 text-right">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AdminLTE App -->
+    <script src="../../../resources/js/adminlte.js"></script>    
+    <!-- ui 관련 -->
+    <script src="../../../resources/js/ui.js"></script>
+
+    <script>
+        //표 삭제
+        $(document).on('click','.btn-table-del',function(e){
+            e.preventDefault();
+            $(this).closest('.table-group').hide();
+        });
+
+        //항목 되돌리기
+        $('#modal-reset').on('show.bs.modal',function(e){
+            $('section.table-group').each(function(i, e){
+                if($(this).is(':visible')){
+                    $('#modal-reset .table tbody tr').eq(i).find('.custom-control-input').prop('checked',true)
+                }
+            });
+        });
+        $('#btnItemSubmit').on('click',function(e){
+            $('#modal-reset .table tbody tr').each(function(i, e){
+                if($(this).find('.custom-control-input').prop('checked') == true){
+                    $('section.table-group').eq(i).show();
+                }else{
+                    $('section.table-group').eq(i).hide();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

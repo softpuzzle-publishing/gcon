@@ -1,0 +1,78 @@
+<!-- Navbar -->
+<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="javascript:;" class="nav-link" id="btnMyHome"><i class="fas fa-home mr-1"></i>콘테스트 홈페이지</a>
+        </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <div class="nav-link">
+                비에이비님
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#" title="로그아웃" data-toggle="modal" data-target="#modal-logout">
+                <i class="fas fa-sign-out-alt"><span class="sr-only">로그아웃</span></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#">
+                <i class="fas fa-th-large"></i>
+            </a>
+        </li>
+    </ul>
+</nav>
+<!-- /.navbar -->
+
+<!-- modal : 로그아웃 -->
+<!-- alert 기능일때 .alert 추가 -->
+<div class="modal fade alert" id="modal-logout">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p class="text-center">로그아웃 하시겠습니까?</p>
+                <div class="btns">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">아니오</button>
+                    <button type="button" class="btn btn-dark" onclick="window.location.href='../../login/login/login.html'">네</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- modal : 홈페이지 개설 전 안내 -->
+<!-- alert 기능일때 .alert 추가 -->
+<div class="modal fade alert" id="modal-homepage">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p class="text-center">홈페이지가 개설되지 않았습니다.</p>
+                <p class="text-center text-danger">콘테스트를 개최하신 후 <br>홈페이지 빌더에서 전용홈페이지를 개설하세요</p>
+                <div class="btns">
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        //콘테스트 홈페이지 링크
+        $(document).on('click','#btnMyHome',function(e){
+            console.log(1)
+            e.preventDefault();
+            //홈페이지 개설 전
+            $('#modal-homepage').modal();
+            //홈페이지 개설 후
+            //...
+        });
+    });    
+</script>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>gcon</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../../resources/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="../../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../../resources/css/style.css">
+    <!-- jQuery -->
+    <script src="../../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../../resources/plugins/moment/moment.min.js"></script>
+    <!-- date-range-picker -->
+    <script src="../../../resources/plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include 개발시 상위 div 삭제 요망 -->
+        </div>        
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include 개발시 상위 div 삭제 요망 -->
+            </div>
+
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                
+                <div id="location-include">
+                    <!-- location include 개발시 상위 div 삭제 요망 -->
+                </div>
+
+                <!-- Main content -->
+                <section class="content">
+                    <div class="container-fluid">
+                    
+                        <!-- content 시작 -->
+
+                        <div class="step">
+                            <ol class="row">
+                                <li class="col-3">
+                                    <div class="small-box">
+                                        <div class="inner">
+                                            <span>step 1</span>
+                                            <strong>상품선택 및 필수정보 등록</strong>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fas fa-edit"></i>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-3">
+                                    <div class="small-box bg-primary">
+                                        <div class="inner">
+                                            <span>step 2</span>
+                                            <strong>콘테스트 기본정보 등록</strong>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fas fa-edit"></i>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-3">
+                                    <div class="small-box">
+                                        <div class="inner">
+                                            <span>step 3</span>
+                                            <strong>콘테스트 상세정보 등록</strong>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fas fa-edit"></i>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-3">
+                                    <div class="small-box">
+                                        <div class="inner">
+                                            <span>step 4</span>
+                                            <strong>접수방법 선택</strong>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fas fa-edit"></i>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="card card-gray card-outline">
+                            <div class="card-header">
+                                <h3 class="card-title">기본정보 등록</h3>
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label>콘테스트 명</label>
+                                            <input type="text" class="form-control" placeholder="콘테스트 명">
+                                            <p class="note-in-form">※ 콘테스트 개최 등록 완료된 후에는 수정 할 수 없으니 신중하게 작성 해주세요.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label>유형선택</label>
+                                            <div class="custom-control-group">
+                                                <span class="custom-radio custom-control">
+                                                    <input class="custom-control-input" type="radio" id="rdo1">
+                                                    <label for="rdo1" class="custom-control-label">공모전</label>
+                                                </span>
+                                                <span class="custom-radio custom-control">
+                                                    <input class="custom-control-input" type="radio" id="rdo2">
+                                                    <label for="rdo2" class="custom-control-label">대외활용</label>
+                                                </span>
+                                                <span class="custom-radio custom-control">
+                                                    <input class="custom-control-input" type="radio" id="rdo3">
+                                                    <label for="rdo3" class="custom-control-label">전시/행사(세미나외)</label>
+                                                </span>
+                                            </div>
+                                            <p class="note-in-form">※ 콘테스트 개최 등록 완료된 후에는 수정 할 수 없으니 신중하게 작성 해주세요.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label>공모 분야 선택</label>
+                                            <div class="custom-control-group">
+                                                <span class="custom-checkbox custom-control">
+                                                    <input class="custom-control-input" type="checkbox" id="chk1_2">
+                                                    <label for="chk1_2" class="custom-control-label">논문/리포트</label>
+                                                </span>
+                                                <span class="custom-checkbox custom-control">
+                                                    <input class="custom-control-input" type="checkbox" id="chk1_3">
+                                                    <label for="chk1_3" class="custom-control-label">기획/아이디어</label>
+                                                </span>
+                                                <span class="custom-checkbox custom-control">
+                                                    <input class="custom-control-input" type="checkbox" id="chk1_4">
+                                                    <label for="chk1_4" class="custom-control-label">네이밍/슬로건</label>
+                                                </span>
+                                                <span class="custom-checkbox custom-control">
+                                                    <input class="custom-control-input" type="checkbox" id="chk1_5">
+                                                    <label for="chk1_5" class="custom-control-label">디자인</label>
+                                                </span>
+                                                <span class="custom-checkbox custom-control">
+                                                    <input class="custom-control-input" type="checkbox" id="chk1_6">
+                                                    <label for="chk1_6" class="custom-control-label">광고/마케팅</label>
+                                                </span>
+                                                <span class="custom-checkbox custom-control">
+                                                    <input class="custom-control-input" type="checkbox" id="chk1_7">
+                                                    <label for="chk1_7" class="custom-control-label">사진/영상/UCC</label>
+                                                </span>
+                                                <span class="custom-checkbox custom-control">
+                                                    <input class="custom-control-input" type="checkbox" id="chk1_8">
+                                                    <label for="chk1_8" class="custom-control-label">캐릭터/만화</label>
+                                                </span>
+                                                <span class="custom-checkbox custom-control">
+                                                    <input class="custom-control-input" type="checkbox" id="chk1_9">
+                                                    <label for="chk1_9" class="custom-control-label">소프트웨어/게임</label>
+                                                </span>
+                                                <span class="custom-checkbox custom-control">
+                                                    <input class="custom-control-input" type="checkbox" id="chk1_10">
+                                                    <label for="chk1_10" class="custom-control-label">문학/수기</label>
+                                                </span>
+                                                <span class="custom-checkbox custom-control">
+                                                    <input class="custom-control-input" type="checkbox" id="chk1_11">
+                                                    <label for="chk1_11" class="custom-control-label">예술/미술/음악</label>
+                                                </span>
+                                                <span class="custom-checkbox custom-control">
+                                                    <input class="custom-control-input" type="checkbox" id="chk1_12">
+                                                    <label for="chk1_12" class="custom-control-label">과학/공학</label>
+                                                </span>
+                                                <span class="custom-checkbox custom-control">
+                                                    <input class="custom-control-input" type="checkbox" id="chk1_13">
+                                                    <label for="chk1_13" class="custom-control-label">건축/인테리어</label>
+                                                </span>
+                                                <span class="custom-checkbox custom-control">
+                                                    <input class="custom-control-input" type="checkbox" id="chk1_14">
+                                                    <label for="chk1_14" class="custom-control-label">체험/참여/캠페인</label>
+                                                </span>
+                                                <span class="custom-checkbox custom-control">
+                                                    <input class="custom-control-input" type="checkbox" id="chk1_15">
+                                                    <label for="chk1_15" class="custom-control-label">취업/창업</label>
+                                                </span>
+                                                <span class="custom-checkbox custom-control">
+                                                    <input class="custom-control-input" type="checkbox" id="chk1_16">
+                                                    <label for="chk1_16" class="custom-control-label">봉사활동/교육</label>
+                                                </span>
+                                                <span class="custom-checkbox custom-control">
+                                                    <input class="custom-control-input" type="checkbox" id="chk1_17">
+                                                    <label for="chk1_17" class="custom-control-label">행사/전시</label>
+                                                </span>
+                                                <span class="custom-checkbox custom-control">
+                                                    <input class="custom-control-input" type="checkbox" id="chk1_18">
+                                                    <label for="chk1_18" class="custom-control-label">장학(금)재단</label>
+                                                </span>
+                                                <span class="custom-checkbox custom-control">
+                                                    <input class="custom-control-input" type="checkbox" id="chk1_19">
+                                                    <label for="chk1_19" class="custom-control-label">해외</label>
+                                                </span>
+                                                <span class="custom-checkbox custom-control">
+                                                    <input class="custom-control-input" type="checkbox" id="chk1_20">
+                                                    <label for="chk1_20" class="custom-control-label">제품/유통</label>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label>공모부문 등록</label>
+                                            <div>
+                                                <input type="text" class="form-control w-auto" placeholder="공모 부문" value="">
+                                                <button type="button" class="btn btn-default w-auto" data-event="btn-add"><i class="fas fa-plus"></i></button>
+                                            </div>
+                                            <p class="note-in-form">※부문이 2개 이상인 경우,부문명을 1개씩 입력 후 우측 +버튼을 클릭하세요. 입력하지 않을 시 단일부문으로 등록됩니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label>공모대상 / 자격선택</label>
+                                            <div class="custom-control-group">
+                                                <span class="custom-checkbox custom-control">
+                                                    <input class="custom-control-input" type="checkbox" id="chk2_1">
+                                                    <label for="chk2_1" class="custom-control-label">제한 없음</label>
+                                                </span>
+                                                <span class="custom-checkbox custom-control">
+                                                    <input class="custom-control-input" type="checkbox" id="chk2_2">
+                                                    <label for="chk2_2" class="custom-control-label">대학(원)생</label>
+                                                </span>
+                                                <span class="custom-checkbox custom-control">
+                                                    <input class="custom-control-input" type="checkbox" id="chk2_3">
+                                                    <label for="chk2_3" class="custom-control-label">직장인/일반인</label>
+                                                </span>
+                                                <span class="custom-checkbox custom-control">
+                                                    <input class="custom-control-input" type="checkbox" id="chk2_4">
+                                                    <label for="chk2_4" class="custom-control-label">고등학생</label>
+                                                </span>
+                                                <span class="custom-checkbox custom-control">
+                                                    <input class="custom-control-input" type="checkbox" id="chk2_5">
+                                                    <label for="chk2_5" class="custom-control-label">초/중학생</label>
+                                                </span>
+                                                <span class="custom-checkbox custom-control">
+                                                    <input class="custom-control-input" type="checkbox" id="chk2_6">
+                                                    <label for="chk2_6" class="custom-control-label">기업</label>
+                                                </span>
+                                                <br>
+                                                <span class="custom-checkbox custom-control">
+                                                    <!-- 기타 선택시 input 토글 -->
+                                                    <input class="custom-control-input" type="checkbox" id="chk2_7" data-check="etc" data-match="#etc1">
+                                                    <label for="chk2_7" class="custom-control-label">기타</label>
+                                                </span>
+                                                <input type="text" class="form-control w-auto" title="기타 입력" data-check="etc-input" id="etc1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>공모기간 선택</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="far fa-clock"></i></span>
+                                                </div>
+                                                <input type="text" class="form-control float-right" id="reservationtime">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>수상 발표일</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                                </div>
+                                                <input type="text" class="form-control" data-event="singleDatepicker">
+                                                <div class="input-group-append">
+                                                    <div class="input-group-text">
+                                                        <span class="custom-checkbox custom-control">
+                                                            <input class="custom-control-input" type="checkbox" id="chk3_1">
+                                                            <label for="chk3_1" class="custom-control-label">추후공지</label>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>시상식 예정일</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                                </div>
+                                                <input type="text" class="form-control" data-event="singleDatepicker">
+                                                <div class="input-group-append">
+                                                    <div class="input-group-text">
+                                                        <span class="custom-checkbox custom-control">
+                                                            <input class="custom-control-input" type="checkbox" id="chk3_2">
+                                                            <label for="chk3_2" class="custom-control-label">추후공지</label>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btns">
+                            <button type="button" class="btn btn-default btn-lg" onclick="window.location.href='step1.html'">이전</button>
+                            <button type="button" class="btn btn-dark btn-lg" onclick="window.location.href='step3.html'">다음</button>
+                        </div>
+                        <!-- content 끝 -->
+                        
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include 개발시 상위 div 삭제 요망 -->
+        </div>
+
+        <div id="aside-right-include">
+            <!-- aside-right include 개발시 상위 div 삭제 요망 -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+    
+    <!-- AdminLTE App -->
+    <script src="../../../resources/js/adminlte.js"></script>    
+    <!-- ui 관련 -->
+    <script src="../../../resources/js/ui.js"></script>
+
+    <script>
+        //Date range picker with time picker
+        //https://www.daterangepicker.com/
+        $('#reservationtime').daterangepicker({
+            timePicker: true,
+            timePickerIncrement: 30,
+            locale: {
+                format: 'YYYY-MM-DD hh:mm A'
+            }
+        });
+
+        //input 추가
+        $('[data-event="btn-add"]').on('click',function(){
+            $(this).before('<input type="text" class="form-control w-auto" value=""> ');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+<defs>
+<style>
+.cls-1{fill:#bababa;}
+</style>
+</defs>
+<title>icon_clock</title>
+
+<path class="cls-1" d="M11,0H3A3,3,0,0,0,0,3v8a3,3,0,0,0,3,3h8a3,3,0,0,0,3-3V3A3,3,0,0,0,11,0Zm1,10.57A1.43,1.43,0,0,1,10.57,12H3.43A1.43,1.43,0,0,1,2,10.57V3.43A1.43,1.43,0,0,1,3.43,2h7.14A1.43,1.43,0,0,1,12,3.43Z"/>
+<rect class="cls-1" x="6" y="4" width="1" height="4"/><rect class="cls-1" x="6" y="7" width="3" height="1"/>
+</svg>

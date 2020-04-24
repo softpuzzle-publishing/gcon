@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>gcon</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../../resources/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="../../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../../resources/css/style.css">
+    <!-- jQuery -->
+    <script src="../../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../../resources/plugins/moment/moment.min.js"></script>
+    <!-- date-range-picker -->
+    <script src="../../../resources/plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include 개발시 상위 div 삭제 요망 -->
+        </div>        
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include 개발시 상위 div 삭제 요망 -->
+            </div>
+
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                
+                <div id="location-include">
+                    <!-- location include 개발시 상위 div 삭제 요망 -->
+                </div>
+
+                <!-- Main content -->
+                <section class="content">
+                    <div class="container-fluid">
+                    
+                        <!-- content 시작 -->
+                        <div class="search-wrap">
+                            <h2>Filter</h2>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label>콘테스트 선택</label>
+                                        <select class="form-control">
+                                            <option selected>제 5회 아이디어 공모전</option>
+                                            <option>제 4회 아이디어 공모전</option>
+                                            <option>제 3회 아이디어 공모전</option>
+                                            <option>제 2회 아이디어 공모전</option>
+                                            <option>제 1회 아이디어 공모전</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label>노출기간 선택</label>
+                                        <div class="row row-10">
+                                            <div class="col-9">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                                    </div>
+                                                    <input type="text" class="form-control float-right" data-event="rangeDatepicker" id="date-range">
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="custom-checkbox custom-control lineheight-match">
+                                                    <input class="custom-control-input" type="checkbox" id="chk_allday" data-check="allday" data-match="#date-range">
+                                                    <label for="chk_allday" class="custom-control-label">전체</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                            
+                            </div>
+                            <div class="row">                                
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label>제목/내용</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btns">
+                                <button type="button" class="btn btn-dark"><i class="fas fa-search"></i> 검색하기</button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-top">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <p>[총 등록 <strong>0</strong>개] 검색결과 <strong>0</strong> 개</p>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <select class="form-control w-auto">
+                                                <option selected>둥록일순 </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 50px">#</th>
+                                            <th style="width: 11%">상태</th>
+                                            <th>제목</th>
+                                            <th style="width: 23%">노출기간</th>
+                                            <th style="width: 13%">등록일</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>사용함</td>
+                                            <td><a href="view.html">팝업 제목 제목 팝업 제목 제목 팝업 제목 제목 팝업 제목 제목</a></td>
+                                            <td>2019-12-31 ~ 2020-02-01</td>
+                                            <td>2019-12-01</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>사용안함</td>
+                                            <td><a href="view.html">팝업 제목 제목 팝업 제목 제목 팝업 제목 제목 팝업 제목 제목</a></td>
+                                            <td>2019-12-31 ~ 2020-02-01</td>
+                                            <td>2019-12-01</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>사용안함</td>
+                                            <td><a href="view.html">팝업 제목</a></td>
+                                            <td>2019-12-31 ~ 2020-02-01</td>
+                                            <td>2019-12-01</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>사용안함</td>
+                                            <td><a href="view.html">팝업 제목</a></td>
+                                            <td>2019-12-31 ~ 2020-02-01</td>
+                                            <td>2019-12-01</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>사용안함</td>
+                                            <td><a href="view.html">팝업 제목</a></td>
+                                            <td>2019-12-31 ~ 2020-02-01</td>
+                                            <td>2019-12-01</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="table-bottom">
+                                    <div class="row">
+                                        <div class="col text-right">
+                                            <a href="form.html" class="btn btn-dark">글쓰기</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pagination-wrap">
+                                    <ul class="pagination">
+                                        <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                        <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-right"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- content 끝 -->
+                        
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include 개발시 상위 div 삭제 요망 -->
+        </div>
+
+        <div id="aside-right-include">
+            <!-- aside-right include 개발시 상위 div 삭제 요망 -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- AdminLTE App -->
+    <script src="../../../resources/js/adminlte.js"></script>    
+    <!-- ui 관련 -->
+    <script src="../../../resources/js/ui.js"></script>
+
+    <script>
+        
+    </script>
+</body>
+
+</html>

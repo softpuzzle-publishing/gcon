@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>약꾹</title>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta name="keywords" content="약꾹">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/MDTimePicker/mdtimepicker.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- timepicker -->
+    <script src="../../resources/plugins/MDTimePicker/mdtimepicker.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+</head>
+
+<body class="body-login">  <!-- 로그인 페이지에 body-login 클래스 필요 -->
+    <div id="wrap">
+        <div id="content-block">
+
+            <div id="login">
+                <div class="half left">
+                    <img src="../../resources/images/logo.svg" alt="약꾹 로고">
+                </div>
+                <div class="half right">
+                    <div class="login">
+                        <div class="form">
+                            <h1>약꾹 OAM</h1>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="이메일">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" placeholder="비밀번호">
+                            </div>
+                            <div class="form-group">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="emailSave">
+                                    <label class="custom-control-label" for="emailSave">이메일 저장</label>
+                                </div>
+                            </div>
+                            <div class="form-group btn-area">
+                                <button type="submit" class="btn btn-primary btn-block" onclick="window.location.href='../1_member/member_list.html'">로그인</button>
+                            </div>
+                            <ul class="menu">
+                                <li><a href="#modalEmail" data-toggle="modal" data-role="button">이메일 찾기</a></li>
+                                <li><a href="#modalPassword" data-toggle="modal" data-role="button">비밀번호 찾기</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer-block">
+                © Medi Plus Solution Co., Ltd. All rights reserved.
+            </div>
+
+        </div>
+    </div>
+
+    <!-- modal : 이메일 찾기 -->
+    <div class="modal" tabindex="-1" role="dialog" id="modalEmail">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">이메일 찾기</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>관리자 정보에 입력하신 정보와 일치할 경우 이메일 주소의 일부를 조회할 수 있습니다.</p>
+                    <div class="form-group">
+                        <label for="formUserName">이름</label>
+                        <input type="text" class="form-control" id="formUserName">
+                    </div>
+                    <div class="form-group mb-0">
+                        <label for="formUserMobile">휴대전화</label>
+                        <input type="tel" class="form-control" id="formUserMobile">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-6">
+                        <button type="button" class="btn btn-primary btn-block" id="btnEmail">확인</button>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" class="btn btn-cancel btn-block">취소</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal : 이메일 찾기 결과 -->
+    <div class="modal" tabindex="-1" role="dialog" id="modalEmailResult">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">이메일 찾기</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-alert mt-3">
+                        홍길동 님의 이메일은 <br>
+                        <sapn class="text-primary">hongild***@**ail.com</sapn> <br>
+                        입니다.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-6">
+                        <button type="button" class="btn btn-primary btn-block">로그인</button>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" class="btn btn-secondary btn-block">비밀번호 찾기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal : 비밀번호 찾기 -->
+    <div class="modal" tabindex="-1" role="dialog" id="modalPassword">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">비밀번호 찾기</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>관리자 정보에 입력하신 정보와 일치할 경우 이메일 주소의 일부를 조회할 수 있습니다.</p>
+                    <div class="form-group">
+                        <label for="formApparatus">기관</label>
+                        <select name="" id="formApparatus" class="form-control">
+                            <option value="">기관선택</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="formUserName2">이름</label>
+                        <input type="text" class="form-control" id="formUserName2">
+                    </div>
+                    <div class="form-group mb-0">
+                        <label for="formUserEmail">이메일</label>
+                        <input type="email" class="form-control" id="formUserEmail">
+                    </div>
+                    <div class="form-group mb-0">
+                        <label for="formNumber">인증번호</label>
+                        <div class="row row-10">
+                            <div class="col-7 col-md-8">
+                                <input type="email" class="form-control" id="formNumber">
+                            </div>
+                            <div class="col-5 col-md-4">
+                                <button type="button" class="btn btn-dark btn-block btn-square">인증번호 전송</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-6">
+                        <button type="button" class="btn btn-primary btn-block" id="btnPw">확인</button>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" class="btn btn-cancel btn-block">취소</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal : 비밀번호 찾기 결과 -->
+    <div class="modal" tabindex="-1" role="dialog" id="modalPasswordResult">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">비밀번호 찾기</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center mt-3">
+                        비밀번호를 재설정 하실 수 있는 링크를 <br>이메일로 전송하였습니다.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-5">
+                        <button type="button" class="btn btn-primary btn-block">로그인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('#btnEmail').on('click',function(){
+                $('#modalEmail').modal('hide');
+                $('#modalEmailResult').modal('show');
+            });
+            $('#btnPw').on('click',function(){
+                $('#modalPassword').modal('hide');
+                $('#modalPasswordResult').modal('show');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
