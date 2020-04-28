@@ -1,136 +1,99 @@
-<div id="header">    
-    <div class="container-fluid">
-        <div class="header-row">
-            <h1 class="logo"><a href="#none">약꾹 OAM</a></h1>
-            <div class="header-menu">
-                <p class="welcome"><strong>운영자</strong> 님 환영합니다!</p>
+<div id="header">
+    <div class="header-top">
+        <div class="container">
+            <div class="row align-items-center">
+                <h1 class="logo"><a href=""><span class="sr-only">gcon</span></a></h1>
+                <div class="header-search">
+                    <form action="">
+                        <fieldset>
+                            <legend>검색</legend>
+                            <div class="search">
+                                <select name="" id="" title="구분 선택" class="form-control">
+                                    <option value="">전체</option>
+                                    <option value="">콘테스트</option>
+                                    <option value="">콘테스트</option>
+                                </select>
+                                <input type="text" titld="검색어 입력" placeholder="어떤 프로젝트를 찾고 계신가요?" class="form-control">
+                                <div class="button">
+                                    <button type="submit" class="btn btn-dark"><i class="fas fa-search"><span class="sr-only">검색</span></i></button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
                 <div class="menu">
                     <ul>
-                        <li>
-                            <a href="">내정보</a>
-                        </li>
-                        <li>
-                            <a href="../0_login/login.html">로그아웃</a>
-                        </li>
-                    </ul> 
-                </div>                   
+                        <li><a href=""><span>로그인</span></a></li>
+                        <li><a href=""><span>무료회원가입</span></a></li>
+                        <li><a href=""><span>고객지원</span></a></li>
+                    </ul>
+                </div>
             </div>
-        </div>        
-        <nav id="gnb">
-            <div class="gnb">
-                <ul class="depth1">
-                    <li class="active">
-                        <a href="../1_member/member_list.html"><span>회원관리</span></a>
-                        <div class="depth2">
-                            <ul>
-                                <li class="active"><a href="../1_member/member_list.html"><span>회원관리</span></a></li>
-                                <li><a href="../1_member/non_member_list.html"><span>탈퇴회원 관리</span></a></li>
-                            </ul>
-                        </div>
+        </div>
+    </div>
+    <div class="header-bottom">
+        <div class="container">
+            <div id="nav">
+                <ul class="row row-0">
+                    <li class="col allmenu">
+                        <div><a href=""><i class="fas fa-bars mr-2"></i>메뉴 전체보기</a></div>
                     </li>
-                    <li>
-                        <a href="../2_button/button_list.html"><span>버튼관리</span></a>
-                        <div class="depth2">
-                            <ul>
-                                <li><a href="../2_button/button_list.html"><span>버튼관리</span></a></li>
-                            </ul>
-                        </div>
+                    <li class="col">
+                        <div><a href="">콘테스트 개최</a></div>
+                        <ul>
+                            <li><a href="">콘테스트 개최하기</a></li>
+                            <li><a href="">G콘 상품소개</a></li>
+                            <li><a href="">G콘 이용방법</a></li>
+                        </ul>
                     </li>
-                    <li>
-                        <a href="../3_organization/organization_list.html"><span>기관/관리자 관리</span></a>
-                        <div class="depth2">
-                            <ul>
-                                <li><a href="../3_organization/organization_list.html"><span>기관관리</span></a></li>
-                                <li><a href="../3_organization/admin_list.html"><span>관리자관리</span></a></li>
-                                <li><a href="../3_organization/authority_list.html"><span>관리자권한 관리</span></a></li>
-                                <li><a href="../3_organization/log_list.html"><span>관리자 접속 LOG</span></a></li>
-                            </ul>
-                        </div>
+                    <li class="col">
+                        <div><a href="">모두의 콘테스트</a></div>
+                        <ul>
+                            <li><a href="">진행중인 콘테스트</a></li>
+                            <li><a href="">인기 콘테스트</a></li>
+                            <li><a href="">임박 콘테스트</a></li>
+                            <li><a href="">종료 콘테스트</a></li>
+                        </ul>
                     </li>
-                    <li>
-                        <a href="../4_app/service_list.html"><span>앱 관리</span></a>
-                        <div class="depth2">
-                            <ul>
-                                <li><a href="../4_app/service_list.html"><span>서비스 관리</span></a></li>
-                                <li><a href="../4_app/version_list.html"><span>앱 버전 관리</span></a></li>
-                                <li><a href="../4_app/medicine_list.html"><span>약 등록</span></a></li>
-                                <li><a href="../4_app/terms_classification_list.html"><span>약관 종류 관리</span></a></li>
-                                <li><a href="../4_app/terms_list.html"><span>약관 관리</span></a></li>
-                            </ul>
-                        </div>
+                    <li class="col">
+                        <div><a href="">행사/전시회</a></div>
+                        <ul>
+                            <li><a href="">최신 행사/전시</a></li>
+                            <li><a href="">인기 행사/전시</a></li>
+                            <li><a href="">종료 행사/전시</a></li>
+                            <li><a href="">행사/전시 대행문의</a></li>
+                        </ul>
                     </li>
-                    <li>
-                        <a href="../5_customer/qna_list.html"><span>1:1문의 관리</span></a>
-                        <div class="depth2">
-                            <ul>
-                                <li><a href="../5_customer/qna_list.html"><span>1:1문의 관리</span></a></li>
-                            </ul>
-                        </div>
+                    <li class="col">
+                        <div><a href="">G-폴리오</a></div>
+                        <ul>
+                            <li><a href="">콘테스트</a></li>
+                            <li><a href="">행사/전시</a></li>
+                            <li><a href="">디자인/마케팅</a></li>
+                            <li><a href="">수상작갤러리</a></li>
+                        </ul>
+                    </li>
+                    <li class="col">
+                        <div><a href="">커뮤니티</a></div>
+                        <ul>
+                            <li><a href="">콘테스트 팀원모집</a></li>
+                            <li><a href="">행사/전시 스탭모집</a></li>
+                        </ul>
+                    </li>
+                    <li class="col-auto icon">
+                        <div class="ico-message"><a href="">
+                            <i class="far fa-comment-dots"></i><span class="sr-only">메세지 알림</span>
+                            <span class="badge badge-primary navbar-badge">15</span>
+                        </a></div>
+                        <div class="ico-notice"><a href="">
+                            <i class="far fa-bell"></i><span class="sr-only">공지 알림</span>
+                            <span class="badge badge-primary navbar-badge">15</span>
+                        </a></div>
                     </li>
                 </ul>
             </div>
-        </nav>
-
-        <!-- 모바일 전체 메뉴 버튼 -->
-        <button class="sidebar-toggler" type="button">
-            <i class="fas fa-bars"><span class="sr-only">전체 메뉴</span></i>
-        </button>
+        </div>
     </div>
 </div>
 
 <div id="dim"></div>
-<!-- 모바일 전체 메뉴 -->
-<aside id="sidebar">
-    <nav class="sidebar">
-        <ul class="depth1">
-            <li class="active">
-                <a href="javascript:;"><i class="fas fa-user"></i><span>회원관리</span></a>
-                <div class="depth2">
-                    <ul>
-                        <li class="active"><a href="../1_member/member_list.html"><span>회원관리</span></a></li>
-                        <li><a href="../1_member/non_member_list.html"><span>탈퇴회원 관리</span></a></li>
-                    </ul>
-                </div>
-            </li>
-            <li>
-                <a href="javascript:;"><i class="fas fa-link"></i><span>버튼관리</span></a>
-                <div class="depth2">
-                    <ul>
-                        <li><a href="../2_button/button_list.html"><span>버튼관리</span></a></li>
-                    </ul>
-                </div>
-            </li>
-            <li>
-                <a href="javascript:;"><i class="fas fa-tools"></i><span>기관/관리자 관리</span></a>
-                <div class="depth2">
-                    <ul>
-                        <li><a href="../3_organization/organization_list.html"><span>기관관리</span></a></li>
-                        <li><a href="../3_organization/admin_list.html"><span>관리자관리</span></a></li>
-                        <li><a href="../3_organization/authority_list.html"><span>관리자권한 관리</span></a></li>
-                        <li><a href="../3_organization/log_list.html"><span>관리자 접속 LOG</span></a></li>
-                    </ul>
-                </div>
-            </li>
-            <li>
-                <a href="javascript:;"><i class="fas fa-mobile-alt"></i><span>앱 관리</span></a>
-                <div class="depth2">
-                    <ul>
-                        <li><a href="../4_app/service_list.html"><span>서비스 관리</span></a></li>
-                        <li><a href="../4_app/version_list.html"><span>앱 버전 관리</span></a></li>
-                        <li><a href="../4_app/medicine_list.html"><span>약 등록</span></a></li>
-                        <li><a href="../4_app/terms_classification_list.html"><span>약관 종류 관리</span></a></li>
-                        <li><a href="../4_app/terms_list.html"><span>약관 관리</span></a></li>
-                    </ul>
-                </div>
-            </li>
-            <li>
-                <a href="javascript:;"><i class="fas fa-comment-dots"></i><span>1:1문의 관리</span></a>
-                <div class="depth2">
-                    <ul>
-                        <li><a href="../5_customer/qna_list.html"><span>1:1문의 관리</span></a></li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
-    </nav>
-</aside>
