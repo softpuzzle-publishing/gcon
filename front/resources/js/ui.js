@@ -1,6 +1,7 @@
 var Header = Header || {};
 
-+(function ($) {
++
+(function ($) {
     "use strict";
 
     Header.el = {};
@@ -9,6 +10,7 @@ var Header = Header || {};
         Header.nav();
         Header.sidebar();
         Header.top();
+        Header.sitemap();
     };
     Header.default = function () {
         Header.el = Header.el || {};
@@ -22,6 +24,7 @@ var Header = Header || {};
         Header.el.content = $("#content-block");
         Header.el.footer = $("#footer-block");
         Header.el.nav = $("#nav");
+        Header.el.btnSitemap = $("#btn-sitemap");
         Header.el.top = $(".btn-top");
         Header.el.btnSidebar = $(".sidebar-toggler");
 
@@ -44,7 +47,9 @@ var Header = Header || {};
         el.El = el.find("a");
         el.El.on("click", function (e) {
             e.preventDefault();
-            $("html, body").animate({ scrollTop: 0 }, 500);
+            $("html, body").animate({
+                scrollTop: 0
+            }, 500);
         });
         Header._top.resize = function () {
             Header._top.scroll();
@@ -93,6 +98,38 @@ var Header = Header || {};
         });
     };
 
+    Header.sitemap = function () {
+        var el = Header.el.btnSitemap;
+        Header.sitemap._isListOpen = false;
+
+        el.on("click", function () {
+            Header.sitemap.viewList(Header.sitemap._isListOpen);
+        });
+
+        Header.sitemap.viewList = function (b) {
+            var bool = b ? b : false;
+            if (!bool) {
+                if (!Header.sitemap._isListOpen) {
+                    Header.sitemap._isListOpen = true;
+                    el.addClass("active");
+                    Header.el.html.addClass("open-sitemap");
+                }
+            } else {
+                if (Header.sitemap._isListOpen) {
+                    Header.sitemap._isListOpen = false;
+                    el.removeClass("active");
+                    Header.el.html.removeClass("open-sitemap");
+                }
+            }
+        };
+
+        Header.el.win.on("click", function (e) {
+            if (!$(e.target).is("#btn-sitemap") && $(e.target).parents("#btn-sitemap").length === 0 && !$(e.target).is(".sitemap") && $(e.target).parents(".sitemap").length === 0) {
+                Header.sitemap.viewList(true);
+            }
+        });
+    };
+
     $(document).ready(function () {
         // 퍼블리싱 include
         // 개발시 삭제 필요
@@ -103,5 +140,12 @@ var Header = Header || {};
         setTimeout(function () {
             Header.init();
         }, 50);
+
+        $('[data-toggle="tooltip"]').tooltip();
+
+        $('.like a').on('click', function (e) {
+            e.preventDefault();
+            $(this).closest('.like').toggleClass('active');
+        });
     });
 })(jQuery);

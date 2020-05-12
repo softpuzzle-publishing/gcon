@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>gcon</title>
-    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
     <meta name="keywords" content="약꾹">
     <link rel="stylesheet" href="../../resources/css/bootstrap.css">
     <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
@@ -32,30 +31,37 @@
 
         <div id="content-block">
             <div class="content">
+
                 <article class="main">
                     <!-- notice -->
                     <section class="section-notice">
                         <div class="container">
-                            <div class="text">
-                                <span>성공 콘테스트 플랫폼, G콘에서는</span>
-                                <strong>누구나 <ㄷm class="text-primary">승자</em>가 된다</strong>
-                            </div>
-                            <div class="notice">
-                                <h2>공지사항/이벤트</h2>
-                                <ul>
-                                    <li>
-                                        <a href="">
-                                            <span class="txt">G콘 콘테스트 플랫폼 오픈 이벤트가 어쩌고 저쩌고...</span>
-                                            <span class="date">2020-01-01</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <span class="txt">G콘 콘테스트 플랫폼 오픈 이벤트가 어쩌고 저쩌고...</span>
-                                            <span class="date">2020-01-01</span>
-                                        </a>
-                                    </li>
-                                </ul>
+                            <div class="row row-100">
+                                <div class="col">
+                                    <div class="text">
+                                        <span>성공 콘테스트 플랫폼, G콘에서는</span>
+                                        <strong>누구나 <b class="text-primary">승자</b>가 된다</strong>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="notice">
+                                        <h2>공지사항/이벤트</h2>
+                                        <ul>
+                                            <li>
+                                                <a href="">
+                                                    <span class="txt">G콘 콘테스트 플랫폼 오픈 이벤트가 오픈 이벤트가오픈 이벤트가 어쩌고 저쩌고...</span>
+                                                    <span class="date">2020-01-01</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    <span class="txt">G콘 콘테스트 플랫폼 오픈 이벤트가 오픈 이벤트가 어쩌고 저쩌고...</span>
+                                                    <span class="date">2020-01-01</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -65,35 +71,41 @@
                             <div class="swiper-container">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <div class="item">
-                                            <div><img src="../../resources/images/common/logo_large.png" alt="gcon"></div>
-                                            <div>온라인으로 개최부터 홍보, 관리까지 <br>원스탑으로 한번에 고민해결!</div>
-                                            <div>G콘테스트 플랫폼</div>
-                                            <div><a href="" class="btn btn-lg btn-dark">콘테스트 개최하기</a></div>
+                                        <div class="item" style="background-image: url('../../resources/images/main/visual_img1.png');background-position: 75% 100%;">
+                                            <div class="cont">
+                                                <div class="container">
+                                                    <div><img src="../../resources/images/common/logo_large.png" alt="gcon"></div>
+                                                    <div class="text-white">온라인으로 개최부터 홍보, 관리까지 <br>원스탑으로 한번에 고민해결!</div>
+                                                    <div class="text-black">G콘테스트 플랫폼</div>
+                                                    <div class="button"><a href="" class="btn btn-lg btn-dark">콘테스트 개최하기</a></div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="swiper-button-next swiper-button-next-visual"></div>
+                                <div class="swiper-button-prev swiper-button-prev-visual"></div>
                             </div>
                             <div class="status">
                                 <div class="container">
-                                    <div class="row">
-                                        <div class="col">
-                                            <dt class="s1">
+                                    <div class="row justify-content-center">
+                                        <div class="col-auto">
+                                            <dl class="s1">
                                                 <dt>진행된 <br>콘테스트</dt>
                                                 <dd>10,890</dd>
-                                            </dt>
+                                            </dl>
                                         </div>
-                                        <div class="col">
-                                            <dt class="s2">
+                                        <div class="col-auto">
+                                            <dl class="s2">
                                                 <dt>활동 <br>출품회원</dt>
                                                 <dd>8,890</dd>
-                                            </dt>
+                                            </dl>
                                         </div>
-                                        <div class="col">
-                                            <dt class="s3">
+                                        <div class="col-auto">
+                                            <dl class="s3">
                                                 <dt>콘테스트 <br>누적 시상금</dt>
                                                 <dd>150,000,890</dd>
-                                            </dt>
+                                            </dl>
                                         </div>
                                     </div>
                                 </div>
@@ -105,37 +117,179 @@
                         <div class="container">
                             <div class="contest-list">
                                 <div class="swiper-container">
-                                    <div class="swiper-warpper">
+                                    <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <a href=""><img src="../../resources/images/temp/@poster1.png" alt=""></a>
+                                            <a href=""><span><img src="../../resources/images/temp/@poster1.png" alt=""></span></a>
                                         </div>
                                         <div class="swiper-slide">
-                                            <a href=""><img src="../../resources/images/temp/@poster2.png" alt=""></a>
+                                            <a href=""><span><img src="../../resources/images/temp/@poster2.png" alt=""></span></a>
                                         </div>
                                         <div class="swiper-slide">
-                                            <a href=""><img src="../../resources/images/temp/@poster1.png" alt=""></a>
+                                            <a href=""><span><img src="../../resources/images/temp/@poster1.png" alt=""></span></a>
                                         </div>
                                         <div class="swiper-slide">
-                                            <a href=""><img src="../../resources/images/temp/@poster2.png" alt=""></a>
+                                            <a href=""><span><img src="../../resources/images/temp/@poster1.png" alt=""></span></a>
                                         </div>
                                         <div class="swiper-slide">
-                                            <a href=""><img src="../../resources/images/temp/@poster1.png" alt=""></a>
+                                            <a href=""><span><img src="../../resources/images/temp/@poster2.png" alt=""></span></a>
                                         </div>
                                         <div class="swiper-slide">
-                                            <a href=""><img src="../../resources/images/temp/@poster2.png" alt=""></a>
+                                            <a href=""><span><img src="../../resources/images/temp/@poster1.png" alt=""></span></a>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="swiper-button-next swiper-button-next-contest"></div>
+                                <div class="swiper-button-prev swiper-button-prev-contest"></div>
                             </div>
                         </div>
                     </section>
                     <!-- 최신등록 게시물 -->
-                    <section class="section-new"></section>
+                    <section class="section-new">
+                        <div class="container">
+                            <div class="row row-90">
+                                <div class="col-6">
+                                    <div class="new-board">
+                                        <h2 class="tit">최신등록 콘테스트</h2>
+                                        <p class="desc">최근 개최된 콘테스트, 공모전을 소개합니다.</p>
+                                        <div class="row">
+                                            <div class="col"><div class="with-ico"><i>C</i> 콘테스트</div></div>
+                                            <div class="col"><a href="" class="more"><span>더보기</span></a></div>
+                                        </div>
+                                        <ul class="list">
+                                            <li class="row row-10">
+                                                <div class="col-6"><a href="">2020 제21회 양성평등 미디어상 공모</a></div>
+                                                <div class="col">한국양성평등교육진흥원</div>
+                                                <div class="col-auto">
+                                                    <div class="info"><span>7,000만원</span><span>D-19</span></div>
+                                                </div>
+                                            </li>
+                                            <li class="row row-10">
+                                                <div class="col-6"><a href="">2020 제21회 양성평등 미디어상 공모2020 제21회 양성평등 미디어상 공모</a></div>
+                                                <div class="col">한국양성평등교육진흥원</div>
+                                                <div class="col-auto">
+                                                    <div class="info"><span>7,000만원</span><span>D-19</span></div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="new-board">
+                                        <h2 class="tit">최신등록 행사/전시회</h2>
+                                        <p class="desc">최근 등록된 세미나, 전시회 등 행사를 소개합니다.</p>
+                                        <div class="row">
+                                            <div class="col"><div class="with-ico"><i>E</i> 행사/전시회</div></div>
+                                            <div class="col"><a href="" class="more"><span>더보기</span></a></div>
+                                        </div>
+                                        <ul class="list">
+                                            <li class="row row-10">
+                                                <div class="col-5"><a href="">2020 제21회 양성평등 미디어상 공모</a></div>
+                                                <div class="col">한국양성평등교육진흥원</div>
+                                                <div class="col-auto">
+                                                    <div class="info"><span>2020.01.01 ~ 2020.02.01</span></div>
+                                                </div>
+                                            </li>
+                                            <li class="row row-10">
+                                                <div class="col-5"><a href="">2020 제21회 양성평등 미디어상 공모2020 제21회 양성평등 미디어상 공모</a></div>
+                                                <div class="col">한국양성평등교육진흥원</div>
+                                                <div class="col-auto">
+                                                    <div class="info"><span>2020.01.01 ~ 2020.02.01</span></div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-btn"><a href="" class="btn btn-lg btn-gray">모두의 콘테스트 바로가기</a></div>
+                    </section>
                     <!-- G콘테스트 PR -->
-                    <section class="section-pr"></section>
+                    <section class="section-pr">
+                        <h2 class="tit">G콘테스트 주요 솔루션 &amp; 서비스</h2>
+                        <p class="desc">G콘테스트가 많은 콘테스트 주최사에게 선택받는 이유를 확인해 보세요.</p>
+                        <div class="img">
+                            <img src="../../resources/images/main/img_pr_content.png" alt="">
+                        </div>
+                        <div class="section-btn"><a href="" class="btn btn-lg btn-dark">콘테스트 개최하기</a></div>
+                    </section>
                     <!-- 포트폴리오 -->
-                    <section class="section-portfolio"></section>
+                    <section class="section-portfolio">
+                        <h2 class="tit">G콘테스트 주요 <strong>포트폴리오</strong></h2>
+                        <p class="desc">G콘테스트와 함께한 콘테스트/전시행사/디자인, 마케팅을 소개합니다.</p>
+                        <div class="container">
+                            <div class="portfolio-list">
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <a href="">
+                                                <span>
+                                                    <img src="../../resources/images/temp/@poster1.png" alt="">
+                                                    <div class="ribbon-wrapper">
+                                                        <div class="ribbon bg-success">콘테스트</div>
+                                                    </div>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="">
+                                                <span>
+                                                    <img src="../../resources/images/temp/@poster2.png" alt="">
+                                                    <div class="ribbon-wrapper">
+                                                        <div class="ribbon bg-danger">이벤트</div>
+                                                    </div>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="">
+                                                <span>
+                                                    <img src="../../resources/images/temp/@poster1.png" alt="">
+                                                    <div class="ribbon-wrapper">
+                                                        <div class="ribbon bg-success">콘테스트</div>
+                                                    </div>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="">
+                                                <span>
+                                                    <img src="../../resources/images/temp/@poster2.png" alt="">
+                                                    <div class="ribbon-wrapper">
+                                                        <div class="ribbon bg-primary">마케팅</div>
+                                                    </div>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="">
+                                                <span>
+                                                    <img src="../../resources/images/temp/@poster1.png" alt="">
+                                                    <div class="ribbon-wrapper">
+                                                        <div class="ribbon bg-success">콘테스트</div>
+                                                    </div>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="">
+                                                <span>
+                                                    <img src="../../resources/images/temp/@poster2.png" alt="">
+                                                    <div class="ribbon-wrapper">
+                                                        <div class="ribbon bg-danger">이벤트</div>
+                                                    </div>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next swiper-button-next-portfolio"></div>
+                                <div class="swiper-button-prev swiper-button-prev-portfolio"></div>
+                            </div>
+                        </div>
+                        <div class="section-btn"><a href="" class="btn btn-lg btn-gray">G폴리오 바로가기</a></div>
+                    </section>
                 </article>
+
             </div>
         </div>
 
@@ -145,7 +299,43 @@
     </div>
 
     <script>
-        $(document).ready(function(){
+        $(document).ready(function () {
+            //메인 비주얼
+            var swiperVisual = new Swiper('.visual .swiper-container', {
+                pagination: {
+                    el: '.swiper-pagination-visual',
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next-visual',
+                    prevEl: '.swiper-button-prev-visual',
+                },
+            });
+
+            //진행중인 콘테스트
+            var swiperContest = new Swiper('.contest-list .swiper-container', {
+                slidesPerView: 4,
+                spaceBetween: 15,
+                pagination: {
+                    el: '.swiper-pagination-contest',
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next-contest',
+                    prevEl: '.swiper-button-prev-contest',
+                },
+            });
+
+            //포트폴리오
+            var swiperPortfolio = new Swiper('.portfolio-list .swiper-container', {
+                slidesPerView: 5,
+                spaceBetween: 15,
+                pagination: {
+                    el: '.swiper-pagination-portfolio',
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next-portfolio',
+                    prevEl: '.swiper-button-prev-portfolio',
+                },
+            });
         });
     </script>
 
