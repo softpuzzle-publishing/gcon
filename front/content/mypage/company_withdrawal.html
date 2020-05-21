@@ -35,46 +35,31 @@
                 <!-- content -->
                 <article>
                     <div class="title-wrap">
-                        <h2 class="title">마이페이지_ 비밀번호 변경</h2>
+                        <h2 class="title">마이페이지_ 회원탈퇴</h2>
                     </div>
                     <div class="tab-center has-border">
                         <ul>
                             <li><a href=""><span>마이콘테스트</span></a></li>
                             <li><a href="company_notification.html"><span>알림 센터</span></a></li>
                             <li><a href="company_my_info.html"><span>회원정보 수정</span></a></li>
-                            <li class="active"><a href="company_my_password.html"><span>비밀번호 변경</span></a></li>
+                            <li><a href="company_my_password.html"><span>비밀번호 변경</span></a></li>
                             <li><a href="company_my_qna.html"><span>1:1문의 내역</span></a></li>
-                            <li><a href="company_withdrawal.html"><span>회원탈퇴</span></a></li>
+                            <li class="active"><a href="company_withdrawal.html"><span>회원탈퇴</span></a></li>
                         </ul>
                     </div>
                     <section>
                         <div class="container-center">
-                            <div class="form-area">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="form-group">
-                                            <label>현재 비밀번호</label>
-                                            <input type="password" class="form-control">
-                                        </div>
-                                    </div>
+                            <div class="withdrawal">
+                                <p class="txt1">정말 탈퇴하시겠습니까?</p>
+                                <p class="txt2">
+                                    콘테스트 개최 및 관리 등의 정보가 모두 삭제됩니다. <br>
+                                    동일한 이메일로 재가입을 하기 위해서는 인증절차가 필요합니다. <br>
+                                    이메일 계정정보 변경, 담당자명 변경 등을 원하시는 분은 고객센터로 문의주세요.
+                                </p>
+                                <p class="txt3">탈퇴 후 재가입하기 위해서는 기간이 소요됩니다.</p>
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalWithdrawal">탈퇴하기</button>
                                 </div>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="form-group">
-                                            <label>새 비밀번호</label>
-                                            <input type="password" class="form-control" placeholder="영문, 숫자, 특수문자 조합한 8자 이상">
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="form-group">
-                                            <label>새 비밀번호 확인</label>
-                                            <input type="password" class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text-center mt-4">
-                                <button type="text" class="btn btn-dark btn-lg btn-block">확인</button>
                             </div>
                         </div>
                     </section>
@@ -86,6 +71,27 @@
 
         <div id="footer-block">
             <!-- footer include -->
+        </div>
+    </div>
+
+    <!-- modal : 탈퇴 확인 -->
+    <div class="modal" tabindex="-1" role="dialog" id="modalWithdrawal">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p class="text-alert mt-3">
+                        정말 탈퇴 하시겠습니까?
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-auto">
+                        <button type="button" class="btn btn-gray" data-dismiss="modal">취소</button>
+                    </div>
+                    <div class="col-auto">
+                        <button type="button" class="btn btn-danger">확인</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

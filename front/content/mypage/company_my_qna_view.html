@@ -35,7 +35,7 @@
                 <!-- content -->
                 <article>
                     <div class="title-wrap">
-                        <h2 class="title">마이페이지_ 1:1문의 내역</h2>
+                        <h2 class="title">마이페이지_ 내가 작성한 글</h2>
                     </div>
                     <div class="tab-center has-border">
                         <ul>
@@ -49,49 +49,35 @@
                     </div>
                     <section>
                         <div class="container">
-                            <table class="table table-center">
-                                <caption>1:1문의 내역</caption>
-                                <colgroup>
-                                    <col style="width: 8%;">
-                                    <col>
-                                    <col style="width: 10%;">
-                                    <col style="width: 12%;">
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th>번호</th>
-                                        <th>제목</th>
-                                        <th>작성일</th>
-                                        <th>상태</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>5</td>
-                                        <td class="text-left"><a href="company_my_qna_view.html">문의 제목</a></td>
-                                        <td>2020-01-01</td>
-                                        <td>미접수</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td class="text-left"><a href="company_my_qna_view.html">문의 제목</a></td>
-                                        <td>2020-01-01</td>
-                                        <td>미접수</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td class="text-left"><a href="company_my_qna_view.html">문의 제목</a></td>
-                                        <td>2020-01-01</td>
-                                        <td>접수확인</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td class="text-left"><a href="company_my_qna_view.html">문의 제목</a></td>
-                                        <td>2020-01-01</td>
-                                        <td>답변완료</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="board-view">
+                                <div class="board-row subject">문의 제목</div>
+                                <div class="board-row">
+                                    <div class="row">
+                                        <div class="col">
+                                            <strong class="label">작성일</strong> 2020-01-01
+                                        </div>
+                                        <div class="col">
+                                            <strong class="label">조회수</strong> 1233
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="board-row">
+                                    <div class="contents-area">
+                                        내용내용 <br>내용내용 <br>내용내용 <br>내용내용 <br>내용내용 <br>내용내용 <br>
+
+                                        <div class="reply-area">
+                                            <div class="mb-3"><i class="fas fa-reply fa-rotate-180"></i></div>
+
+                                            답변 답변 답변 답변답변 답변답변 답변답변 답변답변 답변답변 답변답변 답변답변 답변답변 답변 <br>
+                                            답변 답변 <br>답변 답변 <br>답변 답변 <br>답변 답변 <br>답변 답변 <br>답변 답변 <br>답변 답변 <br>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center mt-5">
+                                <a href="individual_my_board.html" class="btn btn-dark btn-lg">목록</a>
+                            </div>
                         </div>
                     </section>
                 </article>
@@ -107,7 +93,6 @@
 
     <script>
         $(document).ready(function () {
-
         });
     </script>
 

@@ -78,6 +78,9 @@ var Header = Header || {};
         el.item.on("mouseleave", function () {
             el.item.removeClass("hover");
         });
+
+        $('.sitemap').append(el.find('.row').clone());
+
     };
 
     Header.sidebar = function () {
@@ -133,8 +136,8 @@ var Header = Header || {};
     $(document).ready(function () {
         // 퍼블리싱 include
         // 개발시 삭제 필요
-        $("#header-block").load("../../../content/_include/header.html");
-        $("#footer-block").load("../../../content/_include/footer.html");
+        $("#header-block").load("../../content/_include/header.html");
+        $("#footer-block").load("../../content/_include/footer.html");
 
         // 개발시 setTimeout은 빼고 Header.init(); 호출 필요
         setTimeout(function () {

@@ -2305,6 +2305,11 @@ template {
   border-left: 0;
 }
 
+.table-thead-bg tbody th {
+  background-color: #f8f9fb;
+  padding-left: 1rem;
+}
+
 .table-thead-bg td {
   padding: .7rem;
   border-left: 1px solid #dee2e6;
@@ -4940,16 +4945,16 @@ input[type="button"].btn-block {
 }
 
 .nav-tabs {
-  border-bottom: 2px solid #4f5050;
+  border-bottom: 1px solid #4f5050;
 }
 
 .nav-tabs .nav-item {
-  margin-bottom: -2px;
+  margin-bottom: -1px;
 }
 
 .nav-tabs .nav-link {
   text-align: center;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -4970,13 +4975,13 @@ input[type="button"].btn-block {
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #4f5050;
+  color: #000;
   background-color: #fff;
   border-color: #4f5050 #4f5050 #fff;
 }
 
 .nav-tabs .dropdown-menu {
-  margin-top: -2px;
+  margin-top: -1px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }

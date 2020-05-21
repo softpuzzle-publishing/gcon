@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>gcon</title>
+    <meta name="keywords" content="gcon">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/swiper-5.2.1/css/swiper.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jquery ui -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- swiper -->
+    <script src="../../resources/plugins/swiper-5.2.1/js/swiper.min.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header-block">
+            <!-- header include -->
+        </div>
+
+        <div id="content-block">
+            <div class="content">
+
+                <!-- content -->
+                <article>
+                    <div class="title-wrap">
+                        <h2 class="title">마이페이지_ 내가 작성한 글</h2>
+                    </div>
+                    <div class="tab-center has-border">
+                        <ul>
+                            <li><a href="individual_notification.html"><span>알림 센터</span></a></li>
+                            <li><a href="individual_my_contest.html"><span>참여 콘테스트</span></a></li>
+                            <li><a href="individual_my_favorite.html"><span>관심 콘테스트/행사</span></a></li>
+                            <li><a href="individual_my_prize.html"><span>나의 수상내역</span></a></li>
+                            <li class="active"><a href="individual_my_board.html"><span>내가 작성한 글</span></a></li>
+                            <li><a href="individual_my_info.html"><span>회원정보 수정</span></a></li>
+                            <li><a href="individual_my_password.html"><span>비밀번호 변경</span></a></li>
+                            <li><a href="individual_withdrawal.html"><span>회원탈퇴</span></a></li>
+                        </ul>
+                    </div>
+                    <section>
+                        <div class="container">
+                            <ul class="nav nav-tabs" id="faq-tab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="tab1-tab" data-toggle="pill" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">1:1 문의 내역</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="tab2-tab" data-toggle="pill" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">콘테스트 Q&amp;A</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content mt-4">
+                                <div class="tab-pane show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+                                    <div class="board-search">
+                                        <div class="row justify-content-between">
+                                            <div class="col-auto">
+                                                <!-- 총 478건 (1/48페이지) -->
+                                            </div>
+                                            <div class="col-auto">
+                                                <select name="" id="" class="form-control d-inline-block w-auto">
+                                                    <option value="">전체</option>
+                                                </select>
+                                                <input type="text" class="form-control d-inline-block w-auto">
+                                                <button type="submit" class="btn btn-dark"><i class="fas fa-search"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <table class="table table-center">
+                                        <caption>1:1문의 내역</caption>
+                                        <colgroup>
+                                            <col style="width: 8%;">
+                                            <col>
+                                            <col style="width: 10%;">
+                                            <col style="width: 12%;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>번호</th>
+                                                <th>제목</th>
+                                                <th>작성일</th>
+                                                <th>상태</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>5</td>
+                                                <td class="text-left"><a href="individual_my_board_view.html">문의 제목</a></td>
+                                                <td>2020-01-01</td>
+                                                <td>미접수</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td class="text-left"><a href="individual_my_board_view.html">문의 제목</a></td>
+                                                <td>2020-01-01</td>
+                                                <td>미접수</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td class="text-left"><a href="individual_my_board_view.html">문의 제목</a></td>
+                                                <td>2020-01-01</td>
+                                                <td>접수확인</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td class="text-left"><a href="individual_my_board_view.html">문의 제목</a></td>
+                                                <td>2020-01-01</td>
+                                                <td>답변완료</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="pagination-wrap">
+                                        <ul class="pagination justify-content-center">
+                                            <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>
+                                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                            <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+                                    <div class="board-search">
+                                        <div class="row justify-content-between">
+                                            <div class="col-auto">
+                                                <!-- 총 478건 (1/48페이지) -->
+                                            </div>
+                                            <div class="col-auto">
+                                                <select name="" id="" class="form-control d-inline-block w-auto">
+                                                    <option value="">전체</option>
+                                                </select>
+                                                <input type="text" class="form-control d-inline-block w-auto">
+                                                <button type="submit" class="btn btn-dark"><i class="fas fa-search"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <table class="table table-center">
+                                        <caption>콘테스트 Q&amp;A</caption>
+                                        <colgroup>
+                                            <col style="width: 8%;">
+                                            <col style="width: 30%;">
+                                            <col>
+                                            <col style="width: 12%;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>번호</th>
+                                                <th>콘테스트명</th>
+                                                <th>제목</th>
+                                                <th>작성일</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>콘테스트명</td>
+                                                <td class="text-left"><a href="individual_my_board_view.html">문의 제목</a></td>
+                                                <td>2020-01-01</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="pagination-wrap">
+                                        <ul class="pagination justify-content-center">
+                                            <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>
+                                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                            <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+                <!-- //content -->
+
+            </div>
+        </div>
+
+        <div id="footer-block">
+            <!-- footer include -->
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+        });
+    </script>
+
+</body>
+
+</html>
