@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>gcon</title>
+    <meta name="keywords" content="gcon">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/swiper-5.2.1/css/swiper.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jquery ui -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- swiper -->
+    <script src="../../resources/plugins/swiper-5.2.1/js/swiper.min.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header-block">
+            <!-- header include -->
+        </div>
+
+        <div id="content-block">
+            <div class="content">
+
+                <!-- content -->
+                <article>
+                    <div class="title-wrap">
+                        <h2 class="title">지원센터_ 1:1 문의</h2>
+                    </div>
+                    <div class="tab-center has-border">
+                        <ul>
+                            <li><a href="notice_list.html"><span>공지사항</span></a></li>
+                            <li><a href="faq.html"><span>자주 묻는 질문</span></a></li>
+                            <li class="active"><a href="qna.html"><span>1:1 문의</span></a></li>
+                            <li><a href="event_list.html"><span>이벤트</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="form-inline justify-content-center mb-2 mt-5">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input" name="userIdType" id="userId1" data-match="userIdType1" checked>
+                            <label class="custom-control-label" for="userId1">주최 사용자</label>
+                        </div>
+                        <div class="custom-control custom-radio ml-3">
+                            <input type="radio" class="custom-control-input" name="userIdType" id="userId2" data-match="userIdType2">
+                            <label class="custom-control-label" for="userId2">참여 사용자</label>
+                        </div>
+                    </div>
+                    <section>
+                        <div class="container-center">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row" data-group="userIdType1">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label>기관(회사)명</label>
+                                                <input type="text" class="form-control" placeholder="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" data-group="userIdType1">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label>담당자 이름</label>
+                                                <input type="text" class="form-control" placeholder="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" data-group="userIdType1">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label>담당자 연락처</label>
+                                                <div class="row row-10 align-items-center">
+                                                    <div class="col">
+                                                        <input type="tel" class="form-control" placeholder="">
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        -
+                                                    </div>
+                                                    <div class="col">
+                                                        <input type="tel" class="form-control" placeholder="">
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        -
+                                                    </div>
+                                                    <div class="col">
+                                                        <input type="tel" class="form-control" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="text-form">※ 유선으로 상담이 이루어지므로, 연락 가능한 번호를 남겨주세요.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" data-group="userIdType1">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label>담당자 이메일</label>
+                                                <div class="row row-10 align-items-center">
+                                                    <div class="col-5">
+                                                        <input type="email" class="form-control" placeholder="">
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        @
+                                                    </div>
+                                                    <div class="col">
+                                                        <input type="email" class="form-control" placeholder="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label>문의 제목</label>
+                                                <input type="text" class="form-control" placeholder="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label>문의 내용</label>
+                                                <div class="text-form mt-0 mb-2">
+                                                    원활한 상담을 위해 자세한 내용을 작성해주세요. <br> 작성내용을 바탕으로 연락처 또는 이메일로 친절히 답변 드리겠습니다. <br>더 자세한 문의사항은 고객센터(02-000-0000)로 문의 부탁드립니다.
+                                                </div>
+                                                <textarea name="" id="" cols="" rows="7" class="form-control"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label>첨부파일</label>
+                                                <div class="custom-file">
+                                                    <input type="file" class="custom-file-input" id="inputFile1">
+                                                    <label class="custom-file-label" for="inputFile1">Choose file...</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <button type="button" class="btn btn-dark btn-lg btn-block">문의하기</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+                <!-- //content -->
+
+            </div>
+        </div>
+
+        <div id="footer-block">
+            <!-- footer include -->
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+
+        });
+    </script>
+
+</body>
+
+</html>

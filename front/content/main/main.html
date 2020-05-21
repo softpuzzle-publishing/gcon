@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>gcon</title>
-    <meta name="keywords" content="약꾹">
+    <meta name="keywords" content="gcon">
     <link rel="stylesheet" href="../../resources/css/bootstrap.css">
     <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
@@ -83,8 +83,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="swiper-button-next swiper-button-next-visual"></div>
-                                <div class="swiper-button-prev swiper-button-prev-visual"></div>
+                                <!-- <div class="swiper-button-next swiper-button-white swiper-button-next-visual"></div>
+                                <div class="swiper-button-prev swiper-button-white swiper-button-prev-visual"></div> -->
                             </div>
                             <div class="status">
                                 <div class="container">
@@ -301,15 +301,17 @@
     <script>
         $(document).ready(function () {
             //메인 비주얼
-            var swiperVisual = new Swiper('.visual .swiper-container', {
-                pagination: {
-                    el: '.swiper-pagination-visual',
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next-visual',
-                    prevEl: '.swiper-button-prev-visual',
-                },
-            });
+            if($('.visual .swiper-slide').length > 1){
+                var swiperVisual = new Swiper('.visual .swiper-container', {
+                    pagination: {
+                        el: '.swiper-pagination-visual',
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next-visual',
+                        prevEl: '.swiper-button-prev-visual',
+                    },
+                });
+            }
 
             //진행중인 콘테스트
             var swiperContest = new Swiper('.contest-list .swiper-container', {

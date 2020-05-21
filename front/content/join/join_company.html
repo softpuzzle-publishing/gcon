@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>gcon</title>
+    <meta name="keywords" content="gcon">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/swiper-5.2.1/css/swiper.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jquery ui -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- swiper -->
+    <script src="../../resources/plugins/swiper-5.2.1/js/swiper.min.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+</head>
+
+<body>
+
+    <div class="join">
+        <div class="join-wrap">
+            <div class="join-header">
+                <a href="../main/main.html"><img src="../../resources/images/common/logo_dark.png" alt="gcon"></a>
+            </div>
+            <div class="join-body">
+                <ul class="nav nav-pills nav-justified">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="javascript:;">주최 사용자 회원가입</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="join_individual.html">참여 사용자 회원가입</a>
+                    </li>
+                </ul>
+                <div class="form-subtitle">주최 사용자 정보 <span class="text-danger">(전체 필수)</span></div>
+                <div class="form-area">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label>사업자 등록번호</label>
+                                <div class="row row-10">
+                                    <div class="col-9">
+                                        <input type="text" class="form-control" placeholder="사업자 등록번호 입력">
+                                    </div>
+                                    <div class="col-3">
+                                        <button class="btn btn-gray btn-block">중복확인</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label>회사 이름</label>
+                                <input type="text" class="form-control" placeholder="회사명 / 기관명 / 단체명">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label>회사 휴대전화</label>
+                                <input type="text" class="form-control" placeholder="예) 03112345678 (숫자만 입력)">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label>회사 주소</label>
+                                <input type="text" class="form-control" placeholder="주소 입력">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label>담당자 이름</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label>담당자 휴대전화</label>
+                                <input type="text" class="form-control" placeholder="예) 01012345678 (숫자만 입력)">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="form-subtitle">계정 정보 <span class="text-danger">(전체 필수)</span></div>
+                <div class="form-area">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label>이메일 계정 (아이디)</label>
+                                <div class="row row-10">
+                                    <div class="col-9">
+                                        <input type="email" class="form-control" placeholder="관리자 이메일 주소">
+                                    </div>
+                                    <div class="col-3">
+                                        <button class="btn btn-gray btn-block">인증요청</button>
+                                    </div>
+                                </div>
+                                <p class="text-form">위 메일로 인증번호가 발송됩니다.</p>
+                                <div class="row row-10 mt-2">
+                                    <div class="col-9">
+                                        <input type="email" class="form-control" placeholder="인증번호 입력 (10분 이내)">
+                                    </div>
+                                    <div class="col-3">
+                                        <button class="btn btn-gray btn-block">확인</button>
+                                    </div>
+                                </div>
+                                <p class="text-form">5분 이내에 인증번호가 오지 않는 경우 이메일 주소를 다시 한번 확인해주세요.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label>비밀번호</label>
+                                <input type="password" class="form-control" placeholder="영문, 숫자, 특수문자 조합한 8자 이상">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label>비밀번호 확인</label>
+                                <input type="password" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-subtitle">G콘테스트 약관 확인</div>
+                <div class="term-wrap">
+                    <div class="custom-control custom-checkbox mb-2">
+                        <input type="checkbox" class="custom-control-input" name="" id="chkAll" data-event="allcheck" data-group="agree-check">
+                        <label class="custom-control-label" for="chkAll"><strong>전체약관 동의</strong></label>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" name="" id="chk1" data-group="agree-check">
+                                <label class="custom-control-label" for="chk1">회원가입 및 이용약관 <span class="text-danger">(필수)</span></label>
+                            </div>
+                            <div class="card-actions">
+                                <button type="button" class="card-action card-toggler" data-toggle="collapse" data-target="#card1" aria-expanded="true" aria-controls="card1">자세히 보기</button>
+                            </div>
+                        </div>
+                        <div class="collapse show" id="card1">
+                            <div class="card-body">
+                                <textarea name="" id="" cols="" rows="" class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" name="" id="chk2" data-group="agree-check">
+                                <label class="custom-control-label" for="chk2">개인정보 처리방침 <span class="text-danger">(필수)</span></label>
+                            </div>
+                            <div class="card-actions">
+                                <button type="button" class="card-action card-toggler" data-toggle="collapse" data-target="#card2" aria-expanded="false" aria-controls="card2">자세히 보기</button>
+                            </div>
+                        </div>
+                        <div class="collapse" id="card2">
+                            <div class="card-body">
+                                <textarea name="" id="" cols="" rows="" class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" name="" id="chk3" data-group="agree-check">
+                                <label class="custom-control-label" for="chk3">마케팅 정보 수신 <span>(선택)</span></label>
+                            </div>
+                            <div class="card-actions">
+                                <button type="button" class="card-action card-toggler" data-toggle="collapse" data-target="#card3" aria-expanded="false" aria-controls="card3">자세히 보기</button>
+                            </div>
+                        </div>
+                        <div class="collapse" id="card3">
+                            <div class="card-body">
+                                <textarea name="" id="" cols="" rows="" class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <button type="text" class="btn btn-dark btn-lg btn-block">가입 완료하기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+
+        });
+    </script>
+
+</body>
+
+</html>

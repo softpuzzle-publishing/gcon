@@ -1,7 +1,7 @@
 <div id="header">
     <div class="header-top">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="header-top-row">
                 <h1 class="logo"><a href="../main/main.html"><span class="sr-only">gcon</span></a></h1>
                 <div class="header-search">
                     <form action="">
@@ -23,9 +23,25 @@
                 </div>
                 <div class="menu">
                     <ul>
-                        <li><a href=""><span>로그인</span></a></li>
-                        <li><a href=""><span>무료회원가입</span></a></li>
-                        <li><a href=""><span>고객지원</span></a></li>
+                        <li><a href="../login/login.html"><span>로그인</span></a></li>
+                        <li class="dropdown">
+                            <a href="#none" data-toggle="dropdown" aria-expanded="false"><span>홍길동님</span></a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <!-- 주최자 -->
+                                <a class="dropdown-item" href="" target="_blank" title="새창">마이콘테스트</a>
+                                <a class="dropdown-item" href="../mypage/notification.html">마이페이지</a>
+                                <!-- 참여자 -->
+                                <a class="dropdown-item" href="../mypage/my_contest.html">참여콘테스트</a>
+                                <a class="dropdown-item" href="../mypage/my_favorite.html">관심 콘테스트/행사</a>
+                                <a class="dropdown-item" href="../mypage/my_prize.html">나의 수상내역</a>
+                                <a class="dropdown-item" href="../mypage/my_board.html">내가 작성한 글</a>
+                                <a class="dropdown-item" href="../mypage/member_info_individual.html">회원정보 수정</a>
+                                <!-- 공통 -->
+                                <a class="dropdown-item" href="">로그아웃</a>
+                            </div>
+                        </li>
+                        <li><a href="../join/join_individual.html"><span>회원가입</span></a></li>
+                        <li><a href="../customer/notice_list.html"><span>고객지원</span></a></li>
                     </ul>
                 </div>
             </div>
@@ -36,42 +52,43 @@
             <div id="nav">
                 <ul class="row row-0">
                     <li class="col allmenu">
-                        <div><a href="#javascript:;" id="btn-sitemap"><i class="fas fa-bars mr-2"></i>메뉴 전체보기</a></div>
+                        <div><a href="javascript:;" id="btn-sitemap"><i class="fas fa-bars mr-2"></i>메뉴 전체보기</a></div>
                     </li>
                     <li class="col has-treeview">
                         <div><a href="">콘테스트 개최 <i class="fas fa-star"></i></a></div>
                         <ul>
                             <li><a href="">콘테스트 개최하기</a></li>
-                            <li><a href="">G콘 상품소개</a></li>
-                            <li><a href="">G콘 이용방법</a></li>
+                            <li><a href="../contest_hold/contest_intro.html">G콘 상품소개</a></li>
+                            <li><a href="../contest_hold/contest_guide.html">G콘 이용방법</a></li>
                         </ul>
                     </li>
                     <li class="col">
                         <div><a href="../contest/contest.html">모두의 콘테스트</a></div>
                     </li>
                     <li class="col has-treeview">
-                        <div><a href="">행사/전시회</a></div>
+                        <div><a href="../event/event_list.html">행사/전시회</a></div>
                         <ul>
-                            <li><a href="">최신 행사/전시</a></li>
-                            <li><a href="">인기 행사/전시</a></li>
-                            <li><a href="">종료 행사/전시</a></li>
-                            <li><a href="">행사/전시 대행문의</a></li>
+                            <li><a href="../event/event_list.html">최신 행사/전시</a></li>
+                            <li><a href="../event/event_list.html">인기 행사/전시</a></li>
+                            <li><a href="../event/event_list.html">종료 행사/전시</a></li>
+                            <li><a href="../event/event_qna.html">행사/전시 대행문의</a></li>
                         </ul>
                     </li>
                     <li class="col has-treeview">
-                        <div><a href="">G-폴리오</a></div>
+                        <div><a href="../gpolio/gpolio_list.html">G-폴리오</a></div>
                         <ul>
-                            <li><a href="">콘테스트</a></li>
-                            <li><a href="">행사/전시</a></li>
-                            <li><a href="">디자인/마케팅</a></li>
-                            <li><a href="">수상작갤러리</a></li>
+                            <li><a href=../gpolio/gpolio_list.html"">콘테스트</a></li>
+                            <li><a href="../gpolio/gpolio_list.html">행사/전시</a></li>
+                            <li><a href="../gpolio/gpolio_list.html">디자인/마케팅</a></li>
+                            <li><a href="../gpolio/gallery_list.html">수상작갤러리</a></li>
                         </ul>
                     </li>
                     <li class="col has-treeview">
-                        <div><a href="">커뮤니티</a></div>
+                        <div><a href="../community/member_list.html">커뮤니티</a></div>
                         <ul>
-                            <li><a href="">콘테스트 팀원모집</a></li>
-                            <li><a href="">행사/전시 스탭모집</a></li>
+                            <li><a href="../community/member_list.html">콘테스트 팀원모집</a></li>
+                            <li><a href="../community/staff_list.html">행사/전시 스탭모집</a></li>
+                            <li><a href="../community/source_list.html">디자인 소스</a></li>
                         </ul>
                     </li>
                     <li class="col-auto icon">

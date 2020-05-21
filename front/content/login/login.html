@@ -4,124 +4,158 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>약꾹</title>
-    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
-    <meta name="keywords" content="약꾹">
+    <title>gcon</title>
+    <meta name="keywords" content="gcon">
     <link rel="stylesheet" href="../../resources/css/bootstrap.css">
     <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="../../resources/plugins/MDTimePicker/mdtimepicker.css">
+    <link rel="stylesheet" href="../../resources/plugins/swiper-5.2.1/css/swiper.min.css">
     <link rel="stylesheet" href="../../resources/css/style.css">
     <!-- jquery -->
     <script src="../../resources/plugins/jquery/jquery.min.js"></script>
-    <!-- jquery -->
+    <!-- jquery ui -->
     <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
     <!-- bootstrap -->
     <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- timepicker -->
-    <script src="../../resources/plugins/MDTimePicker/mdtimepicker.js"></script>
+    <!-- swiper -->
+    <script src="../../resources/plugins/swiper-5.2.1/js/swiper.min.js"></script>
     <!-- ui 관련 -->
     <script src="../../resources/js/ui.js"></script>
 </head>
 
 <body class="body-login">  <!-- 로그인 페이지에 body-login 클래스 필요 -->
-    <div id="wrap">
-        <div id="content-block">
 
-            <div id="login">
-                <div class="half left">
-                    <img src="../../resources/images/logo.svg" alt="약꾹 로고">
+    <div id="login" class="login">
+        <div class="login-wrap">
+            <div class="login-header">
+                <a href="../main/main.html"><img src="../../resources/images/common/logo_dark.png" alt="gcon"></a>
+            </div>
+            <div class="login-body">
+                <div class="login-form">
+                    <form action="">
+                        <div class="form-group">
+                            <input type="email" class="form-control form-control-lg" placeholder="이메일">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control form-control-lg" placeholder="비밀번호">
+                        </div>
+                        <div class="form-group btn-area">
+                            <button type="submit" class="btn btn-secondary btn-block btn-lg" onclick="window.location.href='../main/main.html'">로그인</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="half right">
-                    <div class="login">
-                        <div class="form">
-                            <h1>약꾹 OAM</h1>
-                            <div class="form-group">
-                                <input type="email" class="form-control" placeholder="이메일">
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control" placeholder="비밀번호">
-                            </div>
-                            <div class="form-group">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="emailSave">
-                                    <label class="custom-control-label" for="emailSave">이메일 저장</label>
-                                </div>
-                            </div>
-                            <div class="form-group btn-area">
-                                <button type="submit" class="btn btn-primary btn-block" onclick="window.location.href='../1_member/member_list.html'">로그인</button>
-                            </div>
-                            <ul class="menu">
-                                <li><a href="#modalEmail" data-toggle="modal" data-role="button">이메일 찾기</a></li>
-                                <li><a href="#modalPassword" data-toggle="modal" data-role="button">비밀번호 찾기</a></li>
-                            </ul>
+                <ul class="menu">
+                    <li><a href="#modalId" data-toggle="modal" data-role="button">아이디 찾기</a></li>
+                    <li><a href="#modalPassword" data-toggle="modal" data-role="button">비밀번호 찾기</a></li>
+                </ul>
+                <div class="banners" style="display:none">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="../../resources/images/temp/@banner.jpg" alt="배너사이즈 524x195"></div>
+                            <div class="swiper-slide"><img src="../../resources/images/temp/@banner.jpg" alt="배너사이즈 524x195"></div>
+                        </div>
+                        <div class="swiper-pagination swiper-pagination-banners"></div>
+                    </div>
+                </div>
+                <div class="join-go">
+                    <p>G-CONTEST가 처음이신가요?</p>
+                    <div class="row row-20">
+                        <div class="col-6">
+                            <a href="../join/join_company.html" class="btn-join company">
+                                <span class="icon"><img src="../../resources/images/content/login_icon1.png" alt=""></span>
+                                <strong>주최 사용자 <span class="text-secondary">회원가입</span></strong>
+                                <span class="txt">(기업, 기관, 단체)</span>
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="../join/join_individual.html" class="btn-join individual">
+                                <span class="icon"><img src="../../resources/images/content/login_icon2.png" alt=""></span>
+                                <strong>참여 사용자 <span class="text-secondary">회원가입</span></strong>
+                                <span class="txt">(개인)</span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="footer-block">
-                © Medi Plus Solution Co., Ltd. All rights reserved.
-            </div>
-
         </div>
     </div>
 
-    <!-- modal : 이메일 찾기 -->
-    <div class="modal" tabindex="-1" role="dialog" id="modalEmail">
+    <!-- modal : 아이디 찾기 -->
+    <div class="modal" tabindex="-1" role="dialog" id="modalId">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">이메일 찾기</h5>
+                    <h5 class="modal-title">아이디 찾기</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>관리자 정보에 입력하신 정보와 일치할 경우 이메일 주소의 일부를 조회할 수 있습니다.</p>
-                    <div class="form-group">
-                        <label for="formUserName">이름</label>
-                        <input type="text" class="form-control" id="formUserName">
+                    <p class="text-center mb-3">회원가입 시 등록한 정보로 아이디를 찾을 수 있습니다.</p>
+                    <div class="form-inline justify-content-center mb-3">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input" name="userIdType" id="userId1" data-match="userIdType1" checked>
+                            <label class="custom-control-label" for="userId1">주최 사용자</label>
+                        </div>
+                        <div class="custom-control custom-radio ml-3">
+                            <input type="radio" class="custom-control-input" name="userIdType" id="userId2" data-match="userIdType2">
+                            <label class="custom-control-label" for="userId2">참여 사용자</label>
+                        </div>
                     </div>
-                    <div class="form-group mb-0">
-                        <label for="formUserMobile">휴대전화</label>
-                        <input type="tel" class="form-control" id="formUserMobile">
+                    <div class="form-group" data-group="userIdType1">
+                        <input type="tel" class="form-control form-control-lg" placeholder="사업자번호 (숫자만 입력)">
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <div class="col-6">
-                        <button type="button" class="btn btn-primary btn-block" id="btnEmail">확인</button>
+                    <div class="form-group" data-group="userIdType1">
+                        <input type="text" class="form-control form-control-lg" placeholder="담당자 이름">
                     </div>
-                    <div class="col-6">
-                        <button type="button" class="btn btn-cancel btn-block">취소</button>
+                    <div class="form-group" data-group="userIdType1">
+                        <input type="tel" class="form-control form-control-lg" placeholder="담당자 휴대전화 (숫자만 입력)" >
+                    </div>
+                    <div class="form-group" data-group="userIdType2" style="display:none">
+                        <input type="text" class="form-control form-control-lg" placeholder="이름">
+                    </div>
+                    <div class="form-group" data-group="userIdType2" style="display:none">
+                        <input type="tel" class="form-control form-control-lg" placeholder="휴대전화 (숫자만 입력)" >
+                    </div>
+                    <div class="row justify-content-center row-10">
+                        <div class="col-6">
+                            <button type="button" class="btn btn-outline-dark btn-block btn-lg" data-dismiss="modal">취소</button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-dark btn-block btn-lg" id="btnEmail">확인</button>
+                        </div>
+                    </div>
+                    <div class="text-center mt-3">
+                        <p class="text-sm">위 정보로 아이디와 비밀번호를 찾을 수 없을 경우, 고객센터로 연락해주세요.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- modal : 이메일 찾기 결과 -->
-    <div class="modal" tabindex="-1" role="dialog" id="modalEmailResult">
+    <!-- modal : 아이디 찾기 결과 -->
+    <div class="modal" tabindex="-1" role="dialog" id="modalIdResult">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">이메일 찾기</h5>
+                    <h5 class="modal-title">아이디 찾기</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p class="text-alert mt-3">
+                    <p class="text-alert">
                         홍길동 님의 이메일은 <br>
-                        <sapn class="text-primary">hongild***@**ail.com</sapn> <br>
+                        <strong class="text-secondary">hongild***@**ail.com</strong> <br>
                         입니다.
                     </p>
                 </div>
                 <div class="modal-footer">
                     <div class="col-6">
-                        <button type="button" class="btn btn-primary btn-block">로그인</button>
+                        <button type="button" class="btn btn-outline-dark btn-block">로그인</button>
                     </div>
                     <div class="col-6">
-                        <button type="button" class="btn btn-secondary btn-block">비밀번호 찾기</button>
+                        <button type="button" class="btn btn-dark btn-block" id="btnFindPw">비밀번호 찾기</button>
                     </div>
                 </div>
             </div>
@@ -139,39 +173,42 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>관리자 정보에 입력하신 정보와 일치할 경우 이메일 주소의 일부를 조회할 수 있습니다.</p>
-                    <div class="form-group">
-                        <label for="formApparatus">기관</label>
-                        <select name="" id="formApparatus" class="form-control">
-                            <option value="">기관선택</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="formUserName2">이름</label>
-                        <input type="text" class="form-control" id="formUserName2">
-                    </div>
-                    <div class="form-group mb-0">
-                        <label for="formUserEmail">이메일</label>
-                        <input type="email" class="form-control" id="formUserEmail">
-                    </div>
-                    <div class="form-group mb-0">
-                        <label for="formNumber">인증번호</label>
-                        <div class="row row-10">
-                            <div class="col-7 col-md-8">
-                                <input type="email" class="form-control" id="formNumber">
-                            </div>
-                            <div class="col-5 col-md-4">
-                                <button type="button" class="btn btn-dark btn-block btn-square">인증번호 전송</button>
-                            </div>
+                    <p class="text-center mb-3">계정(이메일)으로 임시 비밀번호를 발급해드립니다.</p>
+                    <div class="form-inline justify-content-center mb-3">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input" name="userPwType" id="userPw1" data-match="userPwType1" checked>
+                            <label class="custom-control-label" for="userPw1">주최 사용자</label>
+                        </div>
+                        <div class="custom-control custom-radio ml-3">
+                            <input type="radio" class="custom-control-input" name="userPwType" id="userPw2" data-match="userPwType2">
+                            <label class="custom-control-label" for="userPw2">참여 사용자</label>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <div class="col-6">
-                        <button type="button" class="btn btn-primary btn-block" id="btnPw">확인</button>
+                    <div class="form-group">
+                        <input type="tel" class="form-control form-control-lg" placeholder="계정(이메일) 입력">
                     </div>
-                    <div class="col-6">
-                        <button type="button" class="btn btn-cancel btn-block">취소</button>
+                    <div class="form-group" data-group="userPwType1">
+                        <input type="text" class="form-control form-control-lg" placeholder="담당자 이름">
+                    </div>
+                    <div class="form-group" data-group="userPwType1">
+                        <input type="tel" class="form-control form-control-lg" placeholder="담당자 휴대전화 (숫자만 입력)" >
+                    </div>
+                    <div class="form-group" data-group="userPwType2" style="display:none">
+                        <input type="text" class="form-control form-control-lg" placeholder="이름">
+                    </div>
+                    <div class="form-group" data-group="userPwType2" style="display:none">
+                        <input type="tel" class="form-control form-control-lg" placeholder="휴대전화 (숫자만 입력)" >
+                    </div>
+                    <div class="row justify-content-center row-10">
+                        <div class="col-6">
+                            <button type="button" class="btn btn-outline-dark btn-block btn-lg" data-dismiss="modal">취소</button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-dark btn-block btn-lg" id="btnPw">확인</button>
+                        </div>
+                    </div>
+                    <div class="text-center mt-3">
+                        <p class="text-sm">위 정보로 아이디와 비밀번호를 찾을 수 없을 경우, 고객센터로 연락해주세요.</p>
                     </div>
                 </div>
             </div>
@@ -189,13 +226,13 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p class="text-center mt-3">
+                    <p class="text-alert mt-3">
                         비밀번호를 재설정 하실 수 있는 링크를 <br>이메일로 전송하였습니다.
                     </p>
                 </div>
                 <div class="modal-footer">
                     <div class="col-5">
-                        <button type="button" class="btn btn-primary btn-block">로그인</button>
+                        <button type="button" class="btn btn-dark btn-block">로그인</button>
                     </div>
                 </div>
             </div>
@@ -204,14 +241,31 @@
 
     <script>
         $(document).ready(function(){
+            //베이직 swiper
+            if($('.banners .swiper-slide').length > 0){
+                $('.banners').show();
+                var swiperVisual = new Swiper('.banners .swiper-container', {
+                    pagination: {
+                        el: '.swiper-pagination-banners',
+                        type: 'bullets',
+                        clickable: true
+                    },
+                });
+            }
+
             $('#btnEmail').on('click',function(){
-                $('#modalEmail').modal('hide');
-                $('#modalEmailResult').modal('show');
+                $('.modal').modal('hide');
+                $('#modalIdResult').modal('show');
+            });
+            $('#btnFindPw').on('click',function(){
+                $('.modal').modal('hide');
+                $('#modalPassword').modal('show');
             });
             $('#btnPw').on('click',function(){
-                $('#modalPassword').modal('hide');
+                $('.modal').modal('hide');
                 $('#modalPasswordResult').modal('show');
             });
+
         });
     </script>
 

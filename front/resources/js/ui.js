@@ -71,7 +71,7 @@ var Header = Header || {};
         el.itemEl = el.item.find("> div > a");
 
         el.itemEl.on("mouseenter focus click", function (e) {
-            e.preventDefault();
+            //e.preventDefault();
             $(this).closest(".col").siblings().removeClass("hover");
             $(this).closest(".col").addClass("hover");
         });
@@ -142,6 +142,29 @@ var Header = Header || {};
         }, 50);
 
         $('[data-toggle="tooltip"]').tooltip();
+
+        //체크박스 전체선택 - data-group 으로 묶어주기
+        $('[data-event=allcheck]').on('change',function(){
+            var group = $(this).data('group');
+            console.log(group);
+            if ($(this).prop('checked')) {
+                $('[data-group=' + group + ']:not([data-event=all-check])').prop('checked', true);
+            } else {
+                $('[data-group=' + group + ']:not([data-event=all-check])').prop('checked', false);
+            }
+        });
+
+        //라디오 선택시 타겟 영역 toggle
+        $('input[type=radio]').on('change',function(){
+            var group = $(this).attr('name');
+            if($(this).is('[data-match]')){
+                $('[name=' + group + ']').each(function(){
+                    var allgroup = $(this).attr('data-match');
+                    $('[data-group=' + allgroup + ']').hide();
+                });
+                $('[data-group=' + $(this).attr('data-match') + ']').show();
+            }
+        });
 
         $('.like a').on('click', function (e) {
             e.preventDefault();
