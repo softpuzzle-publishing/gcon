@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>gcon</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../../resources/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="../../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../../resources/css/style.css">
+    <!-- jQuery -->
+    <script src="../../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../../resources/plugins/moment/moment.min.js"></script>
+    <!-- date-range-picker -->
+    <script src="../../../resources/plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- ChartJS js -->
+    <script src="../../../resources/plugins/chart.js/Chart.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include 개발시 상위 div 삭제 요망 -->
+        </div>
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include 개발시 상위 div 삭제 요망 -->
+            </div>
+
+
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+
+                <div id="location-include">
+                    <!-- location include 개발시 상위 div 삭제 요망 -->
+                </div>
+
+                <!-- Main content -->
+                <section class="content">
+                    <div class="container-fluid">
+
+                        <!-- content 시작 -->
+                        <div class="contest-select-wrap callout callout-primary">
+                            <div class="row justify-content-center">
+                                <div class="col-auto">
+                                    <div class="form-group mb-0">
+                                        <label class="mr-1">콘테스트 선택</label>
+                                        <select class="form-control form-control-lg d-inline-block w-auto">
+                                            <option selected>제 5회 아이디어 공모전</option>
+                                            <option>제 4회 아이디어 공모전</option>
+                                            <option>제 3회 아이디어 공모전</option>
+                                            <option>제 2회 아이디어 공모전</option>
+                                            <option>제 1회 아이디어 공모전</option>
+                                        </select>
+                                        <button type="button" class="btn btn-primary btn-lg ml-1">확인</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-group">
+                                    <h3 class="table-title mt-0">매체광고유입 설정</h3>
+                                    <p class="text-black-50">광고를 집행할 매체를 선택하여 [사용] 설정한 후 반드시 홍보 URL을 복사하여 홍보를 하면 광고한 매체를 통해 유입된 통계를 확인하실 수 있습니다.</p>
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>매체</th>
+                                                <th>매체 URL</th>
+                                                <th>홍보 URL</th>
+                                                <th>사용여부</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>네이버광고</td>
+                                                <td>naver.com</td>
+                                                <td><a href="javascript:;">temp.gcontest.co.kr/?ref=navercpc</a> <button type="button" class="btn btn-sm btn-default w-auto align-middle ml-1">복사</button></td>
+                                                <td>
+                                                    <span class="custom-switch custom-control">
+                                                        <input class="custom-control-input" type="checkbox" id="chk1" checked>
+                                                        <label for="chk1" class="custom-control-label"></label>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>다음광고</td>
+                                                <td>daum.net</td>
+                                                <td><a href="javascript:;">temp.gcontest.co.kr/?ref=navercpc</a> <button type="button" class="btn btn-sm btn-default w-auto align-middle ml-1">복사</button></td>
+                                                <td>
+                                                    <span class="custom-switch custom-control">
+                                                        <input class="custom-control-input" type="checkbox" id="chk2">
+                                                        <label for="chk2" class="custom-control-label"></label>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="table-group">
+                                    <h3 class="table-title">통계그래프 [ G콘테스트상세페이지 기준 ]</h3>
+                                    <div class="chart-area">
+                                        <!-- 샘플로 아무 데이터 넣어놓음 -->
+                                        <canvas id="barChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="search-wrap">
+                            <h2>Filter</h2>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label>조회기간</label>
+                                        <div class="row row-10">
+                                            <div class="col-9">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                                    </div>
+                                                    <input type="text" class="form-control float-right" data-event="rangeDatepicker" id="date-range">
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="custom-checkbox custom-control lineheight-match">
+                                                    <input class="custom-control-input" type="checkbox" id="chk_allday" data-check="allday" data-match="#date-range">
+                                                    <label for="chk_allday" class="custom-control-label">전체</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btns">
+                                <button type="button" class="btn btn-dark"><i class="fas fa-search"></i> 검색하기</button>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-top">
+                                    <div class="row">
+                                        <div class="col-6">
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <select class="form-control w-auto">
+                                                <option selected="">전체 보기</option>
+                                                <option value="">30개씩 보기</option>
+                                                <option value="">15개씩 보기</option>
+                                                <option value="">7개씩 보기</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>일자</th>
+                                            <th>네이버</th>
+                                            <th>다음</th>
+                                            <th>씽굿</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2020. 03. 31(화)</td>
+                                            <td>5</td>
+                                            <td>5</td>
+                                            <td>5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2020. 03. 31(화)</td>
+                                            <td>5</td>
+                                            <td>5</td>
+                                            <td>5</td>
+                                        </tr>
+                                        <tr class="bg-gray-light">
+                                            <td>합계</td>
+                                            <td>5</td>
+                                            <td>5</td>
+                                            <td>5</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="table-bottom">
+                                    <div class="row">
+                                        <div class="col text-right">
+                                            <button class="btn btn-dark"><i class="fas fa-file-excel"></i> 엑셀다운받기</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- content 끝 -->
+
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include 개발시 상위 div 삭제 요망 -->
+        </div>
+
+        <div id="aside-right-include">
+            <!-- aside-right include 개발시 상위 div 삭제 요망 -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- AdminLTE App -->
+    <script src="../../../resources/js/adminlte.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../../resources/js/ui.js"></script>
+
+    <script>
+        var areaChartData = {
+            labels  : ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            datasets: [
+                {
+                    label               : 'Digital Goods',
+                    backgroundColor     : 'rgba(67,131,248,0.8)',
+                    borderColor         : 'rgba(60,141,188,0.8)',
+                    pointRadius          : false,
+                    pointColor          : '#3b8bba',
+                    pointStrokeColor    : 'rgba(60,141,188,1)',
+                    pointHighlightFill  : '#fff',
+                    pointHighlightStroke: 'rgba(60,141,188,1)',
+                    data                : [28, 48, 40, 19, 86, 27, 90]
+                },
+                {
+                    label               : 'Electronics',
+                    backgroundColor     : 'rgba(232, 62, 140, 0.8)',
+                    borderColor         : 'rgba(210, 214, 222, 1)',
+                    pointRadius         : false,
+                    pointColor          : 'rgba(210, 214, 222, 1)',
+                    pointStrokeColor    : '#c1c7d1',
+                    pointHighlightFill  : '#fff',
+                    pointHighlightStroke: 'rgba(220,220,220,1)',
+                    data                : [65, 59, 80, 81, 56, 55, 40]
+                },
+            ]
+        }
+        var areaChartOptions = {
+            maintainAspectRatio : false,
+            responsive : true,
+            legend: {
+                display: false
+            },
+            scales: {
+                xAxes: [{
+                gridLines : {
+                    display : false,
+                }
+                }],
+                yAxes: [{
+                gridLines : {
+                    display : false,
+                }
+                }]
+            }
+        }
+        var barChartCanvas = $('#barChart').get(0).getContext('2d')
+        var barChartData = jQuery.extend(true, {}, areaChartData)
+        var temp0 = areaChartData.datasets[0]
+        var temp1 = areaChartData.datasets[1]
+        barChartData.datasets[0] = temp1
+        barChartData.datasets[1] = temp0
+
+        var barChartOptions = {
+        responsive              : true,
+        maintainAspectRatio     : false,
+        datasetFill             : false
+        }
+
+        var barChart = new Chart(barChartCanvas, {
+            type: 'bar',
+            data: barChartData,
+            options: barChartOptions
+        })
+    </script>
+</body>
+
+</html>

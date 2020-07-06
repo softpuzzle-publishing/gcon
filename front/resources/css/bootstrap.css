@@ -5,6 +5,34 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+@font-face {
+  font-family: 'NanumSquare';
+  font-weight: 400;
+  src: url(../fonts/NanumSquare/NanumSquareR.eot);
+  src: url(../fonts/NanumSquare/NanumSquareR.eot?#iefix) format("embedded-opentype"), url(../fonts/NanumSquare/NanumSquareR.woff) format("woff"), url(../fonts/NanumSquare/NanumSquareR.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'NanumSquare';
+  font-weight: 700;
+  src: url(../fonts/NanumSquare/NanumSquareB.eot);
+  src: url(../fonts/NanumSquare/NanumSquareB.eot?#iefix) format("embedded-opentype"), url(../fonts/NanumSquare/NanumSquareB.woff) format("woff"), url(../fonts/NanumSquare/NanumSquareB.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'NanumSquare';
+  font-weight: 800;
+  src: url(../fonts/NanumSquare/NanumSquareEB.eot);
+  src: url(../fonts/NanumSquare/NanumSquareEB.eot?#iefix) format("embedded-opentype"), url(../fonts/NanumSquare/NanumSquareEB.woff) format("woff"), url(../fonts/NanumSquare/NanumSquareEB.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'NanumGothic';
+  font-weight: 400;
+  src: url(../fonts/NanumGothic-Regular.eot);
+  src: url(../fonts/NanumGothic-Regular.eot?#iefix) format("embedded-opentype"), url(../fonts/NanumGothic-Regular.woff) format("woff"), url(../fonts/NanumGothic-Regular.ttf) format("truetype");
+}
+
 :root {
   --blue: #545cc7;
   --sky: #7c84ee;
@@ -6433,9 +6461,10 @@ a.close.disabled {
 
 .modal-header .close {
   padding: 1rem;
-  margin: -1.875rem -1.875rem -1.875rem auto;
+  margin: -24px -20px -24px auto;
   position: relative;
   z-index: 1;
+  font-size: 40px;
 }
 
 .modal-title {

@@ -48,7 +48,7 @@
                         </ul>
                         <div class="icons">
                             <a href="contest_calendar.html" data-toggle="tooltip" data-placement="top" title="달력으로 보기"><i class="fas fa-calendar-alt"></i><span></span></a>
-                            <a href="" data-toggle="tooltip" data-placement="top" title="상품안내"><i class="fas fas fa-trophy"></i><span></span></a>
+                            <a href="#none" id="btn-prize" data-toggle="tooltip" data-placement="top" title="상품안내"><i class="fas fas fa-trophy"></i><span></span></a>
                         </div>
                     </div>
                     <section class="section-special">
@@ -901,6 +901,52 @@
         </div>
     </div>
 
+    <!-- modal : 상품소개 -->
+    <div class="modal fade modal-prize" id="modalPrize" aria-modal="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">상품소개</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="tab-center">
+                        <ul class="nav" id="prize-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="tab1-tab" data-toggle="pill" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">콘테스트 관리솔루션</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="tab2-tab" data-toggle="pill" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">배너광고요금제</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="tab3-tab" data-toggle="pill" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false">콘테스트 케어솔루션</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="tab4-tab" data-toggle="pill" href="#tab4" role="tab" aria-controls="tab4" aria-selected="false">무료컨설팅서비스</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+                            <img src="../../resources/images/content/img_intro1.png" alt="">
+                        </div>
+                        <div class="tab-pane" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+                            <img src="../../resources/images/content/img_intro2.png" alt="">
+                        </div>
+                        <div class="tab-pane" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+                            <img src="../../resources/images/content/img_intro3.png" alt="">
+                        </div>
+                        <div class="tab-pane" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
+                            <img src="../../resources/images/content/img_intro4.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         $(document).ready(function () {
             //베이직 swiper
@@ -916,6 +962,11 @@
             $('.contest-list .img a, .contest-list-column li a').on('click',function(e){
                 e.preventDefault();
                 $('#modalContestView').modal();
+            });
+
+            $('#btn-prize').on('click',function(e){
+                e.preventDefault();
+                $('#modalPrize').modal();
             });
         });
     </script>

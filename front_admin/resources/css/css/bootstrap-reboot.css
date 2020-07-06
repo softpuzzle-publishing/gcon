@@ -73,9 +73,11 @@ address {
 
 ol,
 ul,
-dl {
-  margin-top: 0;
-  margin-bottom: 1rem;
+dl,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 ol ol,
@@ -90,8 +92,8 @@ dt {
 }
 
 dd {
-  margin-bottom: .5rem;
-  margin-left: 0;
+  margin: 0;
+  padding: 0;
 }
 
 blockquote {

@@ -104,9 +104,11 @@ address {
 
 ol,
 ul,
-dl {
-  margin-top: 0;
-  margin-bottom: 1rem;
+dl,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 ol ol,
@@ -121,8 +123,8 @@ dt {
 }
 
 dd {
-  margin-bottom: .5rem;
-  margin-left: 0;
+  margin: 0;
+  padding: 0;
 }
 
 blockquote {
@@ -2001,11 +2003,11 @@ pre code {
 
 .table thead th {
   vertical-align: bottom;
-  border-bottom: 2px solid #dee2e6;
+  border-bottom: 1px solid #dee2e6;
 }
 
 .table tbody + tbody {
-  border-top: 2px solid #dee2e6;
+  border-top: 1px solid #dee2e6;
 }
 
 .table-sm th,
@@ -2015,16 +2017,17 @@ pre code {
 
 .table-bordered {
   border: 1px solid #dee2e6;
+  /* thead {
+    th,
+    td {
+      border-bottom-width: 2 * $table-border-width;
+    }
+  } */
 }
 
 .table-bordered th,
 .table-bordered td {
   border: 1px solid #dee2e6;
-}
-
-.table-bordered thead th,
-.table-bordered thead td {
-  border-bottom-width: 2px;
 }
 
 .table-borderless th,

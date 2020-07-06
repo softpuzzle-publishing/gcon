@@ -32,25 +32,25 @@
 
         <div id="header-include">
             <!-- header include 개발시 상위 div 삭제 요망 -->
-        </div>        
+        </div>
 
         <div class="body-container">
             <div id="aside-include">
                 <!-- aside include 개발시 상위 div 삭제 요망 -->
             </div>
-            
-    
+
+
             <!-- Content Wrapper. Contains page content -->
             <div class="content-wrapper">
-                
+
                 <div id="location-include">
                     <!-- location include 개발시 상위 div 삭제 요망 -->
                 </div>
-    
+
                 <!-- Main content -->
                 <section class="content">
                     <div class="container-fluid">
-                    
+
                         <!-- content 시작 -->
                         <div class="contest-select-wrap callout callout-primary">
                             <div class="row justify-content-center">
@@ -66,15 +66,266 @@
                                         </select>
                                         <button type="button" class="btn btn-primary btn-lg ml-1">확인</button>
                                     </div>
-                                </div>                           
+                                </div>
                             </div>
                         </div>
-                        
-                        <div class="btns">
-                            <button type="button" class="btn btn-dark btn-lg" onclick="window.location.href='step2.html'">다음</button>
+
+                        <div class="card card-purple card-outline">
+                            <div class="card-body">
+                                <table class="table table-bordered">
+                                    <colgroup><col style="width:180px">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>사용유무</th>
+                                            <td>
+                                                <div>
+                                                    <span class="custom-radio custom-control custom-control-inline">
+                                                        <input class="custom-control-input" type="radio" id="rdo1" name="use">
+                                                        <label for="rdo1" class="custom-control-label">사용함</label>
+                                                    </span>
+                                                    <span class="custom-radio custom-control custom-control-inline">
+                                                        <input class="custom-control-input" type="radio" id="rdo2" name="use">
+                                                        <label for="rdo2" class="custom-control-label">사용안함</label>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>심사횟수설정</th>
+                                            <td>
+                                                <select class="form-control d-inline-block w-auto">
+                                                    <option>1회</option>
+                                                    <option>2회</option>
+                                                </select>
+                                                <button type="button" class="btn btn-default">확인</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="card card-purple card-outline">
+                            <div class="card-header">
+                                <h3 class="card-title">심사방법(항목//위원) 설정</h3>
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <section class="table-group">
+                                    <div class="row justify-content-between align-items-end mb-2">
+                                        <div class="col-auto">
+                                            <h3 class="table-title mt-0 mb-0">심사항목 설정</h3>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button class="btn btn-outline-danger"><i class="fas fa-times mr-1"></i>선택삭제</button>
+                                            <button class="btn btn-success" data-toggle="modal" data-target="#modal-judge-item">등록</button>
+                                        </div>
+                                    </div>
+                                    <table class="table table-bordered">
+                                        <colgroup>
+                                            <col style="width:65px">
+                                            <col>
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <span class="custom-checkbox custom-control without-label">
+                                                        <input class="custom-control-input" type="checkbox" id="chk1">
+                                                        <label for="chk1" class="custom-control-label"></label>
+                                                    </span>
+                                                </th>
+                                                <th>번호</th>
+                                                <th>항목</th>
+                                                <th>배점</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <span class="custom-checkbox custom-control without-label">
+                                                        <input class="custom-control-input" type="checkbox" id="chk1">
+                                                        <label for="chk1" class="custom-control-label"></label>
+                                                    </span>
+                                                </td>
+                                                <td>3</td>
+                                                <td>독창성</td>
+                                                <td>50</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="custom-checkbox custom-control without-label">
+                                                        <input class="custom-control-input" type="checkbox" id="chk1">
+                                                        <label for="chk1" class="custom-control-label"></label>
+                                                    </span>
+                                                </td>
+                                                <td>3</td>
+                                                <td>창의성</td>
+                                                <td>50</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="custom-checkbox custom-control without-label">
+                                                        <input class="custom-control-input" type="checkbox" id="chk1">
+                                                        <label for="chk1" class="custom-control-label"></label>
+                                                    </span>
+                                                </td>
+                                                <td>3</td>
+                                                <td>심미성</td>
+                                                <td>50</td>
+                                            </tr>
+                                            <tr class="bg-gray-light">
+                                                <th colspan="3">총 점수</th>
+                                                <th>100</th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </section>
+                                <section class="table-group">
+                                    <div class="row justify-content-between align-items-end mb-2">
+                                        <div class="col-auto">
+                                            <h3 class="table-title mt-0 mb-0">심사위원 설정</h3>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button class="btn btn-outline-danger"><i class="fas fa-times mr-1"></i>선택삭제</button>
+                                            <button class="btn btn-success" data-toggle="modal" data-target="#modal-juror">등록</button>
+                                        </div>
+                                    </div>
+                                    <table class="table table-bordered">
+                                        <colgroup>
+                                            <col style="width:65px">
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <span class="custom-checkbox custom-control without-label">
+                                                        <input class="custom-control-input" type="checkbox" id="chk1">
+                                                        <label for="chk1" class="custom-control-label"></label>
+                                                    </span>
+                                                </th>
+                                                <th>이름</th>
+                                                <th>아이디</th>
+                                                <th>비밀번호</th>
+                                                <th>이메일</th>
+                                                <th>연락처</th>
+                                                <th>관리</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <span class="custom-checkbox custom-control without-label">
+                                                        <input class="custom-control-input" type="checkbox" id="chk1">
+                                                        <label for="chk1" class="custom-control-label"></label>
+                                                    </span>
+                                                </td>
+                                                <td>김광승</td>
+                                                <td>bab</td>
+                                                <td>12345</td>
+                                                <td>gs.kim@babkorea.com</td>
+                                                <td>010-4486-0308</td>
+                                                <td><button class="btn btn-default btn-sm">수정</button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="table-bottom">
+                                        <div class="row">
+                                            <div class="col text-right">
+                                                <a href="form.html" class="btn btn-dark">전체 메일 보내기</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+
+                        <div class="card card-purple card-outline">
+                            <div class="card-header">
+                                <h3 class="card-title">시상항목 설정</h3>
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <section class="table-group">
+                                    <div class="row justify-content-between align-items-end mb-2">
+                                        <div class="col-auto">
+                                            <h3 class="table-title mt-0 mb-0">심사항목 설정</h3>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button class="btn btn-outline-danger"><i class="fas fa-times mr-1"></i>선택삭제</button>
+                                            <button class="btn btn-success" data-toggle="modal" data-target="#modal-awarding-item">등록</button>
+                                        </div>
+                                    </div>
+                                    <table class="table table-bordered">
+                                        <colgroup>
+                                            <col style="width:70px">
+                                            <col>
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <span class="custom-checkbox custom-control without-label">
+                                                        <input class="custom-control-input" type="checkbox" id="chk1">
+                                                        <label for="chk1" class="custom-control-label"></label>
+                                                    </span>
+                                                </th>
+                                                <th>번호</th>
+                                                <th>항목</th>
+                                                <th>배점</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <span class="custom-checkbox custom-control without-label">
+                                                        <input class="custom-control-input" type="checkbox" id="chk1">
+                                                        <label for="chk1" class="custom-control-label"></label>
+                                                    </span>
+                                                </td>
+                                                <td>3</td>
+                                                <td>독창성</td>
+                                                <td>50</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="custom-checkbox custom-control without-label">
+                                                        <input class="custom-control-input" type="checkbox" id="chk1">
+                                                        <label for="chk1" class="custom-control-label"></label>
+                                                    </span>
+                                                </td>
+                                                <td>3</td>
+                                                <td>창의성</td>
+                                                <td>50</td>
+                                            </tr>
+                                            <tr class="bg-gray-light">
+                                                <th colspan="3">총 점수</th>
+                                                <th>100</th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </section>
+                            </div>
                         </div>
                         <!-- content 끝 -->
-                        
+
                     </div>
                     <!-- /.container-fluid -->
                 </section>
@@ -94,8 +345,138 @@
     </div>
     <!-- ./wrapper -->
 
+    <!-- modal : 심사항목 등록 -->
+    <div class="modal fade" id="modal-judge-item">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">심사항목 등록</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row row-10">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="항목">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="배점">
+                        </div>
+                        <div class="col-auto">
+                            <button class="btn btn-default w-auto"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="row">
+                        <div class="col text-center">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+                            <button type="button" class="btn btn-dark">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal : 심사위원등록 -->
+    <div class="modal fade" id="modal-juror">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">심사위원 등록</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group mb-2">
+                                <label>이름</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-10">
+                        <div class="col">
+                            <div class="form-group mb-2">
+                                <label>아이디</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group mb-2">
+                                <label>비밀번호</label>
+                                <input type="password" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-10">
+                        <div class="col">
+                            <div class="form-group mb-2">
+                                <label>이메일</label>
+                                <input type="email" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group mb-0">
+                                <label>연락처</label>
+                                <input type="tel" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="row">
+                        <div class="col text-center">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+                            <button type="button" class="btn btn-dark">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal : 시상항목 등록 -->
+    <div class="modal fade" id="modal-judge-item">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">시상항목 등록</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row row-10">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="항목">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="배점">
+                        </div>
+                        <div class="col-auto">
+                            <button class="btn btn-default w-auto"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="row">
+                        <div class="col text-center">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+                            <button type="button" class="btn btn-dark">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- AdminLTE App -->
-    <script src="../../../resources/js/adminlte.js"></script>    
+    <script src="../../../resources/js/adminlte.js"></script>
     <!-- ui 관련 -->
     <script src="../../../resources/js/ui.js"></script>
 

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>gcon</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../../resources/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="../../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../../resources/css/style.css">
+    <!-- jQuery -->
+    <script src="../../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../../resources/plugins/moment/moment.min.js"></script>
+    <!-- date-range-picker -->
+    <script src="../../../resources/plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include 개발시 상위 div 삭제 요망 -->
+        </div>
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include 개발시 상위 div 삭제 요망 -->
+            </div>
+
+
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+
+                <div id="location-include">
+                    <!-- location include 개발시 상위 div 삭제 요망 -->
+                </div>
+
+                <!-- Main content -->
+                <section class="content">
+                    <div class="container-fluid">
+
+                        <!-- content 시작 -->
+                        <div class="contest-select-wrap callout callout-primary">
+                            <div class="row justify-content-center">
+                                <div class="col-auto">
+                                    <div class="form-group mb-0">
+                                        <label class="mr-1">콘테스트 선택</label>
+                                        <select class="form-control form-control-lg d-inline-block w-auto">
+                                            <option selected>제 5회 아이디어 공모전</option>
+                                            <option>제 4회 아이디어 공모전</option>
+                                            <option>제 3회 아이디어 공모전</option>
+                                            <option>제 2회 아이디어 공모전</option>
+                                            <option>제 1회 아이디어 공모전</option>
+                                        </select>
+                                        <button type="button" class="btn btn-primary btn-lg ml-1">확인</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="alert alert-light">
+                                    <div class="row justify-content-between align-items-center">
+                                        <div class="col"></div>
+                                        <div class="col text-center">
+                                            <h5 class="mb-0">선정되지 않은 작품입니다.</h5>
+                                        </div>
+                                        <div class="col text-right">
+                                            <button class="btn btn-outline-dark">츨력하기</button>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-between align-items-center">
+                                        <div class="col"></div>
+                                        <div class="col text-center">
+                                            <h5 class="mb-0">1차합격자로 선정 되었습니다.</h5>
+                                        </div>
+                                        <div class="col text-right">
+                                            <button class="btn btn-outline-dark">츨력하기</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <section class="table-group">
+                                    <h3 class="table-title mt-0">출품자 정보</h3>
+                                    <table class="table table-bordered">
+                                        <colgroup>
+                                            <col style="width:160px">
+                                            <col>
+                                            <col style="width:160px">
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>접수번호</th>
+                                                <td></td>
+                                                <th>접수일</th>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th>출품자명</th>
+                                                <td></td>
+                                                <th>생년월일</th>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th>응모형태</th>
+                                                <td></td>
+                                                <th>소속</th>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th>연락처</th>
+                                                <td></td>
+                                                <th>이메일</th>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th>주소</th>
+                                                <td colspan="3"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </section>
+
+                                <section class="table-group">
+                                    <h3 class="table-title">출품작정보</h3>
+                                    <table class="table table-bordered mb-0">
+                                        <colgroup>
+                                            <col style="width:160px">
+                                            <col>
+                                            <col style="width:160px">
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>응모부문</th>
+                                                <td></td>
+                                                <th>출품작품</th>
+                                                <td>작품파일 [<a href="">다운로드</a>]</td>
+                                            </tr>
+                                            <tr>
+                                                <th>출품작제목</th>
+                                                <td colspan="3"></td>
+                                            </tr>
+                                            <tr>
+                                                <th>출품작설명</th>
+                                                <td colspan="3"></td>
+                                            </tr>
+                                            <tr>
+                                                <th>첨부자료1</th>
+                                                <td>작품파일 [<a href="">다운로드</a>]</td>
+                                                <th>첨부자료2</th>
+                                                <td>작품파일 [<a href="">다운로드</a>]</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="btns">
+                            <button type="button" class="btn btn-default btn-lg" onclick="window.location.href='list.html'">목록</button>
+                            <button type="button" class="btn btn-warning btn-lg">1차 합격자 선정</button>
+                            <button type="button" class="btn btn-warning btn-lg">1차 합격자 취소</button>
+                        </div>
+                        <!-- content 끝 -->
+
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include 개발시 상위 div 삭제 요망 -->
+        </div>
+
+        <div id="aside-right-include">
+            <!-- aside-right include 개발시 상위 div 삭제 요망 -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- modal : 심사항목 등록 -->
+    <div class="modal fade" id="modal-judge-item">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">심사항목 등록</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row row-10">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="항목">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="배점">
+                        </div>
+                        <div class="col-auto">
+                            <button class="btn btn-default w-auto"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="row">
+                        <div class="col text-center">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+                            <button type="button" class="btn btn-dark">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal : 심사위원등록 -->
+    <div class="modal fade" id="modal-juror">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">심사위원 등록</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group mb-2">
+                                <label>이름</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-10">
+                        <div class="col">
+                            <div class="form-group mb-2">
+                                <label>아이디</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group mb-2">
+                                <label>비밀번호</label>
+                                <input type="password" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-10">
+                        <div class="col">
+                            <div class="form-group mb-2">
+                                <label>이메일</label>
+                                <input type="email" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group mb-0">
+                                <label>연락처</label>
+                                <input type="tel" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="row">
+                        <div class="col text-center">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+                            <button type="button" class="btn btn-dark">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal : 시상항목 등록 -->
+    <div class="modal fade" id="modal-judge-item">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">시상항목 등록</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row row-10">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="항목">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="배점">
+                        </div>
+                        <div class="col-auto">
+                            <button class="btn btn-default w-auto"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="row">
+                        <div class="col text-center">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+                            <button type="button" class="btn btn-dark">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AdminLTE App -->
+    <script src="../../../resources/js/adminlte.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../../resources/js/ui.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>

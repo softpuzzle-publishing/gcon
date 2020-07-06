@@ -79,8 +79,17 @@ var Header = Header || {};
             el.item.removeClass("hover");
         });
 
-        $('.sitemap').append(el.find('.row').clone());
+        $('.sitemap .container').append(el.find('.row').clone());
 
+        $('#header .menu .dropdown > a').on("mouseenter focus", function (e) {
+            $(this).siblings('.dropdown-menu').addClass('show');
+        });
+        $('#header .menu').on("mouseleave", function (e) {
+            $('#header .menu .dropdown-menu').removeClass('show');
+        });
+        $('#header .menu .dropdown-menu a:last-child').on("focusout", function (e) {
+            $('#header .menu .dropdown-menu').removeClass('show');
+        });
     };
 
     Header.sidebar = function () {
