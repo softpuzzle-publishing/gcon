@@ -2999,4 +2999,82 @@ input[type=password] {
   font-size: 60px;
   color: #6a6a6a;
 }
+
+.popupMainWrap {
+  display: none;
+}
+
+.popupMainWrap .backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 8888;
+}
+
+.popupWrap {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 8889;
+  padding: 15px;
+}
+
+.popupWrap .row {
+  height: 100%;
+}
+
+.popupWrap .col-12 {
+  margin: 5px 0;
+  display: none;
+}
+
+.popupItem {
+  position: absolute;
+}
+
+.popupMain {
+  background: #fff;
+  position: relative;
+  height: 100%;
+}
+
+.popupMain .cont {
+  min-width: 300px;
+}
+
+.popupMain .cont img {
+  vertical-align: top;
+}
+
+.popupMain .close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.popupMain .close a {
+  display: block;
+  font-size: 30px;
+  padding: 5px;
+  color: #000;
+}
+
+.popupMain .today {
+  text-align: center;
+  padding-bottom: 15px;
+  background-color: #eee;
+  margin-top: -1px;
+  padding-top: 15px;
+}
+
+@media (max-width: 991.98px) {
+  .popupMain .cont img {
+    max-height: 30vh;
+  }
+}
 /*# sourceMappingURL=style.css.map */
