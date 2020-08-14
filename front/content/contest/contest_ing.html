@@ -58,15 +58,17 @@
                                     <!-- Swiper -->
                                     <div class="swiper-container banner-top">
                                         <div class="swiper-wrapper">
-                                            <div class="swiper-slide" style="background-image:url(../../resources/images/temp/@banner.jpg)"></div>
-                                            <div class="swiper-slide" style="background-image:url(../../resources/images/temp/@banner.jpg)"></div>
-                                            <div class="swiper-slide" style="background-image:url(../../resources/images/temp/@banner.jpg)"></div>
+                                            <!-- 200806 수정 -->
+                                            <div class="swiper-slide" style="background-image:url(../../resources/images/temp/@poster1.png)"><a href=""><span class="txt">콘테스트 제목1</span></a></div>
+                                            <div class="swiper-slide" style="background-image:url(../../resources/images/temp/@poster2.png)"><a href=""><span class="txt">콘테스트 제목2</span></a></div>
+                                            <div class="swiper-slide" style="background-image:url(../../resources/images/temp/@banner.jpg)"><a href=""><span class="txt">콘테스트 제목33</span></a></div>
                                         </div>
+                                        <div class="banner-text"></div>
                                     </div>
                                     <div class="banner-thumbs">
                                         <div class="row row-0">
-                                            <div class="col-4 active"><a href="javascript:;"><img src="../../resources/images/temp/@banner.jpg" alt=""></a></div>
-                                            <div class="col-4"><a href="javascript:;"><img src="../../resources/images/temp/@banner.jpg" alt=""></a></div>
+                                            <div class="col-4 active"><a href="javascript:;"><img src="../../resources/images/temp/@poster1.png" alt=""></a></div>
+                                            <div class="col-4"><a href="javascript:;"><img src="../../resources/images/temp/@poster2.png" alt=""></a></div>
                                             <div class="col-4"><a href="javascript:;"><img src="../../resources/images/temp/@banner.jpg" alt=""></a></div>
                                         </div>
                                     </div>
@@ -107,7 +109,7 @@
                             </div>
                         </div>
                     </section>
-                    <section>
+                    <section class="bg-white">
                         <div class="container">
                             <div class="select-area">
                                 <select name="" id="" class="form-control w-auto d-inline-block">
@@ -461,7 +463,7 @@
                             </div>
                         </div>
                     </section>
-                    <section class="section-list">
+                    <section class="section-list bg-lightgray">
                         <div class="container">
                             <h3 class="title-sub">개최 콘테스트</h3>
                             <div class="badge-sorting">
@@ -623,20 +625,17 @@
 
     <script>
         $(document).ready(function () {
-
+            /* 200806 수정 */
             var bannerTop = new Swiper('.banner-top', {
+                effect: 'fade',
                 spaceBetween: 0,
-                allowTouchMove: false,
-                // navigation: {
-                //     nextEl: '.swiper-button-next-banner',
-                //     prevEl: '.swiper-button-prev-banner',
-                // },
+                allowTouchMove: false
             });
-            $('.banner-thumbs a').on('click',function(){
+            $('.banner-thumbs a').on('mouseover',function(){
                 var idx = $(this).closest('div').index();
-                console.log(idx);
                 bannerTop.slideTo(idx);
             });
+            /* //200806 수정 */
 
             $('.contest-list .img a').on('click',function(e){
                 e.preventDefault();

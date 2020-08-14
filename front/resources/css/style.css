@@ -110,9 +110,9 @@ body {
 
 .header-top .menu {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 320px;
-          flex: 0 0 320px;
-  max-width: 320px;
+      -ms-flex: 0 0 285px;
+          flex: 0 0 285px;
+  max-width: 285px;
 }
 
 .header-top .menu ul {
@@ -447,6 +447,36 @@ body {
   font-weight: 700;
 }
 
+.btn-top {
+  position: fixed;
+  bottom: 15px;
+  right: -60px;
+  line-height: 1;
+  z-index: 99;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #4f5050;
+  text-align: center;
+  line-height: 40px;
+  -webkit-transition: all .25s .1s ease-in-out;
+  transition: all .25s .1s ease-in-out;
+}
+
+.btn-top i {
+  font-size: 24px;
+  color: #fff;
+  line-height: 40px;
+}
+
+.btn-top.active {
+  right: 15px;
+}
+
+*:focus {
+  outline: 0;
+}
+
 .ribbon-wrapper {
   height: 70px;
   overflow: hidden;
@@ -569,7 +599,7 @@ input[type=password] {
 
 .hit.active i,
 .like.active i {
-  color: #f55653;
+  color: #f55653 !important;
 }
 
 .hit a:hover i {
@@ -701,6 +731,10 @@ input[type=password] {
   line-height: 0;
 }
 
+.bg-lightgray {
+  background: #f4f4f4 !important;
+}
+
 .body-login {
   background: #f7f7f7;
 }
@@ -746,9 +780,20 @@ input[type=password] {
   text-decoration: underline;
 }
 
-.login .banners .swiper-slide img {
-  width: 100%;
+.login .banners .swiper-slide span {
+  display: block;
   height: 195px;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.login .banners .swiper-slide img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-height: none;
+  width: 100%;
 }
 
 .login .banners .swiper-pagination {
@@ -1099,28 +1144,26 @@ input[type=password] {
 .tab-center .icons {
   display: inline;
   vertical-align: middle;
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 .tab-center .icons a {
-  font-size: 22px;
-  margin: 0 7px;
-  padding: 6px 0;
+  display: inline-block;
 }
 
-.tab-center.has-border {
-  /*
-        position: relative;margin-bottom: 30px;
-        &::before{content: '';display: block;width: 100%;height: 1px;background-color: #f4f4f4;position: absolute;bottom: 0;left: 0;z-index: -1;}
-        ul{
-            li{
-                > a{background-color: #f4f4f4;color: #000;}
-                &.active{
-                    a{background: #fff;color: #000;}
-                }
-            }
-        }
-        */
+.tab-center .icons i {
+  display: inline-block;
+  width: 28px;
+  height: 26px;
+}
+
+.tab-center .icons .icon-calendar {
+  background: url("../images/content/icon_calendar.png") no-repeat 50% 100%;
+}
+
+.tab-center .icons .icon-prize {
+  background: url("../images/content/icon_prize.png") no-repeat 50% 100%;
+  margin-left: 10px;
 }
 
 .tab-center + .container,
@@ -1485,6 +1528,32 @@ input[type=password] {
   height: 213px;
 }
 
+.section-now .banner .banner-top .swiper-slide {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+}
+
+.section-now .banner .banner-top .swiper-slide a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.section-now .banner .banner-top .txt {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: -0.03em;
+  text-align: center;
+  padding: 8px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
 .section-now .banner .banner-thumbs {
   height: 72px;
   border-top: 1px solid #ccc;
@@ -1493,16 +1562,17 @@ input[type=password] {
 .section-now .banner .banner-thumbs a {
   display: block;
   width: 100%;
-  height: 100%;
+  height: 72px;
   overflow: hidden;
+  position: relative;
 }
 
 .section-now .banner .banner-thumbs img {
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  vertical-align: top;
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-height: none;
 }
 
 .section-now .now {
@@ -1691,7 +1761,8 @@ input[type=password] {
 
 .contest-poster .detail dt,
 .contest-poster .detail dd {
-  display: inline;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .contest-poster .detail dd {
@@ -3076,5 +3147,79 @@ input[type=password] {
   .popupMain .cont img {
     max-height: 30vh;
   }
+}
+
+.left-fixed {
+  width: 120px;
+  height: auto;
+  position: fixed;
+  top: 167px;
+  right: 0;
+  z-index: 9999;
+  text-align: center;
+}
+
+.left-fixed .fixed-contest {
+  background-color: #f6a51b;
+  padding: 15px 10px;
+}
+
+.left-fixed .fixed-contest p {
+  color: #fff;
+  line-height: 2.6;
+  font-weight: bold;
+}
+
+.left-fixed .fixed-product {
+  background-color: #ededed;
+  padding: 15px 10px;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.left-fixed .fixed-product p {
+  color: #515151;
+  font-weight: bold;
+  line-height: 2.6;
+}
+
+.left-fixed .fixed-question {
+  background-color: #fff;
+  padding: 15px 10px;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.left-fixed .fixed-question p {
+  color: #515151;
+  line-height: 0.8;
+  font-weight: 700;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.left-fixed .fixed-question span {
+  font-weight: 700;
+}
+
+.left-fixed .fixed-question .watch span {
+  font-size: 12px;
+  color: #666;
+}
+
+.left-fixed .fixed-top-scroll {
+  background-color: #e2e2e2;
+}
+
+.left-fixed .white {
+  background-color: #fff;
+}
+
+.left-fixed .black {
+  background-color: #404040;
+}
+
+.left-fixed .fixed-hr {
+  border: none;
+  height: 1px;
+  margin: 10px auto 15px auto;
 }
 /*# sourceMappingURL=style.css.map */

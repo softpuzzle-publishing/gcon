@@ -55,14 +55,18 @@ var Header = Header || {};
             Header._top.scroll();
         };
         Header._top.scroll = function () {
-            // if(Header.el.win.width() < Header._win._wLimit) return;
             Header._scrollTop = Header.el.win.scrollTop();
             if (Header._scrollTop > 0) {
+                console.log(1);
                 if (!el.hasClass("active")) el.addClass("active");
             } else {
+                console.log(2);
                 if (el.hasClass("active")) el.removeClass("active");
             }
         };
+        $(window).scroll(function(){
+            if(Header.el.top.length > 0) Header._top.scroll();
+        });
     };
 
     Header.nav = function () {
@@ -142,6 +146,8 @@ var Header = Header || {};
         });
     };
 
+   
+
     $(document).ready(function () {
         // 퍼블리싱 include
         // 개발시 삭제 필요
@@ -182,5 +188,9 @@ var Header = Header || {};
             e.preventDefault();
             $(this).closest('.like').toggleClass('active');
         });
+
+        
+
     });
+
 })(jQuery);

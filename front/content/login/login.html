@@ -24,7 +24,6 @@
 </head>
 
 <body class="body-login">  <!-- 로그인 페이지에 body-login 클래스 필요 -->
-
     <div id="login" class="login">
         <div class="login-wrap">
             <div class="login-header">
@@ -48,11 +47,12 @@
                     <li><a href="#modalId" data-toggle="modal" data-role="button">아이디 찾기</a></li>
                     <li><a href="#modalPassword" data-toggle="modal" data-role="button">비밀번호 찾기</a></li>
                 </ul>
-                <div class="banners" style="display:none">
+                <div class="banners">
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="../../resources/images/temp/@banner.jpg" alt="배너사이즈 524x195"></div>
-                            <div class="swiper-slide"><img src="../../resources/images/temp/@banner.jpg" alt="배너사이즈 524x195"></div>
+                            <!-- 200806 수정 -->
+                            <div class="swiper-slide"><span><img src="../../resources/images/temp/@poster1.png" alt="배너사이즈 524x195"></span></div>
+                            <div class="swiper-slide"><span><img src="../../resources/images/temp/@poster2.jpg" alt="배너사이즈 524x195"></span></div>
                         </div>
                         <div class="swiper-pagination swiper-pagination-banners"></div>
                     </div>
@@ -250,6 +250,7 @@
                         type: 'bullets',
                         clickable: true
                     },
+                    autoheight: true
                 });
             }
 
