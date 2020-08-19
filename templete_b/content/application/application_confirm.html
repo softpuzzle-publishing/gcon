@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>gcon 템플릿</title>
+    <meta name="keywords" content="약꾹">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/swiper-5.2.1/css/swiper.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jquery ui -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- swiper -->
+    <script src="../../resources/plugins/swiper-5.2.1/js/swiper.min.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header-block">
+            <!-- header include -->
+        </div>
+
+        <div id="content-block">
+            <div class="content">
+
+                <article>
+                    <section class="section-visual">
+                        <div class="visual">
+                            <div class="contest-name">제 20회 바이러스 확산방지 아이디어 공모전</div>
+                            <div class="contest-period">2020.01.01 ~ 2020.04.30</div>
+                            <!-- 위 공모전명과 기간은 홈페이지 빌더에서 '메인페이지 이미지' 를 등록했을 시 노출안되게 했으면 좋겠습니다. -->
+                            <div class="img"><!-- 이미지 노출 영역 --></div>
+                        </div>
+                    </section>
+                    <section class="section-location">
+                        <div class="container">
+                            <div class="location">
+                                <span class="home">HOME</span>
+                                <span>콘테스트 접수</span>
+                                <span>신청확인</span>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="section-content">
+                        <div class="container">
+                            <div class="title-wrap">
+                                <h2 class="title"><span>신청확인</span></h2>
+                            </div>
+                            <div class="table-top">
+                                <div class="row row-0 justify-content-between">
+                                    <div class="col">
+                                        <strong>출품자 정보</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="table table-thead-bg">
+                                <colgrouop>
+                                    <col style="width: 15%">
+                                    <col>
+                                    <col style="width: 15%">
+                                    <col>
+                                </colgrouop>
+                                <tbody>
+                                    <tr>
+                                        <th>출품자명</th>
+                                        <td><input type="text" class="form-control"></td>
+                                        <th>생년월일</th>
+                                        <td><input type="text" class="form-control"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>연락처</th>
+                                        <td><input type="text" class="form-control"></td>
+                                        <th>소속</th>
+                                        <td><input type="text" class="form-control"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>이메일</th>
+                                        <td colspan="3"><input type="text" class="form-control"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>주소</th>
+                                        <td colspan="3"><input type="text" class="form-control"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>응모형태</th>
+                                        <td colspan="3">
+                                            <div class="form-inline">
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" class="custom-control-input" name="applyType" id="applyType1" data-match="individual">
+                                                    <label class="custom-control-label" for="applyType1">개인</label>
+                                                </div>
+                                                <div class="custom-control custom-radio ml-3">
+                                                    <input type="radio" class="custom-control-input" name="applyType" id="applyType2" data-match="team">
+                                                    <label class="custom-control-label" for="applyType2">팀</label>
+                                                </div>
+                                            </div>
+                                            <div class="mt-2" data-group="team" style="display: none">
+                                                <span class="mr-2">팀원1</span>
+                                                <input type="text" class="form-control w-auto d-inline-block" readonly>
+                                                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modalTeam">찾기</button>
+                                                <span class="ml-2">'찾기'를 클릭 후 팀원의 '이메일 계정'을 검색하여 입력해주세요.</span>
+                                            </div>
+                                            <div class="mt-2" data-group="team" style="display: none">
+                                                <span class="mr-2">팀원1</span>
+                                                <input type="text" class="form-control w-auto d-inline-block" readonly>
+                                                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modalTeam">찾기</button>
+                                                <span class="ml-2">'찾기'를 클릭 후 팀원의 '이메일 계정'을 검색하여 입력해주세요.</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="table-top mt-5">
+                                <div class="row row-0 justify-content-between">
+                                    <div class="col">
+                                        <strong>출품작 정보</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="table table-thead-bg">
+                                <colgrouop>
+                                    <col style="width: 15%">
+                                    <col>
+                                </colgrouop>
+                                <tbody>
+                                    <tr>
+                                        <th>응모 부문</th>
+                                        <td>
+                                            <div class="form-inline">
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" class="custom-control-input" name="applySection" id="applySection1">
+                                                    <label class="custom-control-label" for="applySection1">디자인 부문</label>
+                                                </div>
+                                                <div class="custom-control custom-radio ml-3">
+                                                    <input type="radio" class="custom-control-input" name="applySection" id="applySection2">
+                                                    <label class="custom-control-label" for="applySection2">기획부문</label>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>출품작 제목</th>
+                                        <td><input type="text" class="form-control"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>출품 작품</th>
+                                        <td>
+                                            <div class="row row-20 align-items-center">
+                                                <div class="col-5">
+                                                    <div class="custom-file">
+                                                        <input type="file" class="custom-file-input" id="inputFile1">
+                                                        <label class="custom-file-label" for="inputFile1">Choose file...</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    ※ 출품작 양식에 부합하는 파일을 등록해 주세요.(용량 2M 이하)
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>출품작 설명</th>
+                                        <td>
+                                            <textarea name="" id="" cols="" rows="4" class="form-control"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>참가신청서</th>
+                                        <td>
+                                            <div class="row row-20 align-items-center">
+                                                <div class="col-5">
+                                                    <div class="custom-file">
+                                                        <input type="file" class="custom-file-input" id="inputFile2">
+                                                        <label class="custom-file-label" for="inputFile2">Choose file...</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    ※ 참가신청서 파일(hwp, doc 등 문서파일)을 등록해 주세요. (용량 2M 이하)
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>첨부자료1</th>
+                                        <td>
+                                            <div class="row row-20 align-items-center">
+                                                <div class="col-5">
+                                                    <div class="custom-file">
+                                                        <input type="file" class="custom-file-input" id="inputFile3">
+                                                        <label class="custom-file-label" for="inputFile3">Choose file...</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    ※ 파일이 여러개일 경우 ZIP 파일로 압축하여 등록해 주세요. (용량 2M 이하)
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>첨부자료2</th>
+                                        <td>
+                                            <div class="row row-20 align-items-center">
+                                                <div class="col-5">
+                                                    <div class="custom-file">
+                                                        <input type="file" class="custom-file-input" id="inputFile4">
+                                                        <label class="custom-file-label" for="inputFile4">Choose file...</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    ※ 파일이 여러개일 경우 ZIP 파일로 압축하여 등록해 주세요. (용량 2M 이하)
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="row row-10 justify-content-center mt-5">
+                                <div class="col-auto">
+                                    <button class="btn btn-lg btn-gray">수정</button>
+                                </div>
+                                <div class="col-auto">
+                                    <button class="btn btn-lg btn-success" onclick="window.location.href='application_view.html'">다음</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+
+            </div>
+        </div>
+
+        <div id="footer-block">
+            <!-- footer include -->
+        </div>
+    </div>
+
+    <!-- modal : 팀원 찾기 -->
+    <div class="modal" tabindex="-1" role="dialog" id="modalTeam">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">팀원 찾기</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="row row-10">
+                            <div class="col-9">
+                                <input type="text" class="form-control" placeholder="이메일 입력" id="memberInput">
+                            </div>
+                            <div class="col-3">
+                                <button type="submit" class="btn btn-dark btn-block" id="memberSearch">검색</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="text-center mt-4">
+                        <a href="javascript:;" class="text-lg" id="memberName" style="display:none"><strong>홍길동</strong></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            //팀원 이름 검색
+            var nameTarget;
+            $('[data-target="#modalTeam"]').on('click',function(){
+                nameTarget = $(this).siblings('input[type=text]');
+            });
+            $('#memberSearch').on('click',function(e){
+                e.preventDefault();
+                $('#memberName').show();
+            });
+            $("#memberInput").keydown(function (key) {
+                if (key.keyCode == 13) {
+                    $('#memberName').show();
+                }
+            });
+            $('#memberName').on('click',function(){
+                $(nameTarget).val($(this).text());
+                $(this).closest('.modal').modal('hide');
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
