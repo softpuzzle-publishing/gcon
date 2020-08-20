@@ -13,7 +13,7 @@ body {
 }
 
 .content {
-  min-height: 700px;
+text-align: center;
 }
 
 .header-top {
@@ -22,7 +22,7 @@ body {
 
 .header-top .container {
   position: relative;
-  padding: 12px 0;
+  padding: 12px 15px;
 }
 
 .header-top .name {
@@ -161,7 +161,7 @@ body {
 }
 
 #footer {
-  background: #3a4149;
+  background: #b1b1b1;
   text-align: center;
   color: #fff;
   margin-top: 110px;
@@ -194,7 +194,7 @@ body {
   position: absolute;
   left: 0;
   top: 50%;
-  background: #888;
+  background: #fff;
 }
 
 .footer-top .menu a {
@@ -204,7 +204,7 @@ body {
 
 .footer-bottom .container {
   padding: 25px 0 40px;
-  border-top: 1px solid #85888d;
+  border-top: 1px solid #fff;
 }
 
 .footer-bottom .info {
@@ -230,15 +230,14 @@ body {
   position: absolute;
   left: 0;
   top: 50%;
-  background: #888;
+  background: #fff;
 }
 
 .footer-bottom .copyright {
-  color: #999;
+  color: #fff;
   font-size: 12px;
   margin-top: 15px;
 }
-
 input[type=password] {
   font-family: 'NanumGothic';
 }
@@ -282,6 +281,7 @@ input[type=password] {
   width:20%;
   height: 50vh;
   border-right:1px solid #ddd;
+  margin-right: 20px;
 }
 .left-menu p{
   padding : 15px;

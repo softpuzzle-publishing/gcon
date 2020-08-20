@@ -118,7 +118,7 @@ body {
 }
 
 .header-bottom #nav > ul > li > div {
-  padding: 0 32px;
+  padding: 0 35px;
 }
 .header-bottom #nav > ul > li > div:hover {
   background-color:#000;
@@ -290,6 +290,9 @@ input[type=password] {
 .empty p {
   color: #aaa;
   font-weight: 700;
+}
+.section-location{
+  border-bottom : 1px solid #ddd;
 }
 .location {
   height: 55px;
@@ -519,6 +522,7 @@ input[type=password] {
 .section-notice .notice a{
   border:1px solid #000;
   background-color:#fff;
+  color: #000;
   padding :10px 40px;
 }
 
@@ -528,14 +532,15 @@ input[type=password] {
   border-radius:5px;
   color: #000;
 }
+.section-notice .notice-list .list-text{color:#000;}
+.section-notice .notice-list .list-date{color:#c1c1c3;}
 .contest-box{
   width: 280px;
   height: 280px;
-  background-image: url(../../resources/images/participate-img.png);
-  background-position:center;
-  background-size: cover;
   border:1px solid #ddd;
-
+}
+.contest-box img{
+  width: 100%;
 }
 .contest-box p:nth-child(1){
   font-size:20px;
@@ -568,22 +573,29 @@ input[type=password] {
   padding : 0 15px;
 }
 .contest-question{
-  padding :15px 0;
-  border-bottom : 1px solid #ddd;
-}
-.contest-question ul{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding :15px 0;
+  border-bottom : 1px solid #ddd;
 }
-.question-consulting{
+.contest-question .call-icon{
+  width: 60px;
+  height: 60px;
+  background-image: url('../../resources/images/main_icon_7.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 20px;
+}
+.contest-question .question-consulting{
   font-size: 23px;
   color: #000;
 }
-.question-time{
+.contest-question .question-time{
   color: #ff8019;
 }
-.question-enrollment{
+.contest-question .question-enrollment{
   font-size: 40px;
   color: #000;
   font-weight: bold;
