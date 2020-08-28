@@ -40,6 +40,7 @@ $(document).ready(function(){
 
     //날짜 전체 선택
     $('[data-check="allday"]').on('change',function(){
+        console.log(1)
         if($(this).prop('checked')){
             $($(this).attr('data-match')).attr('disabled',true);
         }else{

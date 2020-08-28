@@ -1,0 +1,35 @@
+.board-view{
+    .board-row{
+        border-bottom: 1px solid #ddd;padding: 1rem 1.25em;font-size: 16px;
+        .label{display: inline-block;margin-right: 20px;}
+        &.subject{text-align: center;font-size: 18px;font-weight: 700;border-top: 1px solid $dark;background: #f9f9f9;}
+    }
+}
+
+.reply{
+    background: #fafafa;padding: 30px;
+    .desc{
+        textarea.form-control{min-height: 100px;}
+        .btn{height: 100%;}
+        p{margin-top: 10px;font-size: 13px;}
+    }
+    .list{
+        margin-top: 15px;
+        .count{font-weight: 700;margin-bottom: 10px;}
+        ul{
+            border-top: 1px solid #666;
+            li{
+                border-bottom: 1px solid #ddd;padding: 20px 15px;
+                .item{
+                    position: relative;
+                }
+                .writer{margin-bottom: 10px;}
+                .date{margin-left: 20px;color: #888;}
+                .del{position: absolute;right:0;top: 0;
+                    .btn{line-height: 1;padding: .4rem .5rem .25rem;}
+                }
+            }
+        }
+
+    }
+}

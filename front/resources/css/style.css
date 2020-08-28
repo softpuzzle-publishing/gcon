@@ -3149,7 +3149,7 @@ input[type=password] {
   }
 }
 
-.left-fixed {
+.quick-banner {
   width: 120px;
   height: auto;
   position: fixed;
@@ -3159,36 +3159,36 @@ input[type=password] {
   text-align: center;
 }
 
-.left-fixed .fixed-contest {
+.quick-banner .quick-contest {
   background-color: #f6a51b;
   padding: 15px 10px;
 }
 
-.left-fixed .fixed-contest p {
+.quick-banner .quick-contest p {
   color: #fff;
   line-height: 2.6;
   font-weight: bold;
 }
 
-.left-fixed .fixed-product {
+.quick-banner .quick-product {
   background-color: #ededed;
   padding: 15px 10px;
   border-bottom: 1px solid #d3d3d3;
 }
 
-.left-fixed .fixed-product p {
+.quick-banner .quick-product p {
   color: #515151;
   font-weight: bold;
   line-height: 2.6;
 }
 
-.left-fixed .fixed-question {
+.quick-banner .quick-question {
   background-color: #fff;
   padding: 15px 10px;
   border-bottom: 1px solid #d3d3d3;
 }
 
-.left-fixed .fixed-question p {
+.quick-banner .quick-question p {
   color: #515151;
   line-height: 0.8;
   font-weight: 700;
@@ -3196,28 +3196,28 @@ input[type=password] {
   font-size: 18px;
 }
 
-.left-fixed .fixed-question span {
+.quick-banner .quick-question span {
   font-weight: 700;
 }
 
-.left-fixed .fixed-question .watch span {
-  font-size: 12px;
+.quick-banner .watch {
+  font-size: 13px;
   color: #666;
 }
 
-.left-fixed .fixed-top-scroll {
+.quick-banner .quick-top-scroll {
   background-color: #e2e2e2;
 }
 
-.left-fixed .white {
+.quick-banner .white {
   background-color: #fff;
 }
 
-.left-fixed .black {
+.quick-banner .black {
   background-color: #404040;
 }
 
-.left-fixed .fixed-hr {
+.quick-banner .quick-hr {
   border: none;
   height: 1px;
   margin: 10px auto 15px auto;

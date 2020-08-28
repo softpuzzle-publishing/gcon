@@ -1,0 +1,10 @@
+html{height:100%;}
+
+body{height: 100%;min-width:1280px;}
+
+.container{max-width: 1240px;width: 1280px;}
+
+.content{padding: 0;min-height: 650px;background: #f4f4f4;}
+
+.title-wrap + .container,
+.title-wrap + section{padding-bottom: 100px;padding-top: 30px;}
