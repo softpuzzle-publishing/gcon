@@ -1663,6 +1663,14 @@ input[type=password] {
   color: #666;
 }
 
+.section-now .rank ul li span.like::before {
+  content: "\f004";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  margin-right: 3px;
+  color: #666;
+}
+
 .section-event-list {
   background: #fff;
   padding-top: 30px;

@@ -167,6 +167,8 @@
                 span{
                     font-size: 14px;
                     &::before{content: "\f06e";font-family: "Font Awesome 5 Free";font-weight: 400;margin-right: 3px;color: #666;}
+
+                    &.like::before{content :"\f004";font-family: "Font Awesome 5 Free";font-weight: 400;margin-right: 3px;color: #666;}
                 }
             }
         }
