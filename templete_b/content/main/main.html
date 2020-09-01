@@ -32,14 +32,14 @@
         <div id="content-block">
             <div class="content">
 
-               <div class="main-poster">
-                   <img src="../../resources/images/poster-3.png" alt="공모전 메인 포스터">
-               </div>
+                <div class="main-poster">
+                    <img src="../../resources/images/poster-3.png" alt="공모전 메인 포스터">
+                </div>
 
             </div>
         </div>
 
-        <div id="footer-block" class="main">
+        <div id="footer-block">
             <!-- footer include -->
         </div>
     </div>
@@ -57,7 +57,8 @@
                         </div>
                         <!-- //editor -->
                     </div>
-                    <div class="close"><a href="javascript:;"><i class="fas fa-times-circle"></i><span class="sr-only">팝업 닫기</span></a></div>
+                    <div class="close"><a href="javascript:;"><i class="fas fa-times-circle"></i><span
+                                class="sr-only">팝업 닫기</span></a></div>
                     <div class="today">
                         <a href="javascript:;">오늘 하루 그만보기</a>
                     </div>
@@ -71,7 +72,8 @@
                         <img src="../../resources/images/temp/@poster_lg.jpg" alt="">
                         <!-- //editor -->
                     </div>
-                    <div class="close"><a href="javascript:;"><i class="fas fa-times-circle"></i><span class="sr-only">팝업 닫기</span></a></div>
+                    <div class="close"><a href="javascript:;"><i class="fas fa-times-circle"></i><span
+                                class="sr-only">팝업 닫기</span></a></div>
                     <div class="today">
                         <a href="javascript:;">오늘 하루 그만보기</a>
                     </div>
@@ -85,7 +87,8 @@
                         <img src="../../resources/images/temp/@poster_lg.jpg" alt="">
                         <!-- //editor -->
                     </div>
-                    <div class="close"><a href="javascript:;"><i class="fas fa-times-circle"></i><span class="sr-only">팝업 닫기</span></a></div>
+                    <div class="close"><a href="javascript:;"><i class="fas fa-times-circle"></i><span
+                                class="sr-only">팝업 닫기</span></a></div>
                     <div class="today">
                         <a href="javascript:;">오늘 하루 그만보기</a>
                     </div>
@@ -97,64 +100,77 @@
 
     <script>
         /* 팝업 */
-        function setCookie(cookieName, value, exdays){
+        function setCookie(cookieName, value, exdays) {
             var exdate = new Date();
             exdate.setDate(exdate.getDate() + exdays);
-            var cookieValue = escape(value) + ((exdays==null) ? "" : "; expires=" + exdate.toGMTString());
+            var cookieValue = escape(value) + ((exdays == null) ? "" : "; expires=" + exdate.toGMTString());
             document.cookie = cookieName + "=" + cookieValue;
         }
-        function deleteCookie(cookieName){
+
+        function deleteCookie(cookieName) {
             var expireDate = new Date();
             expireDate.setDate(expireDate.getDate() - 1);
             document.cookie = cookieName + "= " + "; expires=" + expireDate.toGMTString();
         }
+
         function getCookie(cookieName) {
             cookieName = cookieName + '=';
             var cookieData = document.cookie;
             var start = cookieData.indexOf(cookieName);
             var cookieValue = '';
-            if(start != -1){
+            if (start != -1) {
                 start += cookieName.length;
                 var end = cookieData.indexOf(';', start);
-                if(end == -1)end = cookieData.length;
+                if (end == -1) end = cookieData.length;
                 cookieValue = cookieData.substring(start, end);
             }
             return unescape(cookieValue);
         }
-        $(document).ready(function(){
-         
+        $(document).ready(function () {
+
 
             var cookiename;
-            $('[data-cookie]').each(function(){
+            $('[data-cookie]').each(function () {
                 cookiename = $(this).attr('data-cookie');
-                if(getCookie(cookiename)!="Y"){
+                if (getCookie(cookiename) != "Y") {
                     $(".popupMainWrap").show();
                     $('[data-cookie=' + cookiename + ']').show();
                 }
             });
             //팝업닫기
-            $('.popupMainWrap .close a').on('click',function(){
+            $('.popupMainWrap .close a').on('click', function () {
                 $(this).closest('[data-cookie]').hide();
                 checkPopupLength();
             });
             //오늘하루 그만보기
-            $('.popupMainWrap .today a').on('click',function(){
+            $('.popupMainWrap .today a').on('click', function () {
                 var cookiename = $(this).closest('[data-cookie]').data('cookie');
                 closePopupToday(cookiename);
                 $(this).closest('[data-cookie]').hide();
                 checkPopupLength();
             });
-            
+
         });
-        function closePopupToday(cookiename){
-            setCookie(cookiename,'Y', 1);
+
+        function closePopupToday(cookiename) {
+            setCookie(cookiename, 'Y', 1);
         }
-        function checkPopupLength(){
-            if($('[data-cookie]:visible').length == 0){
+
+        function checkPopupLength() {
+            if ($('[data-cookie]:visible').length == 0) {
                 $('.popupMainWrap').hide();
             }
         }
+        window.onload = function () {
+            margin();
+         
+        }
+   
         /* //팝업 */
+        function margin() {
+            $('#footer').addClass('remove-margin');
+
+        }
     </script>
 
 </body>

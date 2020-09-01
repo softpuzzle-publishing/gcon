@@ -159,14 +159,18 @@ text-align: center;
   width: 100%;
   border-color: #1359b8;
 }
-#footer-block.main #footer{
-  margin-top:0;
-}
+
 #footer {
   background: #b1b1b1;
   text-align: center;
   color: #fff;
   margin-top: 110px;
+}
+#footer.remove-margin {
+  background: #b1b1b1;
+  text-align: center;
+  color: #fff;
+  margin-top: 0;
 }
 
 .footer-top .container {
