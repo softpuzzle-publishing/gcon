@@ -39,7 +39,7 @@
             </div>
         </div>
 
-        <div id="footer-block">
+        <div id="footer-block" class="main">
             <!-- footer include -->
         </div>
     </div>
@@ -122,6 +122,8 @@
             return unescape(cookieValue);
         }
         $(document).ready(function(){
+         
+
             var cookiename;
             $('[data-cookie]').each(function(){
                 cookiename = $(this).attr('data-cookie');
@@ -142,6 +144,7 @@
                 $(this).closest('[data-cookie]').hide();
                 checkPopupLength();
             });
+            
         });
         function closePopupToday(cookiename){
             setCookie(cookiename,'Y', 1);
