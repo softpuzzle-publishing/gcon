@@ -157,7 +157,7 @@ text-align: center;
 
 .header-bottom #nav > ul > li.active > div > a::before {
   width: 100%;
-  border-color: #1359b8;
+  border-color: red;
 }
 
 #footer {
