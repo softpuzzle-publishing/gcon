@@ -1,0 +1,21 @@
+#footer{
+    background: #3a4149;text-align: center;color: #fff;margin-top: 110px;
+}
+.footer-top{
+    .container{padding: 25px 0;}
+    .menu{
+        display: flex;justify-content:center;
+        li{position: relative;padding: 0 15px 0 16px;}
+        li + li::before{content: '';display: block;width: 1px;height: 14px;margin-top: -7px;position: absolute;left: 0;top: 50%;background: #888;}
+        a{color: #eee;font-size: 14px;}
+    }
+}
+.footer-bottom{
+    .container{padding: 25px 0 40px;border-top: 1px solid #85888d;}
+    .info{
+        display: flex;justify-content:center;
+        div{position: relative;padding: 0 15px 0 16px;}
+        div + div::before{content: '';display: block;width: 1px;height: 14px;margin-top: -7px;position: absolute;left: 0;top: 50%;background: #888;}
+    }
+    .copyright{color: #999;font-size: 12px;margin-top: 15px;}
+}
