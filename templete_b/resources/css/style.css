@@ -91,7 +91,9 @@ text-align: center;
 
 .header-bottom #nav > ul > li > div {
   padding: 0 32px;
- 
+}
+.header-bottom #nav > ul > li.active > div {
+  background-color:#1bb3a3;
 }
 .header-bottom #nav > ul > li > div:hover{
   background-color:#1bb3a3;

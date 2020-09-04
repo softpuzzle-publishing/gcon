@@ -103,6 +103,9 @@ body {
 .header-bottom .main-nav li ul li::before {
   display:none;
 }
+.header-bottom .main-nav li.active div {
+  background-color:#000;
+}
 .header-bottom .main-nav li::before {
   content: '';
   width: 1px;
