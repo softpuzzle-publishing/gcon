@@ -1655,7 +1655,7 @@ input[type=password] {
   font-size: 14px;
 }
 
-.section-now .rank ul li span.eye::before {
+.section-now .rank ul li span::before {
   content: "\f06e";
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
