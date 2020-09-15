@@ -131,7 +131,7 @@
         .swiper-slide{text-align: center;}
         .swiper-slide a{display: block;}
         .swiper-slide a span{display: inline-block;border: 1px solid #ddd;overflow: hidden;}
-        .swiper-slide a img{transition: all 5s;}
+        .swiper-slide a img{transition: all 5s; max-width:auto;max-height:auto;width:100%;height:100%;}
         .swiper-slide a:hover img{transform: scale(1.2);}
     }
     .swiper-button-next-portfolio,

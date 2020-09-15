@@ -1,5 +1,5 @@
 /*!
- * Bootstrap Reboot v4.4.1 (https://getbootstrap.com/)
+ * Bootstrap Reboot v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -34,7 +34,7 @@ body {
   background-color: #fff;
 }
 
-[tabindex="-1"]:focus:not(:focus-visible) {
+[tabindex="-1"]:focus {
   outline: 0 !important;
 }
 
@@ -73,11 +73,9 @@ address {
 
 ol,
 ul,
-dl,
-li {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 ol ol,
@@ -92,8 +90,8 @@ dt {
 }
 
 dd {
-  margin: 0;
-  padding: 0;
+  margin-bottom: .5rem;
+  margin-left: 0;
 }
 
 blockquote {
@@ -126,24 +124,28 @@ sup {
 }
 
 a {
-  color: inherit;
+  color: #007bff;
   text-decoration: none;
   background-color: transparent;
 }
 
 a:hover {
-  color: #ba8b00;
+  color: #0056b3;
   text-decoration: underline;
 }
 
-a:not([href]) {
+a:not([href]):not([tabindex]) {
   color: inherit;
   text-decoration: none;
 }
 
-a:not([href]):hover {
+a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus {
   color: inherit;
   text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):focus {
+  outline: 0;
 }
 
 pre,
@@ -181,7 +183,7 @@ table {
 caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  color: #adb5bd;
+  color: #6c757d;
   text-align: left;
   caption-side: bottom;
 }

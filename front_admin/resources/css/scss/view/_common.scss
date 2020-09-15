@@ -39,7 +39,7 @@ td a:hover{text-decoration: underline;}
 .btn.w-100{min-width: auto;}
 
 .form-group > label{font-weight: 700;}
-
+.close-btn{position: absolute;right:11%;transform: translate(-11% , 0); z-index:5; font-size:17px;}
 .card-body > .row:last-child .form-group:last-child{margin-bottom: 0;}
 
 .modal .modal-body .btns{margin-top: 2rem;}
