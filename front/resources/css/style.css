@@ -1955,6 +1955,10 @@ input[type=password] {
   border-color: #aaa;
 }
 
+.modal-content {
+  border: none;
+}
+
 .article-all-gpolio section {
   padding-bottom: 75px;
 }
@@ -3173,6 +3177,7 @@ input[type=password] {
   right: 0;
   z-index: 9999;
   text-align: center;
+  border: 1px solid #ddd;
 }
 
 .quick-banner .quick-contest {
