@@ -1,0 +1,51 @@
+.header-top{
+    .container{position: relative;padding: 12px 0;}
+    .name{font-size: 13px;}
+    .menu{
+        ul{display: flex;justify-content: flex-end;}
+        ul li{margin-left: 15px;padding-left: 15px;position: relative;font-size: 13px;}
+        ul li::before{content: '';width: 1px;height: 12px;background: #ccc;position: absolute;left:0;top:50%;margin-top: -6px;}
+        ul li:first-child{margin-left: 0;padding-left: 0;}
+        ul li:first-child::before{display: none;}
+    }
+    border-bottom: 1px solid #ddd;
+
+}
+.header-bottom{
+    .container{}
+    h1{
+        font-family: 'Sunflower';font-weight: 500;
+        a{text-decoration: none;color: #222;
+            img{max-height: 32px;}
+        }
+        strong{color: $primary;}
+    }
+    #nav{
+        > ul{display: flex;justify-content: flex-end;text-align: center;
+            > li{
+                position: relative;
+                > div{
+                    padding: 0 32px;
+                    a{display: block;padding: 30px 0;font-weight: 700;font-size: 16px;position: relative;
+                        &::before{content: '';display: block;width: 0;position: absolute;left: 50%;bottom: 20px;border-bottom-style: solid; border-bottom-width: 4px;transform: translateX(-50%);transition: width .25s ease-in-out;}
+                        &:hover{text-decoration: none;color: #000;}
+                        &:hover::before{width: 100%;border-color: $success;}
+                    }
+                }
+                > ul{
+                    position: absolute;left:0;top:70px;z-index: 10;width: 100%;box-shadow: 0 2px 4px rgba(0,0,0,0.2);display: none;
+                    > li{
+                        border: 1px solid #666;
+                        a{display: block;padding: 8px 10px;background: #393c44;color: #fff;text-decoration: none;
+                            &:hover{background: #000;}
+                        }
+                        & + li{border-top: 0;}
+                        &.active a{background: #000;}
+                    }
+                }
+                &.hover > ul{display: block;}
+                &.active > div > a::before{width: 100%;border-color: $success;}
+            }
+        }
+    }
+}
