@@ -95,18 +95,18 @@ text-align: center;
 .header-bottom #nav > ul > li.active > div {
   background-color:#1bb3a3;
 }
-.header-bottom #nav > ul > li > div:hover{
-  background-color:#1bb3a3;
-}
+
 .header-bottom #nav > ul > li > div a {
   display: block;
   padding: 30px 0;
   font-weight: 700;
-  font-size: 16px;qjsdu
+  font-size: 16px;
   position: relative;
   color: #fff;
 }
-
+.header-bottom #nav > ul > li.hover > div{
+  background-color:#1bb3a3;
+}
 
 .header-bottom #nav > ul > li > div a:hover {
   text-decoration: none;
@@ -150,7 +150,7 @@ text-align: center;
 }
 
 .header-bottom #nav > ul > li > ul > li.active a {
-  background: #000;
+  background: #d0f2ee;
 }
 
 .header-bottom #nav > ul > li.hover > ul {

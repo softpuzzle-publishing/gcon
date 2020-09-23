@@ -99,7 +99,13 @@ body {
   display: none;
 }
 
-
+.header-bottom .main-nav{
+  margin-right:60px;
+}
+.download-file{
+  position: absolute;
+  right: 0;
+}
 .header-bottom .main-nav li ul li::before {
   display:none;
 }
@@ -123,9 +129,7 @@ body {
 .header-bottom #nav > ul > li > div {
   padding: 0 35px;
 }
-.header-bottom #nav > ul > li > div:hover {
-  background-color:#000;
-}
+
 .header-bottom #nav > ul > li > div a {
   display: block;
   padding: 30px 0;
@@ -179,13 +183,15 @@ body {
 }
 
 .header-bottom #nav > ul > li > ul > li.active a {
-  background: #000;
+  background: #d9d9d9;
 }
 
 .header-bottom #nav > ul > li.hover > ul {
   display: block;
 }
-
+.header-bottom #nav > ul > li.hover > div{
+  background-color:#000;
+}
 .header-bottom #nav > ul > li.active > div > a::before {
   width: 100%;
   border-color: #1359b8;
@@ -456,7 +462,7 @@ input[type=password] {
 
 .section-visual {
   height: 220px;
-  background: url("../images/bg_visual.jpg") repeat 0 0;
+  background: url("../images/contest-3-main.png") repeat 0 0;
 }
 
 .section-visual .visual {
@@ -483,12 +489,14 @@ input[type=password] {
 .section-visual .visual .contest-name {
   font-weight: 800;
   font-size: 35px;
+  color: #000;
 }
 
 .section-visual .visual .contest-period {
   font-weight: 300;
   font-size: 30px;
   margin-top: 20px;
+  color: #000;
 }
 
 .main .section-visual {
@@ -500,6 +508,9 @@ input[type=password] {
 }
 .section-notice{
   margin-top: 50px;
+}
+.section-notice .main-notice-box{
+  height: 100%;
 }
 .section-notice .notice{
   display: flex;
@@ -516,7 +527,7 @@ input[type=password] {
   position: relative;
   display: flex;
   align-items: center;
-  padding : 20px 0;
+  padding : 29.5px 0;
   border-bottom:1px solid #ddd;
 }
 .section-notice .notice-list ul li span:nth-child(2){
@@ -526,6 +537,7 @@ input[type=password] {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-size: 17px;
 }
 .section-notice .notice-list ul li span:nth-child(3){
   position: absolute;
@@ -550,6 +562,7 @@ input[type=password] {
   padding : 3px 10px;
   border-radius:5px;
   color: #000;
+  font-size:17px;
 }
 .section-notice .notice-list .list-text{color:#000;}
 .section-notice .notice-list .list-date{color:#c1c1c3;}
