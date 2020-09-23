@@ -242,9 +242,19 @@ text-align: center;
 }
 
 .footer-bottom .copyright {
-  color: #fff;
+  color: #999;
   font-size: 12px;
   margin-top: 15px;
+  position: relative;
+}
+.footer-bottom .copyright p{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
+  -ms-transform: translate(-50%,0);
+  -webkit-transform: translate(-50%,0);
+  -moz-transform: translate(-50%,0);
+  -o-transform: translate(-50%,0);
 }
 input[type=password] {
   font-family: 'NanumGothic';
