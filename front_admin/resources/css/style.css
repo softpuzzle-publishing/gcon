@@ -276,6 +276,7 @@ td a:hover {
   margin-bottom: 0;
   background-color: #fff;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .step li .small-box .icon > i {
