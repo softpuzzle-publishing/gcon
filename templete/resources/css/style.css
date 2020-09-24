@@ -6,7 +6,9 @@ body {
   height: 100%;
   min-width: 1280px;
 }
-
+p,span,h1,h2,h3,h4,h5{
+  word-break: break-all;
+}
 .container {
   max-width: 1240px;
   width: 1280px;
@@ -256,15 +258,7 @@ body {
   font-size: 12px;
   margin-top: 15px;
 }
-.footer-bottom .copyright p{
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%,0);
-  -ms-transform: translate(-50%,0);
-  -webkit-transform: translate(-50%,0);
-  -moz-transform: translate(-50%,0);
-  -o-transform: translate(-50%,0);
-}
+
 input[type=password] {
   font-family: 'NanumGothic';
 }
