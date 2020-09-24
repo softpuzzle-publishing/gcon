@@ -11,6 +11,7 @@ var Header = Header || {};
         Header.sidebar();
         Header.top();
         Header.sitemap();
+		Header.bottom();
     };
     Header.default = function () {
         Header.el = Header.el || {};
@@ -27,6 +28,7 @@ var Header = Header || {};
         Header.el.btnSitemap = $("#btn-sitemap");
         Header.el.top = $(".btn-top");
         Header.el.btnSidebar = $(".sidebar-toggler");
+		Header.el.bottom = $(".header-bottom");
 
         Header._win = Header._win || {};
         Header._top = Header._top || {};
@@ -57,10 +59,8 @@ var Header = Header || {};
         Header._top.scroll = function () {
             Header._scrollTop = Header.el.win.scrollTop();
             if (Header._scrollTop > 0) {
-                console.log(1);
                 if (!el.hasClass("active")) el.addClass("active");
             } else {
-                console.log(2);
                 if (el.hasClass("active")) el.removeClass("active");
             }
         };
@@ -69,6 +69,24 @@ var Header = Header || {};
         });
     };
 
+    Header.bottom = function () {
+    	var el = Header.el.bottom;
+    	var elTop = $('.header-bottom').offset().top;
+    	Header._top.scroll = function () {
+            Header._scrollTop = Header.el.win.scrollTop();
+            if (Header._scrollTop >= elTop) {
+                if (!el.hasClass("fixed")) el.addClass("fixed");
+            } else {
+                if (el.hasClass("fixed")) el.removeClass("fixed");
+            }
+        };
+        $(window).scroll(function(){
+            if(Header._scrollTop > 0) Header._top.scroll();
+            console.log('el:'+elTop);
+            console.log('win:'+Header.el.win.scrollTop());
+        });
+    }
+	
     Header.nav = function () {
         var el = Header.el.nav;
         el.item = el.find(".col");

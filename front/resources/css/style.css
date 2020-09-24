@@ -169,6 +169,13 @@ body {
   position: relative;
 }
 
+.header-bottom.fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  margin-top: -117px;
+}
+
 #nav {
   position: relative;
 }
