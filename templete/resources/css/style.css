@@ -810,6 +810,7 @@ input[type=password] {
 }
 .box .more-content{
   position: absolute;
+  margin-top: 10px;
 }
 
 .section-board .box a .subject {
