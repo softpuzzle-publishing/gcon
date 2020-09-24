@@ -782,7 +782,7 @@ input[type=password] {
 
 .login .banners .swiper-slide span {
   display: block;
-  height: 195px;
+  height: 275px;
   overflow: hidden;
   width: 100%;
   position: relative;
@@ -871,6 +871,10 @@ input[type=password] {
 .join .form-group > label {
   font-size: 14px;
   font-weight: 400;
+}
+
+.banners {
+  margin-top: 20px;
 }
 
 .form-subtitle {
@@ -1327,7 +1331,7 @@ input[type=password] {
 }
 
 .contest-list.small .img {
-  height: 100px;
+  height: 200px;
 }
 
 .contest-list + .contest-list {
@@ -1826,6 +1830,7 @@ input[type=password] {
 .contest-info .details dd {
   padding: 8px 0 8px 10px;
   color: #888;
+  overflow: auto;
 }
 
 .contest-info .row + .details {
