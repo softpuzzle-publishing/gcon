@@ -808,6 +808,9 @@ input[type=password] {
 .section-board .box a {
   display: block;
 }
+.box .more-content{
+  position: absolute;
+}
 
 .section-board .box a .subject {
   display: block;

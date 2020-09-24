@@ -351,7 +351,24 @@ input[type=password] {
 }
 .container-content{
 }
-
+.container-content>ul{
+  text-align: left;
+  padding :25px 15px;
+  border-bottom:1px solid #ddd;
+}
+.container-content>ul>li{
+  font-weight: 400;
+  font-size:16px;
+  color: #666;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+.container-content>p{
+  text-align: left;
+  font-family:nanum, dotum, AppleGothic;
+  margin-top: 20px;
+  font-weight: bold;
+}
 .content-list{
   width:20%;
   border:1px solid #ddd;
