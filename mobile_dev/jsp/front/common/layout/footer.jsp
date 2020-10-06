@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<div id="footer">
+    <div class="customer-center">
+        <div class="container">
+            <strong>고객센터</strong>
+            <div class="phone">전화 : 02. 6953.1994 ~ 1996</div>
+            <div class="time">평일 AM 10:00 ~ PM 6:30 (주말/공휴일 휴무) <br>점심 PM 12:00 ~ PM 1:00</div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+
+            <div class="info">
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <div class="logo"><span class="sr-only">gcon</span></div>
+                    </div>
+                    <div class="col-auto">
+                        <ul class="f-menu">
+                            <li><a href="/front/user/userPolicy">이용약관 | 개인정보처리방침</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="f-info">
+                    <span><em>상호 : 비에이비 주식회사</em><em>대표이사 : 신명석</em></span>
+                    <span>사업자등록번호 : 198-88-01264</span>
+                    <span>주소 : 서울시 강남구 논현로 124길 5, 동양빌딩 1층</span>
+                    <span>E-mail : gcon@gcontest.co.kr</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

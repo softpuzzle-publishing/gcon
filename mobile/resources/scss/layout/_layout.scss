@@ -1,0 +1,13 @@
+body{
+    background: #f2f2f2;padding-top: 165px;
+    &.body-view{background: #fff;padding-top: 0;}
+}
+
+section{
+    background: #fff;margin: 1rem 0;padding: 20px 0;
+    .container{position: relative;}
+}
+
+#top{
+    height: 60px;display: flex;align-items: center;
+}

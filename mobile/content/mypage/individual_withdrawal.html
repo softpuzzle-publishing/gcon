@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>gcon</title>
+    <meta name="keywords" content="gcon">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/swiper-5.2.1/css/swiper.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jquery ui -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- swiper -->
+    <script src="../../resources/plugins/swiper-5.2.1/js/swiper.min.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header-block">
+            <!-- header include -->
+        </div>
+
+        <div id="container-block">
+            <article class="content">
+
+                <!-- content -->
+                <section>
+                    <div class="title-wrap">
+                        <h2 class="title">마이페이지</h2>
+                    </div>
+                    <div class="tab-category">
+                        <nav class="swiper-container">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide"><a href="individual_notification.html"><span>알림 센터</span></a></li>
+                                <li class="swiper-slide"><a href="individual_my_favorite.html"><span>관심 콘테스트/행사</span></a></li>
+                                <li class="swiper-slide"><a href="individual_my_info.html"><span>회원정보 수정</span></a></li>
+                                <li class="swiper-slide"><a href="individual_my_password.html"><span>비밀번호 변경</span></a></li>
+                                <li class="swiper-slide active"><a href="individual_withdrawal.html"><span>회원탈퇴</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </section>
+                <section>
+                    <div class="container">
+                        <div class="withdrawal">
+                            <p class="txt1">정말 탈퇴하시겠습니까?</p>
+                            <p class="txt2">
+                                콘테스트 개최 및 관리 등의 정보가 모두 삭제됩니다. <br>
+                                동일한 이메일로 재가입을 하기 위해서는 <br>
+                                인증절차가 필요합니다. <br>
+                                이메일 계정정보 변경, 담당자명 변경 등을 원하시는 분은 <br> 고객센터로 문의주세요.
+                            </p>
+                            <p class="txt3">탈퇴 후 재가입하기 위해서는 기간이 소요됩니다.</p>
+                            <div class="text-center">
+                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalWithdrawal">탈퇴하기</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- //content -->
+
+            </article>
+        </div>
+
+        <div id="footer-block">
+            <!-- footer include -->
+        </div>
+    </div>
+
+    <!-- modal : 탈퇴 확인 -->
+    <div class="modal" tabindex="-1" role="dialog" id="modalWithdrawal">
+        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p class="text-alert mt-3">
+                        정말 탈퇴 하시겠습니까?
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-auto">
+                        <button type="button" class="btn btn-gray" data-dismiss="modal">취소</button>
+                    </div>
+                    <div class="col-auto">
+                        <button type="button" class="btn btn-danger">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+
+        });
+    </script>
+
+</body>
+
+</html>
