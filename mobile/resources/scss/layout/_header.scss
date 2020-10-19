@@ -11,7 +11,10 @@
         h1 a{display: inline-block;vertical-align: top;background: url('../images/logo-dark.svg') no-repeat 50% 50%;width: 46.5px;height: 27.5px;background-size: contain;}
     }
     .h-btn-menu{position: absolute;left: 20px;top: 22px;}
-    .h-btn-bell{position: absolute;right: 20px;top: 18px;}
+    .h-btn-bell{position: absolute;right: 20px;top: 18px;
+        a{vertical-align: middle;}
+        a + a{margin-left: 15px;}
+    }
 }
 
 .header-bottom{
@@ -32,26 +35,26 @@
 
 .gnb{
     position: relative;
-    &::before{content: '';width: 20px;height: 100%;position: absolute;top:0;left: 0;z-index: 2;
+    /* &::before{content: '';width: 19px;height: 100%;position: absolute;top:0;left: 0;z-index: 2;
         background: -moz-linear-gradient(to left,rgba(255,255,255,0) 0,rgba(255,255,255,1) 42%);
         background:  -webkit-linear-gradient(to left,rgba(255,255,255,0) 0,rgba(255,255,255,1) 42%);
         background: linear-gradient(to left,rgba(255,255,255,0) 0,rgba(255,255,255,1) 42%);
     }
-    &::after{content: '';width: 20px;height: 100%;position: absolute;top:0;right: 0;z-index: 2;
+    &::after{content: '';width: 19px;height: 100%;position: absolute;top:0;right: 0;z-index: 2;
         background: -moz-linear-gradient(left,rgba(255,255,255,0) 0,rgba(255,255,255,1) 42%);
         background: -webkit-linear-gradient(left,rgba(255,255,255,0) 0,rgba(255,255,255,1) 42%);
         background: linear-gradient(to right,rgba(255,255,255,0) 0,rgba(255,255,255,1) 42%);
-    }
+    } */
 
     li{width: auto !important;position: relative;}
-    a{display: block;line-height: 55px;font-size: 17px;color: #111;font-weight: 500;letter-spacing: -0.4px;}
+    a{display: block;line-height: 55px;font-size: 17px;color: #111;font-weight: 500;letter-spacing: -0.4px;padding: 0 10px;}
     li.active{
-        a::after{content: '';display: block;width: 100%;height: 5px;background: #848891;position: absolute;left: 0;bottom: 0;}
+        a::after{content: '';display: block;height: 5px;background: #848891;position: absolute;left: 10px;bottom: 0;right: 10px;}
     }
 }
 
 .fixed-menu{
-    position: fixed;left: 0;bottom: -70px;width: 100%;height: 60px;z-index: 999;background: #fff;transition: all 0.3s cubic-bezier(0.1, 0.76, 0.33, 0.99);
+    position: fixed;left: 0;/* bottom: -70px; */bottom: 0;width: 100%;height: 60px;z-index: 999;background: #fff;transition: all 0.3s cubic-bezier(0.1, 0.76, 0.33, 0.99);
     ul{display: flex;}
     li{width: 25%;text-align: center;
         a{display: flex;height: 60px;align-items: center;flex-direction: column;justify-content: center;}

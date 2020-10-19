@@ -11,6 +11,7 @@
 .icon-nav-bell{background-image: url('../images/icon-nav-bell.svg');width: 12.5px;height: 22px;}
 .icon-arr-right{background-image: url('../images/icon-arrow-right.svg');width: 7.7px;height: 11.7px;}
 .icon-hamburger{background-image: url('../images/icon-hamburger.svg');width: 27px;height: 16px;}
+.icon-user{background-image: url('../images/icon-user.svg');width: 19.5px;height: 19.5px;}
 .icon-bell{background-image: url('../images/icon-bell.svg');width: 13px;height: 22.5px;}
 .icon-eye{background-image: url('../images/icon-eye.svg');width: 21px;height: 11.5px;}
 .icon-heart{background-image: url('../images/icon-heart.svg');width: 11.5px;height: 10px;}
@@ -90,7 +91,7 @@
 }
 
 .modal-contest-view{
-    .modal-dialog{max-width: 100%;margin: 0;}
+    .modal-dialog{max-width: 100%;margin: 0;padding-left: 0;padding-right: 0;}
     .modal-content{border-radius: 0;border: 0;}
     .modal-header{border-bottom: 0;}
     .modal-back{line-height: 1;}
@@ -163,7 +164,7 @@
 .tab-category{
     margin-top: 10px;
     li{width: auto !important;position: relative;}
-    a{display: block;font-size: 15px;color: #666;font-weight: 500;letter-spacing: -0.4px;}
+    a{display: block;font-size: 15px;color: #666;font-weight: 500;letter-spacing: -0.4px;padding: 0 10px;}
     li.active{
         a{color: $secondary;}
     }
@@ -266,5 +267,16 @@ h3.tit{text-align: center;font-size: 18px;margin-bottom: 30px;}
     .desc{
         margin-top: 20px;font-size: 13px;
         strong{font-size: 14px;text-align: center;display: block;margin-bottom: 6px;}
+    }
+}
+
+.board-top{
+    font-size: 13px;margin-bottom: 8px;
+}
+.listing_select{
+    &.text-right{
+        .select{
+            margin: 0 5px;
+        }
     }
 }

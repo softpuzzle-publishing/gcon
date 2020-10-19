@@ -103,9 +103,8 @@ var Header = {
 			initialSlide: idx,
             slidesPerView: 'auto',
 			freeMode: true,
-			spaceBetween: 20,
-            slidesOffsetBefore: 20,
-            slidesOffsetAfter: 20,
+            slidesOffsetBefore: 10,
+            slidesOffsetAfter: 10,
         });
 	}
 };
@@ -125,9 +124,8 @@ var Common = {
 				initialSlide: idx,
 				slidesPerView: 'auto',
 				freeMode: true,
-				spaceBetween: 20,
-				slidesOffsetBefore: 20,
-				slidesOffsetAfter: 20,
+				slidesOffsetBefore: 10,
+				slidesOffsetAfter: 10,
 			});
 		}
 
