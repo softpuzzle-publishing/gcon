@@ -914,10 +914,13 @@ input[type=password] {
 .popupMain {
   background: #fff;
   position: relative;
+  height: 100%;
+  overflow: auto;
 }
 
 .popupMain .cont {
   min-width: 300px;
+  padding: 50px;
 }
 
 .popupMain .cont img {
@@ -937,7 +940,7 @@ input[type=password] {
   color: #000;
 }
 
-.popupMain .today {
+.popupMainWrap .today {
   text-align: center;
   padding-bottom: 15px;
   background-color: #eee;

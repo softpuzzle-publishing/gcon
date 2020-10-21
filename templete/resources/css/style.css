@@ -781,6 +781,7 @@ input[type=password] {
   border: 1px solid #ddd;
   position: relative;
   padding: 40px;
+  height: 100%;
 }
 
 .section-board .box h3 {
@@ -888,10 +889,13 @@ input[type=password] {
 .popupMain {
   background: #fff;
   position: relative;
+  height: 100%;
+  overflow: auto;
 }
 
 .popupMain .cont {
   min-width: 300px;
+  padding: 50px;
 }
 
 .popupMain .cont img {
@@ -911,7 +915,7 @@ input[type=password] {
   color: #000;
 }
 
-.popupMain .today {
+.popupMainWrap .today {
   text-align: center;
   padding-bottom: 15px;
   background-color: #eee;
@@ -925,3 +929,330 @@ input[type=password] {
   }
 }
 /*# sourceMappingURL=style.css.map */
+
+
+/* 2020.08.27. sykim: 갤러리 수상작 시작 */
+.gallery-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: -10px;
+}
+
+.gallery-list .item {
+  width: 50%;
+  padding: 10px;
+}
+
+.gallery-list .box {
+  background: #fff;
+  height: 100%;
+  -webkit-transition: all .15s;
+  transition: all .15s;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 1px solid #ddd;
+}
+
+.gallery-list .box:hover {
+  background-color: #e5e5e5;
+}
+
+.gallery-list .txt {
+  padding: 15px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+.gallery-list .txt .subject {
+  font-size: 19px;
+  font-weight: 700;
+  height: 3em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-bottom: 1px solid #ddd;
+}
+
+.gallery-list .txt .date {
+  font-size: 13px;
+  color: #888;
+  margin-top: 10px;
+}
+
+.gallery-list .txt .host {
+  font-weight: 700;
+  color: #666;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.gallery-list .img {
+  height: 150px;
+  width: 150px;
+}
+
+.gallery-list .img a {
+  display: block;
+  height: 100%;
+  position: relative;
+}
+
+.gallery-list .img a::before {
+  content: '대상';
+  display: block;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  padding: 5px 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.gallery-list .img span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.gallery-list .img span::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.gallery-list .img span::after {
+  content: "\f002";
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #333;
+  font-size: 20px;
+  line-height: 50px;
+  text-align: center;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  display: none;
+}
+
+.gallery-list .img a:focus span::before,
+.gallery-list .img a:hover span::before {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.gallery-list .img a:focus span::after,
+.gallery-list .img a:hover span::after {
+  display: block;
+}
+
+.gallery-list .img img {
+  position: absolute;
+  width: 100%;
+  max-height: none;
+  left: 0;
+  top: 0;
+}
+
+.gallery-list + .gallery-list {
+  margin-top: 15px;
+}
+
+.section-gallery-view .tit {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.gallery-list-sub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: -10px;
+}
+
+.gallery-list-sub .item {
+  width: 25%;
+  padding: 10px;
+}
+
+.gallery-list-sub .box {
+  background: #fff;
+  height: 100%;
+  -webkit-transition: all .15s;
+  transition: all .15s;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.gallery-list-sub .box > a {
+  display: block;
+  padding: 15px;
+  height: 100%;
+  position: relative;
+}
+
+.gallery-list-sub .box > a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.gallery-list-sub .box > a:hover .desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gallery-list-sub .box:hover {
+  background-color: #f6f6f6;
+}
+
+.gallery-list-sub .sector {
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.gallery-list-sub .img {
+  height: 200px;
+}
+
+.gallery-list-sub .img span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.gallery-list-sub .img p {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.gallery-list-sub .img a:focus span::before,
+.gallery-list-sub .img a:hover span::before {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.gallery-list-sub .img a:focus span::after,
+.gallery-list-sub .img a:hover span::after {
+  display: block;
+}
+
+.gallery-list-sub .img img {
+  position: absolute;
+  width: 100%;
+  max-height: none;
+  left: 0;
+  top: 0;
+}
+
+.gallery-list-sub .txt {
+  padding: 15px;
+}
+
+.gallery-list-sub .txt .subject {
+  font-weight: 700;
+}
+
+.gallery-list-sub .txt .name {
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.gallery-list-sub .desc {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gallery-list-sub .desc p {
+  height: 9em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
+  word-break: keep-all;
+  padding: 0 20px;
+}
+
+.gallery-list-sub .desc .btn {
+  margin-top: 10px;
+  background: #fff;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.gallery-list-sub + .gallery-list-sub {
+  margin-top: 15px;
+}
+
+.winner-view {
+  text-align: center;
+}
+
+.winner-view .subject {
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.winner-view .desc {
+  margin-top: 20px;
+}
+
+.winner-view .desc strong {
+  font-size: 16px;
+  text-align: center;
+  display: block;
+  margin-bottom: 6px;
+}
+/* 2020.08.27. sykim: 갤러리 수상작 종료 */ 
