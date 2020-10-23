@@ -798,7 +798,7 @@ input[type=password] {
 .login .banners .swiper-slide img {
   position: absolute;
   left: 0;
-  top: 0;
+  top: -65px;
   max-height: none;
   width: 100%;
 }
