@@ -574,6 +574,20 @@ input[type=password] {
   margin-left: 15px;
 }
 
+.title-wrap.contest-select {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.title-wrap.contest-select.fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  margin-top: -67px;
+  height: 58px;
+  background: black;
+}
+
 .hit,
 .like {
   font-size: 13px;
@@ -1191,18 +1205,14 @@ input[type=password] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-left: 1px solid #b0b0b0;
 }
 
 .contest-list .item {
-  width: 20%;
-  border-top: 1px solid #b0b0b0;
-  border-bottom: 1px solid #b0b0b0;
-  border-right: 1px solid #b0b0b0;
+  width: 236px;
 }
 
 .contest-list .item + .item {
-  margin-left: 0;
+  margin-left: 8px;
 }
 
 .contest-list .box {
@@ -1210,6 +1220,7 @@ input[type=password] {
   height: 100%;
   -webkit-transition: all .15s;
   transition: all .15s;
+  border: 1px solid #b0b0b0;
 }
 
 .contest-list .box:hover {
@@ -1288,7 +1299,7 @@ input[type=password] {
 }
 
 .contest-list .txt {
-  padding: 15px;
+  padding: 7px;
 }
 
 .contest-list .txt .subject {
@@ -1309,8 +1320,8 @@ input[type=password] {
 }
 
 .contest-list .txt .info {
-  padding-top: 15px;
-  margin-top: 15px;
+  padding-top: 5px;
+  margin-top: 5px;
   border-top: 1px solid #ddd;
 }
 
@@ -1324,17 +1335,16 @@ input[type=password] {
 }
 
 .contest-list.special .item {
-  width: 23%;
+  width: 236px;
   border: 0;
 }
 
 .contest-list.special .item + .item {
-  margin-left: 2.66666%;
   border-left: 0;
 }
 
 .contest-list.special .img {
-  height: 250px;
+  height: 200px;
 }
 
 .contest-list.small .img {
@@ -1346,16 +1356,17 @@ input[type=password] {
 }
 
 .article-all-contest section {
-  padding-bottom: 75px;
+  padding-bottom: 15px;
 }
 
 .article-all-contest .title-sub {
   font-size: 22px;
   font-weight: 700;
-  border-top: 6px solid #000;
-  padding-top: 30px;
+  padding: 4px;
   display: inline-block;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
+  background: #9da3b0;
+  color: white;
 }
 
 .section-special {
@@ -1400,7 +1411,6 @@ input[type=password] {
 
 .contest-list-column li {
   border: 1px solid #ddd;
-  padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1704,6 +1714,7 @@ input[type=password] {
   font-size: 1rem;
   font-weight: 700;
   margin: 0 3px;
+  border: 1px solid orange;
 }
 
 .contest-view-wrap {
