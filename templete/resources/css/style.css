@@ -707,10 +707,6 @@ input[type=password] {
   text-decoration: underline;
 }
 
-.section-quick {
-  margin-top: -68px;
-}
-
 .section-quick a {
   display: block;
   font-size: 22px;
