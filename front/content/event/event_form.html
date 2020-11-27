@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>gcon</title>
+    <meta name="keywords" content="gcon">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/swiper-5.2.1/css/swiper.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jquery ui -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- swiper -->
+    <script src="../../resources/plugins/swiper-5.2.1/js/swiper.min.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header-block">
+            <!-- header include -->
+        </div>
+
+        <div id="content-block">
+            <div class="content">
+
+                <!-- content -->
+                <article>
+                    <div class="title-wrap">
+                        <h2 class="title">행사/전시 등록</h2>
+                    </div>
+                    <section>
+                        <div class="container">
+
+                            <!-- content 시작 -->
+                            <input type="hidden" id="page-title" value="행사/전시 등록">
+                            <form action="" id="eventForm">
+                                <input type="hidden" id="eIdx" name="eIdx" value="">
+                                <input type="hidden" name="fileJson" id="fileJson">
+                                <div class="card card-gray card-outline">
+                                    <div class="card-header">
+                                        <h3 class="card-title">담당자 정보</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <label>회사명</label>
+                                                    <input type="text" name="eAgentCoNm" class="form-control" placeholder="회사명" value="비에이비(주)" maxlength="125">
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <label>담당자명</label>
+                                                    <input type="text" name="eAgentUserNm" class="form-control" placeholder="담당자명" value="G콘관리자" maxlength="125">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <label>연락처</label>
+                                                    <select name="eAgentPhone" class="form-control"><option value="010-9195-4240">010-9195-4240</option><option value="02-6953-1995">02-6953-1995</option></select>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <label>이메일</label>
+                                                    <input type="text" name="eAgentEmail" class="form-control" placeholder="이메일" value="gcon@gcontest.co.kr" maxlength="125">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card card-gray card-outline">
+                                    <div class="card-header">
+                                        <h3 class="card-title">주최/주관/후원 정보</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label>주최사명</label>
+                                                    <input type="hidden" value="eHostArray">
+                                                    <div class="d-flex align-items-center">
+
+
+
+                                                                <input type="text" name="eHostArray" class="form-control w-auto mr-1" placeholder="주최사명" value="" maxlength="125">
+
+
+
+                                                        <button type="button" class="btn btn-gray w-auto mr-1" data-event="btn-add"><i class="fas fa-plus"></i></button>
+                                                        <button type="button" class="btn btn-gray w-auto" data-event="btn-remove"><i class="fas fa-minus"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label>주최사 사업유형</label>
+                                                    <div data-id="eHostTypeCd" class="custom-control-group"><span class="custom-control custom-radio"><input type="radio" id="eHostTypeCd1" name="eHostTypeCd" value="HT01" class="custom-control-input"> <label for="eHostTypeCd1" class="custom-control-label">중앙정부/기관</label></span><span class="custom-control custom-radio"><input type="radio" id="eHostTypeCd2" name="eHostTypeCd" value="HT02" class="custom-control-input"> <label for="eHostTypeCd2" class="custom-control-label">지방자치단체</label></span><span class="custom-control custom-radio"><input type="radio" id="eHostTypeCd3" name="eHostTypeCd" value="HT04" class="custom-control-input"> <label for="eHostTypeCd3" class="custom-control-label">학교/재단/협회</label></span><span class="custom-control custom-radio"><input type="radio" id="eHostTypeCd4" name="eHostTypeCd" value="HT05" class="custom-control-input"> <label for="eHostTypeCd4" class="custom-control-label">신문/방송/언론</label></span><span class="custom-control custom-radio"><input type="radio" id="eHostTypeCd5" name="eHostTypeCd" value="HT06" class="custom-control-input"> <label for="eHostTypeCd5" class="custom-control-label">공기업</label></span><span class="custom-control custom-radio"><input type="radio" id="eHostTypeCd6" name="eHostTypeCd" value="HT07" class="custom-control-input"> <label for="eHostTypeCd6" class="custom-control-label">대기업</label></span><span class="custom-control custom-radio"><input type="radio" id="eHostTypeCd7" name="eHostTypeCd" value="HT08" class="custom-control-input"> <label for="eHostTypeCd7" class="custom-control-label">중소/벤처기업</label></span><span class="custom-control custom-radio"><input type="radio" id="eHostTypeCd8" name="eHostTypeCd" value="HT09" class="custom-control-input"> <label for="eHostTypeCd8" class="custom-control-label">외국계기업</label></span><span class="custom-control custom-radio"><input type="radio" id="eHostTypeCd9" name="eHostTypeCd" value="HT10" class="custom-control-input"> <label for="eHostTypeCd9" class="custom-control-label">학회/비영리 단체</label></span><span class="custom-control custom-radio"><input type="radio" id="eHostTypeCd10" name="eHostTypeCd" value="HT99" class="custom-control-input"> <label for="eHostTypeCd10" class="custom-control-label">기타</label></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label>주관사명</label>
+                                                    <input type="hidden" value="eOrganizedArray">
+                                                    <div class="d-flex align-items-center">
+
+
+
+                                                                <input type="text" name="eOrganizedArray" class="form-control w-auto mr-1" placeholder="주관사명" value="" maxlength="125">
+
+
+
+                                                        <button type="button" class="btn btn-gray w-auto mr-1" data-event="btn-add"><i class="fas fa-plus"></i></button>
+                                                        <button type="button" class="btn btn-gray w-auto" data-event="btn-remove"><i class="fas fa-minus"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label>후원사명</label>
+                                                    <input type="hidden" value="eSponsorArray">
+                                                    <div class="d-flex align-items-center">
+
+
+
+                                                                <input type="text" name="eSponsorArray" class="form-control w-auto mr-1" placeholder="후원사명" value="" maxlength="125">
+
+
+
+                                                        <button type="button" class="btn btn-gray w-auto mr-1" data-event="btn-add"><i class="fas fa-plus"></i></button>
+                                                        <button type="button" class="btn btn-gray w-auto" data-event="btn-remove"><i class="fas fa-minus"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card card-gray card-outline">
+                                    <div class="card-header">
+                                        <h3 class="card-title">기본정보 등록</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label>행사전시명</label>
+
+                                                        <input type="text" name="eEventNm" class="form-control" placeholder="행사전시명" maxlength="125" value="">
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label>분야 선택</label>
+                                                    <div data-id="eBunyaCd" class="custom-control-group"><span class="custom-control custom-checkbox"><input type="checkbox" id="eBunyaCd1" name="eBunyaCd" value="EB01" class="custom-control-input"> <label for="eBunyaCd1" class="custom-control-label">미술/디자인</label></span><span class="custom-control custom-checkbox"><input type="checkbox" id="eBunyaCd2" name="eBunyaCd" value="EB02" class="custom-control-input"> <label for="eBunyaCd2" class="custom-control-label">광고/마케팅</label></span><span class="custom-control custom-checkbox"><input type="checkbox" id="eBunyaCd3" name="eBunyaCd" value="EB03" class="custom-control-input"> <label for="eBunyaCd3" class="custom-control-label">연극/공연</label></span><span class="custom-control custom-checkbox"><input type="checkbox" id="eBunyaCd4" name="eBunyaCd" value="EB04" class="custom-control-input"> <label for="eBunyaCd4" class="custom-control-label">무용/음악</label></span><span class="custom-control custom-checkbox"><input type="checkbox" id="eBunyaCd5" name="eBunyaCd" value="EB05" class="custom-control-input"> <label for="eBunyaCd5" class="custom-control-label">사진</label></span><span class="custom-control custom-checkbox"><input type="checkbox" id="eBunyaCd6" name="eBunyaCd" value="EB06" class="custom-control-input"> <label for="eBunyaCd6" class="custom-control-label">캐릭터/만화</label></span><span class="custom-control custom-checkbox"><input type="checkbox" id="eBunyaCd7" name="eBunyaCd" value="EB07" class="custom-control-input"> <label for="eBunyaCd7" class="custom-control-label">과학/공학</label></span><span class="custom-control custom-checkbox"><input type="checkbox" id="eBunyaCd8" name="eBunyaCd" value="EB08" class="custom-control-input"> <label for="eBunyaCd8" class="custom-control-label">건축/인테리어</label></span><span class="custom-control custom-checkbox"><input type="checkbox" id="eBunyaCd9" name="eBunyaCd" value="EB09" class="custom-control-input"> <label for="eBunyaCd9" class="custom-control-label">체험/참여/캠페인</label></span><span class="custom-control custom-checkbox"><input type="checkbox" id="eBunyaCd10" name="eBunyaCd" value="EB10" class="custom-control-input"> <label for="eBunyaCd10" class="custom-control-label">취업/창업</label></span><span class="custom-control custom-checkbox"><input type="checkbox" id="eBunyaCd11" name="eBunyaCd" value="EB11" class="custom-control-input"> <label for="eBunyaCd11" class="custom-control-label">봉사활동/교육</label></span><span class="custom-control custom-checkbox"><input type="checkbox" id="eBunyaCd12" name="eBunyaCd" value="EB12" class="custom-control-input"> <label for="eBunyaCd12" class="custom-control-label">금융</label></span><span class="custom-control custom-checkbox"><input type="checkbox" id="eBunyaCd13" name="eBunyaCd" value="EB13" class="custom-control-input"> <label for="eBunyaCd13" class="custom-control-label">환경</label></span><span class="custom-control custom-checkbox"><input type="checkbox" id="eBunyaCd14" name="eBunyaCd" value="EB14" class="custom-control-input"> <label for="eBunyaCd14" class="custom-control-label">제품/유통</label></span></div>
+                                                </div>
+                                                <input id="eBunyaNm" name="eBunyaNm" type="hidden">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <label>행사기간 선택</label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                                        </div>
+                                                        <input type="text" id="ePeriodD" name="ePeriodD" class="form-control" data-event="rangeDatepicker">
+                                                        <input type="hidden" id="ePeriodStD" name="ePeriodStD" value="">
+                                                        <input type="hidden" id="ePeriodEdD" name="ePeriodEdD" value="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <label>평일 참여시간 선택</label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text"><i class="far fa-clock"></i></span>
+                                                        </div>
+                                                        <input type="text" class="form-control float-right" id="eWeekdayT" data-event="rangeTimepicker">
+                                                        <input type="hidden" id="eWeekdayStT" name="eWeekdayStT" value="">
+                                                        <input type="hidden" id="eWeekdayEdT" name="eWeekdayEdT" value="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <label>주말 참여시간 선택</label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text"><i class="far fa-clock"></i></span>
+                                                        </div>
+                                                        <input type="text" class="form-control float-right" id="eWeekendT" data-event="rangeTimepicker">
+                                                        <input type="hidden" id="eWeekendStT" name="eWeekendStT" value="">
+                                                        <input type="hidden" id="eWeekendEdT" name="eWeekendEdT" value="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label>휴관 휴무일</label>
+                                                    <input type="text" name="eClosedDay" class="form-control" placeholder="휴관 휴무일" value="" maxlength="125">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label>참여 대상</label>
+                                                    <input type="hidden" id="tempTargetEtcVal" value="">
+                                                    <div data-id="eTargetCd" id="eTargetCdList" class="custom-control-group"><span class="custom-control custom-checkbox"><input type="checkbox" id="eTargetCd1" name="eTargetCd" value="CT01" class="custom-control-input"> <label for="eTargetCd1" class="custom-control-label">제한 없음</label></span><span class="custom-control custom-checkbox"><input type="checkbox" id="eTargetCd2" name="eTargetCd" value="CT02" class="custom-control-input"> <label for="eTargetCd2" class="custom-control-label">대학(원)생</label></span><span class="custom-control custom-checkbox"><input type="checkbox" id="eTargetCd3" name="eTargetCd" value="CT03" class="custom-control-input"> <label for="eTargetCd3" class="custom-control-label">직장인/일반인</label></span><span class="custom-control custom-checkbox"><input type="checkbox" id="eTargetCd4" name="eTargetCd" value="CT04" class="custom-control-input"> <label for="eTargetCd4" class="custom-control-label">고등학생</label></span><span class="custom-control custom-checkbox"><input type="checkbox" id="eTargetCd5" name="eTargetCd" value="CT05" class="custom-control-input"> <label for="eTargetCd5" class="custom-control-label">초/중학생</label></span><span class="custom-control custom-checkbox"><input type="checkbox" id="eTargetCd6" name="eTargetCd" value="CT06" class="custom-control-input"> <label for="eTargetCd6" class="custom-control-label">기업</label></span><br><span class="custom-control custom-checkbox"><input type="checkbox" id="eTargetCd7" name="eTargetCd" value="CT99" class="custom-control-input" data-check="etc" data-match="#eTargetEtcVal"> <label for="eTargetCd7" class="custom-control-label">기타</label></span><input type="text" class="form-control w-auto" title="기타 입력" data-check="etc-input" id="eTargetEtcVal" name="eTargetEtcVal" maxlength="125" style="display: none;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label>참여 비용</label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text">₩</span>
+                                                        </div>
+                                                        <input type="number" name="eCost" class="form-control" value="">
+                                                    </div>
+                                                    <!-- <p class="note-in-form">※ 숫자만 입력해주세요</p> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card card-gray card-outline">
+                                    <div class="card-header">
+                                        <h3 class="card-title">상세 정보 등록</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label>행사 주제</label>
+                                                    <textarea name="eSubject" class="form-control" rows="3"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label>행사 장소</label>
+                                                    <input type="text" name="eLocation" class="form-control" maxlength="125" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label>행사 소개</label>
+                                                    <textarea name="eSummary" class="form-control" rows="3"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label>찾아오시는 길</label>
+                                                    <textarea name="eDirections" class="form-control" rows="3"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label>홈페이지</label>
+                                                    <input type="text" name="eHomepage" class="form-control" maxlength="125" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label>문의 및 안내</label>
+                                                    <input type="text" name="eInquiry" class="form-control" maxlength="125" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label>포스터 등록 <a href="javascript:;" data-toggle="modal" data-target="#modal-poster" class="badge bg-success"><i class="fas fa-question-circle"></i> 안내</a></label>
+                                                    <div class="input-group">
+                                                        <div class="custom-file">
+                                                            <input type="file" class="custom-file-input" id="efile">
+                                                            <label class="custom-file-label" for="epfile">파일 선택</label>
+                                                            <input type="hidden" name="" class="fileType" value="EP">
+                                                            <input type="hidden" class="dispIdx" value="1">
+                                                            <input type="hidden" name="epFileName" class="fileName" value="">
+                                                            <input type="hidden" name="epFilePath" class="filePath" value="">
+                                                            <input type="hidden" name="epFileSize" class="fileSize" value="">
+                                                            <input type="hidden" name="epFileWidth" class="fileWidth" value="">
+                                                            <input type="hidden" name="epFileHeight" class="fileHeight" value="">
+                                                            <input type="hidden" name="epFileRate" class="fileRate" value="">
+                                                        </div>
+                                                    </div>
+                                                    <!-- <p class="note-in-form">※파일형태(JPG/PNG) / 권장사이즈(가로 600픽셀)</p> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="row row-10 mt-3">
+                                <div class="col-6">
+                                    <button type="button" id="btn-cancel" class="btn btn-gray btn-block btn-lg">취소</button>
+                                </div>
+                                <div class="col-6">
+                                    <button type="button" id="btn-save" class="btn btn-dark btn-block btn-lg" data-toggle="modal" data-target="#modal-save">완료</button>
+                                </div>
+                            </div>
+
+                            <!-- modal : 등록 확인 -->
+                            <!-- alert 기능일때 .alert 추가 -->
+                            <div class="modal fade alert" id="modal-save">
+                                <div class="modal-dialog modal-sm">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <p class="text-center text-danger">“등록을 완료하였습니다.”</p>
+                                            <p class="text-center">등록하시겠습니까?</p>
+                                            <div class="btns">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">아니오</button>
+                                                <button type="button" id="btn-modal-save" class="btn btn-dark">네</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- modal : 수정 확인 -->
+                            <!-- alert 기능일때 .alert 추가 -->
+                            <div class="modal fade alert" id="modal-modify">
+                                <div class="modal-dialog modal-sm">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <p class="text-center text-danger">“내용을 수정하였습니다.”</p>
+                                            <p class="text-center">변경 하시겠습니까?</p>
+                                            <div class="btns">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">아니오</button>
+                                                <button type="button" id="btn-modal-modify" class="btn btn-dark">네</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- modal : 포스터 등록 안내 -->
+                            <div class="modal fade" id="modal-poster">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title"></h4>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">×</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>포스터 등록 안내 <br> width:766px</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- modal : 솔루션 등록 안내 -->
+                            <div class="modal fade" id="modal-solution">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title"></h4>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">×</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>솔루션 안내 <br> width:766px</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- content 끝 -->
+
+                        </div>
+                    </section>
+                </article>
+                <!-- //content -->
+
+            </div>
+        </div>
+
+        <div id="footer-block">
+            <!-- footer include -->
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+        });
+    </script>
+
+</body>
+
+</html>

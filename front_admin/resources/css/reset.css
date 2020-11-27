@@ -39,35 +39,3 @@
   font-weight: 900;
   src: url(../fonts/ko_NotoSans/NotoSansKR-Black.woff2) format("woff2"), url(../fonts/ko_NotoSans/NotoSansKR-Black.woff) format("woff"), url(../fonts/ko_NotoSans/NotoSansKR-Black.otf) format("opentype");
 }
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-
-.accessibility-nav {
-  z-index: 2;
-  position: relative;
-  width: 100%;
-}
-
-.accessibility-nav a {
-  display: block;
-  overflow: hidden;
-  height: 0;
-  text-align: center;
-}
-
-.accessibility-nav a:hover, .accessibility-nav a:focus, .accessibility-nav a:active {
-  background: #318de7;
-  padding: .5em;
-  height: auto;
-  color: #fff;
-}
-/*# sourceMappingURL=reset.css.map */

@@ -5090,6 +5090,11 @@ input[type="button"].btn-block {
 
 .card-title {
   margin-bottom: 0.75rem;
+  float: left;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+  font-weight: 700;
 }
 
 .card-subtitle {
@@ -5122,6 +5127,22 @@ input[type="button"].btn-block {
 
 .card-header + .list-group .list-group-item:first-child {
   border-top: 0;
+}
+
+.card-header > .card-tools {
+  float: right;
+  margin-right: -0.625rem;
+}
+
+.card-header > .card-tools .input-group,
+.card-header > .card-tools .nav,
+.card-header > .card-tools .pagination {
+  margin-bottom: -0.4rem;
+  margin-top: -0.4rem;
+}
+
+.card-header > .card-tools [data-toggle='tooltip'] {
+  position: relative;
 }
 
 .card-footer {
@@ -10551,4 +10572,3 @@ a.text-black:hover, a.text-black:focus {
 .invisible {
   visibility: hidden !important;
 }
-/*# sourceMappingURL=bootstrap.css.map */
