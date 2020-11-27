@@ -678,7 +678,7 @@ td a:hover {
 }
 
 .winner-list .item {
-  width: 33.3333%;
+  width: 20%;
   padding: 10px;
 }
 
@@ -741,8 +741,8 @@ td a:hover {
 }
 
 .winner-list .img img {
-  position: absolute;
-  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
   max-height: none;
   left: 0;
   top: 0;
@@ -799,4 +799,10 @@ td a:hover {
   font-weight: 700;
   margin-top: 8px;
 }
+
+.winner-list .btn {
+  margin-top: 10px;
+  cursor: auto;
+}
+
 /*# sourceMappingURL=style.css.map */
