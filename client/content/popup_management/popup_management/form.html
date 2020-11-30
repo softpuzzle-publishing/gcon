@@ -32,7 +32,7 @@
 
         <div id="header-include">
             <!-- header include 개발시 상위 div 삭제 요망 -->
-        </div>        
+        </div>
 
         <div class="body-container">
             <div id="aside-include">
@@ -41,7 +41,7 @@
 
             <!-- Content Wrapper. Contains page content -->
             <div class="content-wrapper">
-                
+
                 <div id="location-include">
                     <!-- location include 개발시 상위 div 삭제 요망 -->
                 </div>
@@ -49,10 +49,10 @@
                 <!-- Main content -->
                 <section class="content">
                     <div class="container-fluid">
-                    
+
                         <!-- content 시작 -->
                         <div class="card">
-                            <div class="card-body">                                
+                            <div class="card-body">
                                 <table class="table table-bordered">
                                     <colgroup>
                                         <col style="width:140px">
@@ -93,7 +93,7 @@
                                                     <label class="custom-file-label" for="file1">파일 선택</label>
                                                 </div>
                                             </td>
-                                        </tr>                                    
+                                        </tr>
                                         <tr>
                                             <th>이미지 설명</th>
                                             <td colspan="3">
@@ -129,15 +129,16 @@
                                         <li class="page-item"><a class="page-link" href="#">5</a></li>
                                         <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-right"></i></a></li>
                                     </ul>
-                                </div>                                
+                                </div>
                             </div>
                         </div>
                         <div class="btns">
                             <button type="button" class="btn btn-default btn-lg" onclick="history.back()">취소</button>
-                            <button type="button" class="btn btn-dark btn-lg" onclick="window.location.href='list.html'">등록(수정)</button>                    
+                            <button type="button" class="btn btn-dark btn-lg" onclick="window.location.href='list.html'">등록(수정)</button>
+                            <button type="button" class="btn btn-secondary btn-lg" id="btn-popup-preview">미리보기</button>
                         </div>
                         <!-- content 끝 -->
-                        
+
                     </div>
                     <!-- /.container-fluid -->
                 </section>
@@ -158,13 +159,44 @@
     </div>
     <!-- ./wrapper -->
 
+    <div class="popupMainWrap" style="display: none;">
+        <div class="backdrop"></div>
+        <div class="popupWrap">
+            <div class="popupItem"style="width:400px;left:40px;top:50px;">
+                <div class="popupMain">
+                    <div class="cont">
+                        <!-- editor -->
+                        <div style="padding:30px">
+                            팝업 내용
+                        </div>
+                        <!-- //editor -->
+                    </div>
+                    <div class="close"><a href="javascript:;"><i class="fas fa-times-circle"></i><span class="sr-only">팝업 닫기</span></a></div>
+                    <div class="today">
+                        <a href="javascript:;">오늘 하루 그만보기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- AdminLTE App -->
-    <script src="../../../resources/js/adminlte.js"></script>    
+    <script src="../../../resources/js/adminlte.js"></script>
     <!-- ui 관련 -->
     <script src="../../../resources/js/ui.js"></script>
 
     <script>
-        
+        //미리보기 팝업 open
+        $('#btn-popup-preview').on('click',function(e){
+            e.preventDefault();
+            $('.popupMainWrap').show();
+        });
+        //미리보기 팝업 close
+        $('.popupWrap').click(function(e) {
+            if(!$('.popupItem .cont').has(e.target).length){
+                $('.popupMainWrap').hide();
+            }
+        });
     </script>
 </body>
 
