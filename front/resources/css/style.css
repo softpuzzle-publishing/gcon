@@ -1919,58 +1919,58 @@ input[type=password] {
   padding: 2.5rem 2rem;
 }
 
+.event-list {
+  overflow: hidden;
+  width: 100%;
+}
+
 .event-list ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0 -15px;
+  width: 100%;
+}
+
+.event-list li:nth-child(3n+1) {
+  margin-left: 0;
 }
 
 .event-list li {
-  width: 50%;
-  padding: 15px;
+  width: calc((100% - 60px) / 3);
+  min-height: 394px;
+  margin-left: 30px;
+  float: left;
 }
 
 .event-list a {
   background: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-decoration: none;
-  border: 1px solid #ddd;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  width: 100%;
+  display: inline-block;
+  border: 1px solid #0000001f;
+  min-height: 359px;
 }
 
 .event-list a .event-img {
-  width: 50%;
+  width: 100%;
+  height: 250px;
+  border-bottom:  1px solid #0000001f;
 }
 
 .event-list a .event-img img {
   width: 100%;
+  height: 250px;
 }
 
 .event-list a .event-info {
-  width: 50%;
-  padding: 0 20px;
+  width: 100%;
+  padding: 10px 20px;
 }
 
 .event-list a .event-info .tit {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  height: 3em;
-  font-size: 22px;
-  margin-bottom: 15px;
+  display: block;
+  font-size: 18px;
+  margin-top: 10px;
 }
 
 .event-list a .event-info .date {
-  display: block;
+  margin-left: 7px;
 }
 
 .event-list a:hover {
