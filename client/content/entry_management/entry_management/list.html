@@ -32,7 +32,7 @@
 
         <div id="header-include">
             <!-- header include 개발시 상위 div 삭제 요망 -->
-        </div>        
+        </div>
 
         <div class="body-container">
             <div id="aside-include">
@@ -41,7 +41,7 @@
 
             <!-- Content Wrapper. Contains page content -->
             <div class="content-wrapper">
-                
+
                 <div id="location-include">
                     <!-- location include 개발시 상위 div 삭제 요망 -->
                 </div>
@@ -49,7 +49,7 @@
                 <!-- Main content -->
                 <section class="content">
                     <div class="container-fluid">
-                    
+
                         <!-- content 시작 -->
                         <div class="contest-select-wrap callout callout-primary">
                             <div class="row justify-content-center">
@@ -65,7 +65,7 @@
                                         </select>
                                         <button type="button" class="btn btn-primary btn-lg ml-1">확인</button>
                                     </div>
-                                </div>                           
+                                </div>
                             </div>
                         </div>
                         <div class="card">
@@ -99,14 +99,14 @@
                                                     <label for="allchk" class="custom-control-label"></label>
                                                 </span>
                                             </th>
-                                            <th style="width: 12%">접수번호</th>                                    
+                                            <th style="width: 12%">접수번호</th>
                                             <th style="width: 9.5%">응모부문</th>
                                             <th style="width: 9.5%">응모형태</th>
                                             <th style="width: 10%">출품자명</th>
                                             <th>출품작 제목</th>
                                             <th style="width: 15%">연락처</th>
                                             <th style="width: 14%">이메일</th>
-                                            <th style="width: 10%">접수일</th>
+                                            <th style="width: 10%">출품 사진</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -121,10 +121,10 @@
                                             <td>기획</td>
                                             <td>개인</td>
                                             <td>김광승</td>
-                                            <td><a href="view.html">출품작 제목 출품작 제목 출품작 제목</a></td>
+                                            <td><a href="view.html" data-toggle="modal" data-target="#receiptInfoViewModal">출품작 제목 출품작 제목 출품작 제목</a></td>
                                             <td>010-0000-0000</td>
                                             <td>gs.kim@babbab.com</td>
-                                            <td>20-01-01</td>
+                                            <td><a href="javascript:void(0)" data-toggle="modal" data-target="#receiptFileViewModal">이미지</a></td>
                                         </tr>
                                         <tr>
                                             <td>
@@ -215,9 +215,9 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- content 끝 -->
-                        
+
                     </div>
                     <!-- /.container-fluid -->
                 </section>
@@ -238,13 +238,137 @@
     </div>
     <!-- ./wrapper -->
 
+    <!-- modal : 작품정보 -->
+    <!-- alert 기능일때 .alert 추가 -->
+    <div class="modal fade" id="receiptInfoViewModal">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="close-wrap">
+                        <button type="button" id="btn-close" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="table-top">
+                                <div class="row">
+                                    <div class="col text-right">
+                                        <!-- <button type="button" class="btn btn-outline-dark">출력하기</button> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="table-title mt-0">출품자 정보</h3>
+                            <table class="table table-bordered">
+                                <colgroup>
+                                    <col style="width:120px">
+                                    <col>
+                                    <col style="width:120px">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>접수번호</th>
+                                        <td id="rIdx">-</td>
+                                        <th>접수일</th>
+                                        <td id="rCreateTime">-</td>
+                                    </tr>
+                                    <tr>
+                                        <th>출품자명</th>
+                                        <td id="uNm">-</td>
+                                        <th>생년월일</th>
+                                        <td id="uBirthday">-</td>
+                                    </tr>
+                                    <tr>
+                                        <th>응모형태</th>
+                                        <td id="rEnterTypeNm">-</td>
+                                        <th>소속</th>
+                                        <td id="uJob">-</td>
+                                    </tr>
+                                    <tr>
+                                        <th>연락처</th>
+                                        <td id="uPhoneNo">-</td>
+                                        <th>이메일</th>
+                                        <td id="uEmail">-</td>
+                                    </tr>
+                                    <tr>
+                                        <th>주소</th>
+                                        <td colspan="3" id="uAddress">-</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <h3 class="table-title">출품작 정보</h3>
+                            <table class="table table-bordered">
+                                <colgroup>
+                                    <col style="width:120px">
+                                    <col>
+                                    <col style="width:120px">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>응모부문</th>
+                                        <td id="rEnterBumunNm">-</td>
+                                        <th>출품작품</th>
+                                        <td id="rEntry">미제출</td>
+                                    </tr>
+                                    <tr>
+                                        <th>출품작 제목</th>
+                                        <td colspan="3" id="rEntryTitle">-</td>
+                                    </tr>
+                                    <tr>
+                                        <th>출품작 설명</th>
+                                        <td colspan="3" id="rEntryDesc">-</td>
+                                    </tr>
+                                    <tr>
+                                        <th>첨부자료 1</th>
+                                        <td id="rAttachedFile01">미제출</td>
+                                        <th>첨부자료 2</th>
+                                        <td id="rAttachedFile02">미제출</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="text-center mt-3 _exceptDiv">
+                        <button type="button" class="btn btn-primary" id="create_pdf"><i class="fas fa-print"></i>pdf 생성</button>
+                        <input type="hidden" id="tempImageData" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- modal : 작품정보 -->
+    <!-- alert 기능일때 .alert 추가 -->
+    <div class="modal fade" id="receiptFileViewModal">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="close-wrap">
+                        <button type="button" id="btn-close" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="img-view">
+                        <!-- <video src="../../../resources/images/sample.mp4" autoplay controls></video> -->
+                        <!-- <img id="receiptFileView" src="../../../resources/images/test.jpg" alt="" style="padding-bottom: 0"> -->
+                    </div>
+                    <div class="text-center mt-3 _exceptDiv">
+                        <a href="javascript:;" class="btn btn-primary" id="create_pdf2" download=""><i class="fas fa-print"></i>pdf 생성</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- AdminLTE App -->
-    <script src="../../../resources/js/adminlte.js"></script>    
+    <script src="../../../resources/js/adminlte.js"></script>
     <!-- ui 관련 -->
     <script src="../../../resources/js/ui.js"></script>
 
     <script>
-        
+
     </script>
 </body>
 
