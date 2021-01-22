@@ -135,9 +135,29 @@
                         <div class="btns">
                             <button type="button" class="btn btn-default btn-lg" onclick="history.back()">취소</button>
                             <button type="button" class="btn btn-dark btn-lg" onclick="window.location.href='list.html'">등록(수정)</button>                    
+                            <button type="button" class="btn btn-primary btn-lg" onclick="popupLayer()">미리보기</button>                    
                         </div>
                         <!-- content 끝 -->
-                        
+                        <div class="ex-wrap" style="display:none;">
+                            <div class="backdrop" style="width: 100%;height: 100%; position: fixed;left: 0;top: 0;background-color: rgba(0, 0, 0, 0.6);z-index: 8888;"></div>
+                            <div class="popWrap" style="position:fixed;width: 100%;height: 100%;left: 0;top: 0;z-index: 8889;padding: 15px;">
+                                <div class="popupItem" data-cookie="c1" style="width:400px;left:40px;top:50px;">
+                                    <div class="popupMain" style="background-color:#fff;position: relative;height:100%;">
+                                        <div class="cont">
+                                            <!-- editor -->
+                                            <div style="padding:30px">
+                                                팝업 내용 <br> 에디터로 등록
+                                            </div>
+                                            <!-- //editor -->
+                                        </div>
+                                        <div class="close" style="position: absolute; top:10px;right:10px;"><a href="javascript:;" onclick="popupClose()"><i class="fas fa-times-circle"></i><span class="sr-only">팝업 닫기</span></a></div>
+                                        <div class="today" style="text-align:center; padding-bottom:15px;background-color:#eee;margin-top:-1px;padding-top:15px;">
+                                            <a href="javascript:;">오늘 하루 그만보기</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <!-- /.container-fluid -->
                 </section>
@@ -164,7 +184,12 @@
     <script src="../../../resources/js/ui.js"></script>
 
     <script>
-        
+        function popupLayer(){
+            $('.ex-wrap').show();
+        }
+        function popupClose(){
+            $('.ex-wrap').hide();
+        }
     </script>
 </body>
 
