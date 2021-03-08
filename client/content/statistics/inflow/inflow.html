@@ -76,7 +76,10 @@
                             <div class="card-body">
                                 <div class="table-group">
                                     <h3 class="table-title mt-0">매체광고유입 설정</h3>
-                                    <p class="text-black-50">광고를 집행할 매체를 선택하여 [사용] 설정한 후 반드시 홍보 URL을 복사하여 홍보를 하면 광고한 매체를 통해 유입된 통계를 확인하실 수 있습니다.</p>
+                                    <div class="d-flex align-items-center justify-content-between mb-2">
+                                        <p class="text-black-50 mb-0">광고를 집행할 매체를 선택하여 [사용] 설정한 후 반드시 홍보 URL을 복사하여 홍보를 하면 광고한 매체를 통해 유입된 통계를 확인하실 수 있습니다.</p>
+                                        <button type="button" class="btn btn-dark align-middle primary-hover" data-toggle="modal" data-target="#modal-new-media">신규 매체 등록</button>
+                                    </div>
                                     <table class="table table-bordered">
                                         <thead>
                                             <tr>
@@ -90,12 +93,15 @@
                                             <tr>
                                                 <td>네이버광고</td>
                                                 <td>naver.com</td>
-                                                <td><a href="javascript:;">temp.gcontest.co.kr/?ref=navercpc</a> <button type="button" class="btn btn-sm btn-default w-auto align-middle ml-1">복사</button></td>
+                                                <td><a href="javascript:;" data-toggle="modal" data-target="#modal-copy">temp.gcontest.co.kr/?ref=navercpc</a> <button type="button" class="btn btn-sm btn-default w-auto align-middle ml-1">복사</button></td>
                                                 <td>
-                                                    <span class="custom-switch custom-control">
-                                                        <input class="custom-control-input" type="checkbox" id="chk1" checked>
-                                                        <label for="chk1" class="custom-control-label"></label>
-                                                    </span>
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="custom-switch custom-control">
+                                                            <input class="custom-control-input" type="checkbox" id="chk1" checked>
+                                                            <label for="chk1" class="custom-control-label"></label>
+                                                        </span>
+                                                        <button type="button" class="btn btn-info btn-md ml-1" data-toggle="modal" data-target="#modal-remove-modify">수정 / 삭제</button>
+                                                    </div>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -103,14 +109,20 @@
                                                 <td>daum.net</td>
                                                 <td><a href="javascript:;">temp.gcontest.co.kr/?ref=navercpc</a> <button type="button" class="btn btn-sm btn-default w-auto align-middle ml-1">복사</button></td>
                                                 <td>
-                                                    <span class="custom-switch custom-control">
-                                                        <input class="custom-control-input" type="checkbox" id="chk2">
-                                                        <label for="chk2" class="custom-control-label"></label>
-                                                    </span>
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="custom-switch custom-control">
+                                                            <input class="custom-control-input" type="checkbox" id="chk2">
+                                                            <label for="chk2" class="custom-control-label"></label>
+                                                        </span>
+                                                        <button type="button" class="btn btn-info btn-md ml-1" data-toggle="modal" data-target="#modal-remove-modify">수정 / 삭제</button>
+                                                    </div>
                                                 </td>
                                             </tr>
                                         </tbody>
                                     </table>
+                                    <div class="text-right">
+                                        <button type="button" class="btn btn-dark align-middle" data-toggle="modal" data-target="#modal-new-media">신규 매체 등록</button>
+                                    </div>
                                 </div>
                                 <div class="table-group">
                                     <h3 class="table-title">통계그래프 [ G콘테스트상세페이지 기준 ]</h3>
@@ -227,7 +239,101 @@
 
     </div>
     <!-- ./wrapper -->
-
+    
+    <!-- 신규매체 등록하기 -->
+    <div class="modal fade" id="modal-new-media">
+        <div class="modal-dialog modal-lg new-media">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <p class="m-0-auto">신규 매체 등록하기</p>
+                    <div class="close-wrap">
+                        <button type="button" id="btn-close" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">홍보할 매체의 정보를 등록 해주세요.</p>  
+                    <div class="form-group d-flex align-items-center">
+                        <label class="w-15 m-0">매체 이름</label>
+                        <input type="text" class="form-control ml-2" placeholder="매체 이름" value="">
+                    </div>
+                    <div class="form-group d-flex align-items-center">
+                        <label class="w-15 m-0">매체 URL</label>
+                        <input type="text" class="form-control ml-2" placeholder="매체 URL" value="">
+                    </div>
+                    <div class="form-group d-flex align-items-center">
+                        <label class="w-15 m-0">서비스 이름</label>
+                        <input type="text" class="form-control ml-2" placeholder="서비스 이름" value="">
+                    </div>
+                    <p class="example-txt">★ 서비스 이름은 ‘매체 URL에서 도메인종류
+                        (com, co.kr, net등) 앞에 붙는 이름입니다.
+                       (예 : gcontest.kr의 서비스 이름은 ‘gcontest’)</p>
+                    <div class="text-center mt-3 _exceptDiv">
+                        <button type="button" class="btn btn-info mr-2">취소하기</button>
+                        <button type="button" class="btn btn-dark">등록하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 수정 / 삭제 -->
+    <div class="modal fade" id="modal-remove-modify">
+        <div class="modal-dialog modal-lg new-media">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <p class="m-0-auto">매체 수정삭제하기</p>
+                    <div class="close-wrap">
+                        <button type="button" id="btn-close" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">홍보할 매체의 정보를 관리하세요.</p>  
+                    <div class="form-group d-flex align-items-center">
+                        <label class="w-15 m-0">매체 이름</label>
+                        <input type="text" class="form-control ml-2" placeholder="매체 이름" value="">
+                    </div>
+                    <div class="form-group d-flex align-items-center">
+                        <label class="w-15 m-0">매체 URL</label>
+                        <input type="text" class="form-control ml-2" placeholder="매체 URL" value="">
+                    </div>
+                    <div class="form-group d-flex align-items-center">
+                        <label class="w-15 m-0">서비스 이름</label>
+                        <input type="text" class="form-control ml-2" placeholder="서비스 이름" value="">
+                    </div>
+                    <div class="text-center mt-3 _exceptDiv">
+                        <button type="button" class="btn btn-info mr-2">취소하기</button>
+                        <button type="button" class="btn btn-dark mr-2">등록하기</button>
+                        <button type="button" class="btn btn-danger">삭제하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- url 복사 -->
+     <div class="modal fade" id="modal-copy">
+        <div class="modal-dialog modal-sm new-media">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <p class="m-0-auto">홍보 URL 생성 규칙</p>
+                    <div class="close-wrap">
+                        <button type="button" id="btn-close" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">홍보할 매체의 정보를 관리하세요.</p>  
+                    <div class="d-flex align-items-center justify-content-between mt-3 _exceptDiv">
+                        <p class="m-0">temp.gcontest.co.kr/?ref=navercpc</p>
+                        <button type="button" class="btn btn-sm btn-default w-auto align-middle ml-2">복사</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- AdminLTE App -->
     <script src="../../../resources/js/adminlte.js"></script>
     <!-- ui 관련 -->
