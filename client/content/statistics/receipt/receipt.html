@@ -54,160 +54,122 @@
                     <div class="container-fluid">
 
                         <!-- content 시작 -->
+                        <input type="hidden" id=" page-title" value="접수통계">
                         <div class="contest-select-wrap callout callout-primary">
                             <div class="row justify-content-center">
                                 <div class="col-auto">
-                                    <div class="form-group mb-0">
-                                        <label class="mr-1">콘테스트 선택</label>
-                                        <select class="form-control form-control-lg d-inline-block w-auto">
-                                            <option selected>제 5회 아이디어 공모전</option>
-                                            <option>제 4회 아이디어 공모전</option>
-                                            <option>제 3회 아이디어 공모전</option>
-                                            <option>제 2회 아이디어 공모전</option>
-                                            <option>제 1회 아이디어 공모전</option>
-                                        </select>
-                                        <button type="button" class="btn btn-primary btn-lg ml-1">확인</button>
+                                    <div class="btn-group" role="group">
+                                        <button type="button" class="btn btn-outline-dark active">최근1일</button>
+                                        <button type="button" class="btn btn-outline-dark">7일</button>
+                                        <button type="button" class="btn btn-outline-dark">30일</button>
+                                        <button type="button" class="btn btn-outline-dark">직접입력</button>
                                     </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="input-group" style="width:240px">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                        </div>
+                                        <input type="text" class="form-control float-right" data-event="rangeDatepicker" id="date-range" disabled>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <button type="button" class="btn btn-dark">확인</button>
                                 </div>
                             </div>
                         </div>
 
                         <div class="card">
                             <div class="card-body">
-                                <div class="table-group">
-                                    <h3 class="table-title mt-0">전체접수통계</h3>
-                                    <table class="table table-bordered">
-                                        <tbody>
-                                            <tr>
-                                                <th>총접수인원</th>
-                                                <td>35</td>
-                                                <th>총접수량</th>
-                                                <td>70</td>
-                                            </tr>
-                                            <tr>
-                                                <th rowspan="3">부문별접수량</th>
-                                                <th>부문명</th>
-                                                <th>접수량(건)</th>
-                                                <th>전체대비비율(%)</th>
-                                            </tr>
-                                            <tr>
-                                                <td>기획</td>
-                                                <td>24</td>
-                                                <td>36%</td>
-                                            </tr>
-                                            <tr>
-                                                <td>디자인</td>
-                                                <td>42</td>
-                                                <td>36%</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="table-group">
-                                    <h3 class="table-title">통계그래프</h3>
-                                    <div class="chart-area">
-                                        <!-- 샘플로 아무 데이터 넣어놓음 -->
-                                        <canvas id="barChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                                <div class="row justify-content-center">
+                                    <div class="col-3">
+                                        <div class="small-box bg-light">
+                                            <div class="inner">
+                                                <p>방문통계</p>
+                                                <h4 class="mb-0">1,856</h4>
+                                            </div>
+                                            <div class="icon">
+                                                <i class="ion ion-bag"></i>
+                                            </div>
+                                            <a href="#"><i class="fas fa-arrow-circle-right"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="small-box bg-light">
+                                            <div class="inner">
+                                                <p>클릭수 </p>
+                                                <h4 class="mb-0">1,856</h4>
+                                            </div>
+                                            <div class="icon">
+                                                <i class="ion ion-bag"></i>
+                                            </div>
+                                            <a href="#"><i class="fas fa-arrow-circle-right"></i></a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
 
-                        <div class="search-wrap">
-                            <h2>Filter</h2>
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <label>조회기간</label>
-                                        <div class="row row-10">
-                                            <div class="col-9">
-                                                <div class="input-group">
-                                                    <div class="input-group-prepend">
-                                                        <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
-                                                    </div>
-                                                    <input type="text" class="form-control float-right" data-event="rangeDatepicker" id="date-range">
+                                <nav class="dashboard-tab">
+                                    <ul class="nav nav-tabs nav-justified" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" data-toggle="pill" href="#t1" role="tab">부문별</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="pill" href="#t2" role="tab">유형별</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="pill" href="#t3" role="tab">성별</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="pill" href="#t4" role="tab">연령별</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="pill" href="#t5" role="tab">지역별</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link bg-blue" data-toggle="pill" href="#t6" role="tab">기간별</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link bg-blue" data-toggle="pill" href="#t7" role="tab">시간별</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade active show" id="t1" role="tabpanel">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="pie-area">
+                                                    <canvas id="myChart1-1"></canvas>
                                                 </div>
                                             </div>
-                                            <div class="col-3">
-                                                <div class="custom-checkbox custom-control lineheight-match">
-                                                    <input class="custom-control-input" type="checkbox" id="chk_allday" data-check="allday" data-match="#date-range">
-                                                    <label for="chk_allday" class="custom-control-label">전체</label>
+                                            <div class="col">
+                                                <div class="bar-area">
+                                                    <canvas id="myChart1-2"></canvas>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="btns">
-                                <button type="button" class="btn btn-dark"><i class="fas fa-search"></i> 검색하기</button>
-                            </div>
-                        </div>
+                                    <div class="tab-pane fade" id="t2" role="tabpanel">
 
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="table-top">
-                                    <div class="row">
-                                        <div class="col-6">
-                                        </div>
-                                        <div class="col-6 text-right">
-                                            <select class="form-control w-auto">
-                                                <option selected="">전체 보기</option>
-                                                <option value="">30개씩 보기</option>
-                                                <option value="">15개씩 보기</option>
-                                                <option value="">7개씩 보기</option>
-                                            </select>
+                                    </div>
+                                    <div class="tab-pane fade" id="t3" role="tabpanel">
+
+                                    </div>
+                                    <div class="tab-pane fade" id="t4" role="tabpanel">
+
+                                    </div>
+                                    <div class="tab-pane fade" id="t5" role="tabpanel">
+
+                                    </div>
+                                    <div class="tab-pane fade" id="t6" role="tabpanel">
+                                        <div class="line-chart-area">
+                                            <canvas id="myChart6-1"></canvas>
                                         </div>
                                     </div>
-                                </div>
-                                <table class="table table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <th rowspan="2">일자</th>
-                                            <th rowspan="2">접수량 (건)</th>
-                                            <th colspan="2">유형별</th>
-                                            <th colspan="2">부문별</th>
-                                        </tr>
-                                        <tr>
-                                            <th>개인</th>
-                                            <th>팀</th>
-                                            <th>기획</th>
-                                            <th>디자인</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>2020. 03. 31(화)</td>
-                                            <td>5</td>
-                                            <td>5</td>
-                                            <td>5</td>
-                                            <td>5</td>
-                                            <td>5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2020. 03. 31(화)</td>
-                                            <td>5</td>
-                                            <td>5</td>
-                                            <td>5</td>
-                                            <td>5</td>
-                                            <td>5</td>
-                                        </tr>
-                                        <tr class="bg-gray-light">
-                                            <td>합계</td>
-                                            <td>5</td>
-                                            <td>5</td>
-                                            <td>5</td>
-                                            <td>5</td>
-                                            <td>5</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div class="table-bottom">
-                                    <div class="row">
-                                        <div class="col text-right">
-                                            <button class="btn btn-dark"><i class="fas fa-file-excel"></i> 엑셀다운받기</button>
-                                        </div>
+                                    <div class="tab-pane fade" id="t7" role="tabpanel">
+
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                         <!-- content 끝 -->
@@ -237,70 +199,185 @@
     <script src="../../../resources/js/ui.js"></script>
 
     <script>
-        var areaChartData = {
-            labels  : ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-            datasets: [
-                {
-                    label               : 'Digital Goods',
-                    backgroundColor     : 'rgba(67,131,248,0.8)',
-                    borderColor         : 'rgba(60,141,188,0.8)',
-                    pointRadius          : false,
-                    pointColor          : '#3b8bba',
-                    pointStrokeColor    : 'rgba(60,141,188,1)',
-                    pointHighlightFill  : '#fff',
-                    pointHighlightStroke: 'rgba(60,141,188,1)',
-                    data                : [28, 48, 40, 19, 86, 27, 90]
-                },
-                {
-                    label               : 'Electronics',
-                    backgroundColor     : 'rgba(232, 62, 140, 0.8)',
-                    borderColor         : 'rgba(210, 214, 222, 1)',
-                    pointRadius         : false,
-                    pointColor          : 'rgba(210, 214, 222, 1)',
-                    pointStrokeColor    : '#c1c7d1',
-                    pointHighlightFill  : '#fff',
-                    pointHighlightStroke: 'rgba(220,220,220,1)',
-                    data                : [65, 59, 80, 81, 56, 55, 40]
-                },
-            ]
-        }
-        var areaChartOptions = {
-            maintainAspectRatio : false,
-            responsive : true,
-            legend: {
-                display: false
-            },
-            scales: {
-                xAxes: [{
-                gridLines : {
-                    display : false,
-                }
-                }],
-                yAxes: [{
-                gridLines : {
-                    display : false,
-                }
+        var chartRender1_1 = function(){
+            const ctx = document.getElementById('myChart1-1').getContext('2d');
+            const data = {
+                labels: [
+                    '구글',
+                    '네이버',
+                    '다음'
+                ],
+                datasets: [{
+                    label: '채널 별',
+                    data: [65, 59, 80, 81, 56, 55, 40],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.6)',
+                        'rgba(255, 159, 64, 0.6)',
+                        'rgba(255, 205, 86, 0.6)',
+                        'rgba(75, 192, 192, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(153, 102, 255, 0.6)',
+                        'rgba(201, 203, 207, 0.6)'
+                    ],
                 }]
-            }
+            };
+            const myChart = new Chart(ctx, {
+                type: 'pie',
+                data: data,
+                options: {
+                    responsive: false,
+                    plugins: {
+                        legend: {
+                            display: false,
+                            position: 'bottom',
+                            labels: {
+                                usePointStyle: true,
+                            },
+                        }
+                    }
+                }
+            });
         }
-        var barChartCanvas = $('#barChart').get(0).getContext('2d')
-        var barChartData = jQuery.extend(true, {}, areaChartData)
-        var temp0 = areaChartData.datasets[0]
-        var temp1 = areaChartData.datasets[1]
-        barChartData.datasets[0] = temp1
-        barChartData.datasets[1] = temp0
 
-        var barChartOptions = {
-        responsive              : true,
-        maintainAspectRatio     : false,
-        datasetFill             : false
+        var chartRender1_2 = function(){
+            const ctx = document.getElementById('myChart1-2').getContext('2d');
+            const data = {
+                labels: [
+                    '단체부',
+                    '일반부',
+                    '아동부',
+                    '청소년부'
+                ],
+                datasets: [{
+                    label: '부문 별',
+                    data: [65, 59, 80, 81],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.6)',
+                        'rgba(255, 159, 64, 0.6)',
+                        'rgba(255, 205, 86, 0.6)',
+                        'rgba(75, 192, 192, 0.6)',
+                    ],
+                    borderColor: [
+                        'rgb(255, 99, 132)',
+                        'rgb(255, 159, 64)',
+                        'rgb(255, 205, 86)',
+                        'rgb(75, 192, 192)',
+                    ],
+                }]
+            };
+            const myChart = new Chart(ctx, {
+                type: 'bar',
+                data: data,
+                options: {
+                    responsive: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                usePointStyle: true,
+                            },
+                        }
+                    },
+                    scales: {
+                        xAxes: [{
+                            barPercentage: 0.4
+                        }]
+                    }
+                }
+            });
         }
 
-        var barChart = new Chart(barChartCanvas, {
-            type: 'bar',
-            data: barChartData,
-            options: barChartOptions
-        })
+        var chartRender6_1 = function(){
+            console.log(2);
+            const ctx = document.getElementById('myChart6-1').getContext('2d');
+            const data = {
+                labels: ["20121-02-01","20121-02-01","20121-02-01","20121-02-01","20121-02-01","20121-02-01","20121-02-01",],
+                datasets: [
+                    {
+                        label: "A",
+                        backgroundColor: '#0078ff',
+                        borderColor: '#0078ff',
+                        borderWidth: 2,
+                        fill: false,
+                        lineTension: 0,
+                        pointRadius: 5,
+                        pointBorderColor: '#fff',
+                        pointHoverRadius: 6,
+                        data: [2, 3, 4, 4, 2, 1, 2, 4, 5, 3, 2, 1],
+                    },
+                    {
+                        label: "B",
+                        backgroundColor: '#20c997',
+                        borderColor: '#20c997',
+                        borderWidth: 2,
+                        fill: false,
+                        lineTension: 0,
+                        pointRadius: 5,
+                        pointBorderColor: '#fff',
+                        pointHoverRadius: 6,
+                        data: [5, 1, 8, 7, 7, 5, 1, 4, 6, 3, 1, 9],
+                    }
+                ],
+            };
+            const myChart = new Chart(ctx, {
+                type: 'line',
+                data: data,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    legend: {
+                        display: false,
+                    },
+                    hover: {
+                        mode: 'index',
+                        intersect: false
+                    },
+                    scales: {
+                        xAxes: [{
+                            gridLines: {
+                                display: false,
+                            },
+                            scaleLabel: {
+                                display: false,
+                            },
+                            ticks:{
+                                fontSize : 14,
+                                padding:30,
+                            },
+                        }],
+                        yAxes: [{
+                            scaleLabel: {
+                                drawBorder: false,
+                            },
+                            ticks: {
+                                fontSize : 14,
+                                stepSize: 1,
+                                beginAtZero: true,
+                                padding:30,
+                            },
+                            gridLines:{
+                                drawBorder:false,
+                            }
+                        }]
+                    }
+                }
+            });
+        }
+
+        //첫번째 탭은 바로 호출
+        chartRender1_1();
+        chartRender1_2();
+        chartRender6_1();
+
+        //닫혀있는 탭 열릴때 호출
+        $('a[href="#t1"]').on('shown.bs.tab', function (event) {
+            chartRender1_1();
+            chartRender1_2();
+        });
+        $('a[href="#t6"]').on('shown.bs.tab', function (event) {
+            console.log(1);
+            chartRender6_1();
+        });
     </script>
 </body>
 

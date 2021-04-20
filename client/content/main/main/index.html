@@ -25,6 +25,8 @@
     <script src="../../../resources/plugins/daterangepicker/daterangepicker.js"></script>
     <!-- overlayScrollbars -->
     <script src="../../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- ChartJS js -->
+    <script src="../../../resources/plugins/chart.js/Chart.min.js"></script>
 </head>
 
 <body class="sidebar-mini layout-fixed layout-navbar-fixed">
@@ -32,277 +34,278 @@
 
         <div id="header-include">
             <!-- header include 개발시 상위 div 삭제 요망 -->
-        </div>        
+        </div>
 
         <div class="body-container">
             <div id="aside-include">
                 <!-- aside include 개발시 상위 div 삭제 요망 -->
             </div>
-            
-    
+
+
             <!-- Content Wrapper. Contains page content -->
             <div class="content-wrapper">
-                
+
                 <div id="location-include">
                     <!-- location include 개발시 상위 div 삭제 요망 -->
                 </div>
-    
+
                 <!-- Main content -->
-                <section class="content">
+                <section class="content management">
                     <div class="container-fluid">
-                    
+
                         <!-- content 시작 -->
-                        <div class="row">
-                            <div class="col-6">
-                                <div class="card card-secondary h-100">
-                                    <div class="card-header">
-                                        <h3 class="card-title">콘테스트 접수현황</h3>
-                                    </div>
-                                    <div class="card-body">
-                                        <table class="table table-bordered">
-                                            <colgroup>
-                                                <col style="width:35%">
-                                                <col style="width:26%">
-                                                <col>
-                                                <col>
-                                            </colgroup>
-                                            <thead>
-                                                <tr>
-                                                    <th class="text-center" rowspan="2">일자</th>
-                                                    <th class="text-center" rowspan="2">접수량(건)</th>
-                                                    <th class="text-center" colspan="2">부문별</th>
-                                                </tr>
-                                                <tr>
-                                                    <th class="text-center">기획</th>
-                                                    <th class="text-center">디자인</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="text-center">2020-03-02</td>
-                                                    <td class="text-right">5</td>
-                                                    <td class="text-right">1</td>
-                                                    <td class="text-right">4</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-center">2020-03-02</td>
-                                                    <td class="text-right">5</td>
-                                                    <td class="text-right">1</td>
-                                                    <td class="text-right">4</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-center text-danger">2020-03-02(오늘)</td>
-                                                    <td class="text-right">5</td>
-                                                    <td class="text-right">1</td>
-                                                    <td class="text-right">4</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-center text-success">최근 7일 합계</td>
-                                                    <td class="text-right">5</td>
-                                                    <td class="text-right">1</td>
-                                                    <td class="text-right">4</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-center">최근 30일 합계</td>
-                                                    <td class="text-right">5</td>
-                                                    <td class="text-right">1</td>
-                                                    <td class="text-right">4</td>
-                                                </tr>
-                                                <tr class="bg-gray-light">
-                                                    <td class="text-center">누적 합계</td>
-                                                    <td class="text-right">45</td>
-                                                    <td class="text-right">1</td>
-                                                    <td class="text-right">4</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                        <input type="hidden" id=" page-title" value="대시보드">
+                        <div class="search-wrap">
+                            <div class="form-group mt-0">
+                                <label class="mb-0">콘테스트 선택</label>
+                                <select class="form-control mr-0">
+                                    <option value="669">테스트 콘테스트</option>
+                                    <option value="651">지금지금 공모전</option>
+                                    <option value="578">Template C</option>
+                                    <option value="535">Template B</option>
+                                    <option value="529">Template A</option>
+                                </select>
+                            </div>
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-auto">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                        </div>
+                                        <input type="text" class="form-control float-right" data-event="rangeDatepicker" id="date-range">
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="card card-success h-100">
-                                    <div class="card-header">
-                                        <h3 class="card-title">콘테스트 통계분석 현황</h3>
-                                    </div>
-                                    <div class="card-body">
-                                        <table class="table table-bordered">
-                                            <tbody>
-                                                <tr>
-                                                    <th class="text-center">콘테스트공고조회수</th>
-                                                    <td class="text-center">1234</td>
-                                                </tr>
-                                                <tr>
-                                                    <th class="text-center">관심콘테스트등록수</th>
-                                                    <td class="text-center">234</td>
-                                                </tr>
-                                                <tr>
-                                                    <th class="text-center" rowspan="6">G콘접수솔루션 방문수</th>
-                                                    <th class="text-center">템플릿홈페이지</th>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-center">234</td>
-                                                </tr>
-                                                <tr>
-                                                    <th class="text-center">간편접수</th>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-center">-</td>
-                                                </tr>
-                                                <tr>
-                                                    <th class="text-center">폼메일</th>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-center">-</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                <div class="col-auto">
+                                    <button id="selectContestBtn" type="button" class="btn btn-dark">불러오기</button>
                                 </div>
                             </div>
                         </div>
-                        <div class="row mt-3">
-                            <div class="col-6">
-                                <div class="card card-warning card-tabs h-100">
-                                    <div class="card-header p-0 pt-1">
-                                        <ul class="nav nav-tabs" role="tablist">
-                                            <li class="nav-item">
-                                                <a class="nav-link active" data-toggle="pill" href="#tab-notice" role="tab" aria-selected="true">공지사항</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" data-toggle="pill" href="#tab-qna" role="tab" aria-selected="true">Q&amp;A</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" data-toggle="pill" href="#tab-lib" role="tab" aria-selected="false">자료실</a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="card h-100">
                                     <div class="card-body">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="small-box bg-light">
+                                                    <div class="inner">
+                                                        <p>방문통계</p>
+                                                        <h4 class="mb-0">1,856</h4>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <i class="ion ion-bag"></i>
+                                                    </div>
+                                                    <a href="#"><i class="fas fa-arrow-circle-right"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="small-box bg-light">
+                                                    <div class="inner">
+                                                        <p>클릭수 </p>
+                                                        <h4 class="mb-0">1,856</h4>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <i class="ion ion-bag"></i>
+                                                    </div>
+                                                    <a href="#"><i class="fas fa-arrow-circle-right"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <nav class="dashboard-tab">
+                                            <ul class="nav nav-tabs nav-justified" role="tablist">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" data-toggle="pill" href="#t1-1" role="tab">채널 별</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" data-toggle="pill" href="#t1-2" role="tab">접속기기 별</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" data-toggle="pill" href="#t1-3" role="tab">클릭 수</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
                                         <div class="tab-content">
-                                            <div class="tab-pane fade active show" id="tab-notice" role="tabpanel">
-                                                <div class="text-right mb-1">
-                                                    <a href="../../board_management/notice/list.html"><i class="fas fa-plus"></i> 더보기</a>
+                                            <div class="tab-pane fade active show" id="t1-1" role="tabpanel">
+                                                <div class="pie-area">
+                                                    <canvas id="myChart1-1"></canvas>
                                                 </div>
-                                                <table class="table table-hover text-nowrap">
-                                                    <colgroup>
-                                                        <col>
-                                                        <col style="width:110px">
-                                                    </colgroup>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="text-truncate"><a href="">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
-                                                            <td class="text-right">2020-01-01</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-truncate"><a href="">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
-                                                            <td class="text-right">2020-01-01</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-truncate"><a href="">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
-                                                            <td class="text-right">2020-01-01</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-truncate"><a href="">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
-                                                            <td class="text-right">2020-01-01</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-truncate"><a href="">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
-                                                            <td class="text-right">2020-01-01</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-truncate"><a href="">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
-                                                            <td class="text-right">2020-01-01</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
                                             </div>
-                                            <div class="tab-pane fade" id="tab-qna" role="tabpanel">
-                                                <div class="text-right mb-1">
-                                                    <a href="../../board_management/notice/list.html"><i class="fas fa-plus"></i> 더보기</a>
+                                            <div class="tab-pane fade" id="t1-2" role="tabpanel">
+                                                <div class="pie-area">
+                                                    <canvas id="myChart1-2"></canvas>
                                                 </div>
-                                                <table class="table table-hover text-nowrap">
-                                                    <colgroup>
-                                                        <col>
-                                                        <col style="width:110px">
-                                                    </colgroup>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="text-truncate"><a href="">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
-                                                            <td class="text-right">2020-01-01</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-truncate"><a href="">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
-                                                            <td class="text-right">2020-01-01</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-truncate"><a href="">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
-                                                            <td class="text-right">2020-01-01</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-truncate"><a href="">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
-                                                            <td class="text-right">2020-01-01</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-truncate"><a href="">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
-                                                            <td class="text-right">2020-01-01</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-truncate"><a href="">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
-                                                            <td class="text-right">2020-01-01</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
                                             </div>
-                                            <div class="tab-pane fade" id="tab-lib" role="tabpanel">
-                                                <div class="text-right mb-1">
-                                                    <a href="../../board_management/notice/list.html"><i class="fas fa-plus"></i> 더보기</a>
+                                            <div class="tab-pane fade" id="t1-3" role="tabpanel">
+                                                <div class="pie-area">
+                                                    <canvas id="myChart1-3"></canvas>
                                                 </div>
-                                                <table class="table table-hover text-nowrap">
-                                                    <colgroup>
-                                                        <col>
-                                                        <col style="width:110px">
-                                                    </colgroup>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="text-truncate"><a href="">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
-                                                            <td class="text-right">2020-01-01</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-truncate"><a href="">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
-                                                            <td class="text-right">2020-01-01</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-truncate"><a href="">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
-                                                            <td class="text-right">2020-01-01</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-truncate"><a href="">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
-                                                            <td class="text-right">2020-01-01</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-truncate"><a href="">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
-                                                            <td class="text-right">2020-01-01</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-truncate"><a href="">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
-                                                            <td class="text-right">2020-01-01</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-6">
-                                <div class="card card-dark h-100">
+                            <div class="col">
+                                <div class="card h-100">
                                     <div class="card-body">
-                                        G콘테스트 광고 영역 또는 바로가기 배너 영역
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="small-box bg-light">
+                                                    <div class="inner">
+                                                        <p>홍보통계</p>
+                                                        <h4 class="mb-0">1,856</h4>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <i class="ion ion-bag"></i>
+                                                    </div>
+                                                    <a href="#"><i class="fas fa-arrow-circle-right"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <nav class="dashboard-tab">
+                                            <ul class="nav nav-tabs nav-justified" role="tablist">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" data-toggle="pill" href="#t2-1" role="tab">채널 별</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" data-toggle="pill" href="#t2-2" role="tab">접속기기 별</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                        <div class="tab-content">
+                                            <div class="tab-pane fade active show" id="t2-1" role="tabpanel">
+                                                <div class="pie-area">
+                                                    <canvas id="myChart2-1"></canvas>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="t2-2" role="tabpanel">
+                                                <div class="pie-area">
+                                                    <canvas id="myChart2-2"></canvas>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="small-box bg-light">
+                                                    <div class="inner">
+                                                        <p>접수현황</p>
+                                                        <h4 class="mb-0">1,856</h4>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <i class="ion ion-bag"></i>
+                                                    </div>
+                                                    <a href="#"><i class="fas fa-arrow-circle-right"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="small-box bg-light">
+                                                    <div class="inner">
+                                                        <p>출품자 현황</p>
+                                                        <h4 class="mb-0">1,856</h4>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <i class="ion ion-bag"></i>
+                                                    </div>
+                                                    <a href="#"><i class="fas fa-arrow-circle-right"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <nav class="dashboard-tab">
+                                            <ul class="nav nav-tabs nav-justified" role="tablist">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" data-toggle="pill" href="#t3-1" role="tab">부문 별</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" data-toggle="pill" href="#t3-2" role="tab">성 별</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                        <div class="tab-content">
+                                            <div class="tab-pane fade active show" id="t3-1" role="tabpanel">
+                                                <div class="pie-area">
+                                                    <canvas id="myChart3-1"></canvas>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="t3-2" role="tabpanel">
+                                                <div class="pie-area">
+                                                    <canvas id="myChart3-2"></canvas>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <div class="row justify-content-between mt-3">
+                                            <div class="col-auto">
+                                                <h5>공지사항</h5>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="../../board_management/notice/list.html" class="text-dark"><i class="fas fa-plus"></i> </a>
+                                            </div>
+                                        </div>
+                                        <table class="table table-hover text-nowrap">
+                                            <colgroup>
+                                                <col>
+                                                <col style="width:110px">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-truncate text-left"><a href="" class="text-dark">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
+                                                    <td class="text-right">2020-01-01</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-truncate text-left"><a href="" class="text-dark">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
+                                                    <td class="text-right">2020-01-01</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-truncate text-left"><a href="" class="text-dark">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
+                                                    <td class="text-right">2020-01-01</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="row justify-content-between mt-5">
+                                            <div class="col-auto">
+                                                <h5>Q&amp;A</h5>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="../../board_management/notice/list.html" class="text-dark"><i class="fas fa-plus"></i> </a>
+                                            </div>
+                                        </div>
+                                        <table class="table table-hover text-nowrap">
+                                            <colgroup>
+                                                <col>
+                                                <col style="width:110px">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-truncate text-left"><a href="" class="text-dark">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
+                                                    <td class="text-right">2020-01-01</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-truncate text-left"><a href="" class="text-dark">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
+                                                    <td class="text-right">2020-01-01</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-truncate text-left"><a href="" class="text-dark">[안내] 안내글안내글안내글안내글 안내글안내글안내글안내글</a></td>
+                                                    <td class="text-right">2020-01-01</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!-- content 끝 -->
-                        
+
                     </div>
                     <!-- /.container-fluid -->
                 </section>
@@ -323,11 +326,270 @@
     <!-- ./wrapper -->
 
     <!-- AdminLTE App -->
-    <script src="../../../resources/js/adminlte.js"></script>    
+    <script src="../../../resources/js/adminlte.js"></script>
     <!-- ui 관련 -->
     <script src="../../../resources/js/ui.js"></script>
 
     <script>
+
+        var chartRender1_1 = function(){
+            const ctx = document.getElementById('myChart1-1').getContext('2d');
+            const data = {
+                labels: [
+                    '구글',
+                    '네이버',
+                    '다음'
+                ],
+                datasets: [{
+                    label: '채널 별',
+                    data: [300, 50, 100],
+                    backgroundColor: [
+                        'rgb(255, 99, 132)',
+                        'rgb(54, 162, 235)',
+                        'rgb(255, 205, 86)'
+                    ],
+                }]
+            };
+            const myChart = new Chart(ctx, {
+                type: 'pie',
+                data: data,
+                options: {
+                    responsive: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                usePointStyle: true,
+                            },
+                        }
+                    }
+                }
+            });
+        }
+
+        var chartRender1_2 = function(){
+            const ctx = document.getElementById('myChart1-2').getContext('2d');
+            const data = {
+                labels: [
+                    'PC',
+                    '모바일',
+                    '기타'
+                ],
+                datasets: [{
+                    label: '채널 별',
+                    data: [300, 50, 100],
+                    backgroundColor: [
+                        'rgb(255, 99, 132)',
+                        'rgb(54, 162, 235)',
+                        'rgba(0, 0, 0, 0.3)'
+                    ],
+                }]
+            };
+            const myChart = new Chart(ctx, {
+                type: 'pie',
+                data: data,
+                options: {
+                    responsive: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                usePointStyle: true,
+                            },
+                        }
+                    }
+                }
+            });
+        }
+
+        var chartRender1_3 = function(){
+            const ctx = document.getElementById('myChart1-3').getContext('2d');
+            const data = {
+                labels: [
+                'PC',
+                    '모바일',
+                    '기타'
+                ],
+                datasets: [{
+                    label: '채널 별',
+                    data: [300, 150, 50],
+                    backgroundColor: [
+                        'rgb(255, 99, 132)',
+                        'rgb(54, 162, 235)',
+                        'rgba(0, 0, 0, 0.3)'
+                    ],
+                }]
+            };
+            const myChart = new Chart(ctx, {
+                type: 'pie',
+                data: data,
+                options: {
+                    responsive: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                usePointStyle: true,
+                            },
+                        }
+                    }
+                }
+            });
+        }
+
+        var chartRender2_1 = function(){
+            const ctx = document.getElementById('myChart2-1').getContext('2d');
+            const data = {
+                labels: [
+                    'G콘테스트 노출수',
+                    '네이버, 다음 바이럴',
+                    '페이스북',
+                    '인스타그램',
+                    '타 사이트',
+                ],
+                datasets: [{
+                    label: '채널 별',
+                    data: [200, 50, 100, 25, 70],
+                    backgroundColor: [
+                        'rgb(255, 99, 132)',
+                        'rgb(75, 192, 192)',
+                        'rgb(255, 205, 86)',
+                        'rgb(243, 159, 64)',
+                        'rgb(54, 162, 235)'
+                    ],
+                }]
+            };
+            const myChart = new Chart(ctx, {
+                type: 'pie',
+                data: data,
+                options: {
+                    responsive: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                usePointStyle: true,
+                            },
+                        }
+                    }
+                }
+            });
+        }
+
+        var chartRender2_2 = function(){
+            const ctx = document.getElementById('myChart2-2').getContext('2d');
+            const data = {
+                labels: [
+                    'PC',
+                    '모바일',
+                    '기타'
+                ],
+                datasets: [{
+                    label: '채널 별',
+                    data: [300, 50, 100],
+                    backgroundColor: [
+                        'rgb(255, 99, 132)',
+                        'rgb(54, 162, 235)',
+                        'rgba(0, 0, 0, 0.3)'
+                    ],
+                }]
+            };
+            const myChart = new Chart(ctx, {
+                type: 'pie',
+                data: data,
+                options: {
+                    responsive: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                usePointStyle: true,
+                            },
+                        }
+                    }
+                }
+            });
+        }
+
+        var chartRender3_1 = function(){
+            const ctx = document.getElementById('myChart3-1').getContext('2d');
+            const data = {
+                labels: [
+                    '단체부(919)',
+                    '일반부',
+                    '아동부',
+                    '청소년부',
+                ],
+                datasets: [{
+                    label: '채널 별',
+                    data: [50, 100, 25, 70],
+                    backgroundColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(75, 192, 192)',
+                    'rgb(255, 205, 86)',
+                    'rgb(54, 162, 235)'
+                    ],
+                }]
+            };
+            const myChart = new Chart(ctx, {
+                type: 'pie',
+                data: data,
+                options: {
+                    responsive: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                usePointStyle: true,
+                            },
+                        }
+                    }
+                }
+            });
+        }
+
+        var chartRender3_2 = function(){
+            const ctx = document.getElementById('myChart3-2').getContext('2d');
+            const data = {
+                labels: [
+                    '남',
+                    '여',
+                    '기타'
+                ],
+                datasets: [{
+                    label: '채널 별',
+                    data: [300, 50, 100],
+                    backgroundColor: [
+                        'rgb(255, 99, 132)',
+                        'rgb(54, 162, 235)',
+                        'rgba(0, 0, 0, 0.3)'
+                    ],
+                }]
+            };
+            const myChart = new Chart(ctx, {
+                type: 'pie',
+                data: data,
+                options: {
+                    responsive: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                usePointStyle: true,
+                            },
+                        }
+                    }
+                }
+            });
+        }
+
+        chartRender1_1();
+        chartRender1_3();
+        chartRender1_2();
+        chartRender2_1();
+        chartRender2_2();
+        chartRender3_1();
+        chartRender3_2();
     </script>
 </body>
 
